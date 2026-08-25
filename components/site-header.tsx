@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useId, useState } from 'react';
 import { routePairs, whatsappUrl } from '@/lib/site-data';
 import { IconWhatsApp } from './icons';
 import { TrackedLink } from './tracked-link';
@@ -32,9 +33,31 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
   const home = english ? '/en' : '/';
   const switchPath = routePairs[pathname] || (english ? '/' : '/en');
   const wa = whatsappUrl('default', undefined, english);
+  const [open, setOpen] = useState(false);
+  const menuId = useId();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', open);
+    return () => document.body.classList.remove('menu-open');
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+    function onKey(event: KeyboardEvent) {
+      if (event.key === 'Escape') setOpen(false);
+    }
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
 
   return (
-    <header className={`site-header ${overlay ? 'site-header--overlay' : 'site-header--solid'}`}>
+    <header
+      className={`site-header ${overlay ? 'site-header--overlay' : 'site-header--solid'} ${open ? 'site-header--menu-open' : ''}`}
+    >
       <div className="site-header__inner shell">
         <Link
           className="brand"
@@ -79,25 +102,36 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
           WhatsApp
         </TrackedLink>
 
-        <details className="mobile-menu">
-          <summary aria-label={english ? 'Open menu' : 'Menüyü aç'}>
-            {english ? 'Menu' : 'Menü'}
-          </summary>
-          <div className="mobile-menu__panel">
-            <nav aria-label={english ? 'Mobile navigation' : 'Mobil menü'}>
-              {nav.map(([href, label]) => (
-                <Link key={href} href={href}>
-                  {label}
-                </Link>
-              ))}
-              <TrackedLink
-                href={switchPath}
-                eventName="language_switch"
-                eventData={{ language: english ? 'tr' : 'en' }}
-              >
-                {english ? 'Türkçe' : 'English'}
-              </TrackedLink>
-            </nav>
+        <button
+          type="button"
+          className="mobile-menu-toggle"
+          aria-expanded={open}
+          aria-controls={menuId}
+          aria-label={open ? (english ? 'Close menu' : 'Menüyü kapat') : english ? 'Open menu' : 'Menüyü aç'}
+          onClick={() => setOpen((value) => !value)}
+        >
+          {open ? (english ? 'Close' : 'Kapat') : english ? 'Menu' : 'Menü'}
+        </button>
+      </div>
+
+      {open ? (
+        <div className="mobile-menu-panel" id={menuId}>
+          <nav className="shell" aria-label={english ? 'Mobile navigation' : 'Mobil menü'}>
+            {nav.map(([href, label]) => (
+              <Link key={href} href={href} onClick={() => setOpen(false)}>
+                {label}
+              </Link>
+            ))}
+            <TrackedLink
+              href={switchPath}
+              eventName="language_switch"
+              eventData={{ language: english ? 'tr' : 'en' }}
+              onClick={() => setOpen(false)}
+            >
+              {english ? 'Türkçe' : 'English'}
+            </TrackedLink>
+          </nav>
+          <div className="shell mobile-menu-panel__cta">
             <TrackedLink
               className="button button--whatsapp"
               href={wa}
@@ -105,13 +139,14 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
               rel="noreferrer"
               eventName="whatsapp_click"
               eventData={{ location: 'mobile_menu' }}
+              onClick={() => setOpen(false)}
             >
               <IconWhatsApp />
               {english ? 'Chat on WhatsApp' : 'WhatsApp’tan yaz'}
             </TrackedLink>
           </div>
-        </details>
-      </div>
+        </div>
+      ) : null}
     </header>
   );
 }
