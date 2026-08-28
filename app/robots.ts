@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/site-url';
 
 export default function robots(): MetadataRoute.Robots {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const production = process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_SITE_URL;
+  const production = process.env.NODE_ENV === 'production';
   return {
     rules: production ? { userAgent: '*', allow: '/' } : { userAgent: '*', disallow: '/' },
-    sitemap: new URL('/sitemap.xml', base).toString(),
+    sitemap: new URL('/sitemap.xml', SITE_URL).toString(),
   };
 }

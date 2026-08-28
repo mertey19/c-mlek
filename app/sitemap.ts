@@ -1,13 +1,13 @@
 import type { MetadataRoute } from 'next';
 import { allIndexablePaths } from '@/lib/all-pages';
 import { blogPosts } from '@/lib/blog-data';
+import { SITE_URL } from '@/lib/site-url';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const blogPaths = new Set(blogPosts.map((post) => post.path));
 
   return allIndexablePaths.map((path) => ({
-    url: new URL(path, base).toString(),
+    url: new URL(path, SITE_URL).toString(),
     lastModified: blogPaths.has(path) ? new Date('2026-08-28') : new Date('2026-08-25'),
     changeFrequency:
       path === '/'

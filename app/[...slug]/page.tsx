@@ -5,10 +5,11 @@ import { PageShell } from '@/components/page-shell';
 import { allIndexablePaths, pageFromAllSegments } from '@/lib/all-pages';
 import { isBlogPath } from '@/lib/blog-data';
 import { routePairs } from '@/lib/site-data';
+import { SITE_URL } from '@/lib/site-url';
 
 type Props = { params: Promise<{ slug: string[] }> };
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const baseUrl = SITE_URL;
 
 export function generateStaticParams() {
   return allIndexablePaths.filter((path) => path !== '/').map((path) => ({ slug: path.slice(1).split('/') }));

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import { AnalyticsReady } from '@/components/analytics-ready';
+import { SITE_URL } from '@/lib/site-url';
 import './globals.css';
 
 const serif = Cormorant_Garamond({
@@ -15,7 +16,7 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(SITE_URL),
   title: 'Tarsus Çömlekçilik | El Yapımı Terracotta & Çömlek Üreticisi',
   description: 'Tarsus’ta el yapımı çömlek, terracotta saksı ve dekoratif küp üretimi. Toptan satış, proje tedariki ve ihracat seçeneklerini keşfedin.',
   keywords: [

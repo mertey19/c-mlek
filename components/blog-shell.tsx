@@ -2,16 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { blogPostFromPath, postsForLocale, type BlogPost } from '@/lib/blog-data';
 import { business, whatsappUrl, type PageContent } from '@/lib/site-data';
+import { absoluteUrl } from '@/lib/site-url';
 import { ContactBars } from './contact-bars';
 import { IconWhatsApp } from './icons';
 import { JsonLd } from './json-ld';
 import { SiteFooter } from './site-footer';
 import { SiteHeader } from './site-header';
 import { TrackedLink } from './tracked-link';
-
-function absolute(path: string) {
-  return new URL(path, process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').toString();
-}
 
 function formatDate(value: string, english: boolean) {
   return new Intl.DateTimeFormat(english ? 'en-GB' : 'tr-TR', {
@@ -112,15 +109,15 @@ function BlogIndex({ page }: { page: PageContent }) {
             '@type': 'Blog',
             name: page.title,
             description: page.seoDescription,
-            url: absolute(page.path),
+            url: absoluteUrl(page.path),
             inLanguage: english ? 'en' : 'tr-TR',
-            publisher: { '@id': `${absolute('/')}#organization` },
+            publisher: { '@id': `${absoluteUrl('/')}#organization` },
             blogPost: posts.map((item) => ({
               '@type': 'BlogPosting',
               headline: item.title,
               datePublished: item.publishedAt,
-              url: absolute(item.path),
-              image: absolute(item.image),
+              url: absoluteUrl(item.path),
+              image: absoluteUrl(item.image),
             })),
           },
           {
@@ -131,9 +128,9 @@ function BlogIndex({ page }: { page: PageContent }) {
                 '@type': 'ListItem',
                 position: 1,
                 name: english ? 'Home' : 'Ana Sayfa',
-                item: absolute(english ? '/en' : '/'),
+                item: absoluteUrl(english ? '/en' : '/'),
               },
-              { '@type': 'ListItem', position: 2, name: 'Blog', item: absolute(page.path) },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: absoluteUrl(page.path) },
             ],
           },
         ]}
@@ -253,16 +250,16 @@ function BlogArticle({ post }: { post: BlogPost }) {
             datePublished: post.publishedAt,
             dateModified: post.publishedAt,
             inLanguage: english ? 'en' : 'tr-TR',
-            url: absolute(post.path),
-            image: [absolute(post.image)],
+            url: absoluteUrl(post.path),
+            image: [absoluteUrl(post.image)],
             keywords: post.tags.join(', '),
-            author: { '@type': 'Organization', name: business.name, url: absolute('/') },
+            author: { '@type': 'Organization', name: business.name, url: absoluteUrl('/') },
             publisher: {
               '@type': 'Organization',
               name: business.name,
-              logo: { '@type': 'ImageObject', url: absolute('/og.png') },
+              logo: { '@type': 'ImageObject', url: absoluteUrl('/og.png') },
             },
-            mainEntityOfPage: absolute(post.path),
+            mainEntityOfPage: absoluteUrl(post.path),
           },
           {
             '@context': 'https://schema.org',
@@ -272,10 +269,10 @@ function BlogArticle({ post }: { post: BlogPost }) {
                 '@type': 'ListItem',
                 position: 1,
                 name: english ? 'Home' : 'Ana Sayfa',
-                item: absolute(english ? '/en' : '/'),
+                item: absoluteUrl(english ? '/en' : '/'),
               },
-              { '@type': 'ListItem', position: 2, name: 'Blog', item: absolute(english ? '/en/blog' : '/blog') },
-              { '@type': 'ListItem', position: 3, name: post.title, item: absolute(post.path) },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: absoluteUrl(english ? '/en/blog' : '/blog') },
+              { '@type': 'ListItem', position: 3, name: post.title, item: absoluteUrl(post.path) },
             ],
           },
         ]}

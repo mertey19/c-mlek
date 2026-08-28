@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { categories, products, whatsappUrl, type PageContent } from '@/lib/site-data';
+import { absoluteUrl } from '@/lib/site-url';
 import { ContactBars } from './contact-bars';
 import { IconWhatsApp } from './icons';
 import { JsonLd } from './json-ld';
@@ -15,10 +16,6 @@ const labelMap: Record<string, string> = {
   products: 'Products', wholesale: 'Wholesale', projects: 'Projects', export: 'Export', about: 'About', contact: 'Contact',
 };
 
-function absolute(path: string) {
-  return new URL(path, process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').toString();
-}
-
 export function PageShell({ page }: { page: PageContent }) {
   const english = page.locale === 'en';
   const segments = page.path.split('/').filter(Boolean);
@@ -32,12 +29,12 @@ export function PageShell({ page }: { page: PageContent }) {
   const breadcrumbSchema = {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: english ? 'Home' : 'Ana Sayfa', item: absolute(english ? '/en' : '/') },
-      ...crumbs.map((crumb, index) => ({ '@type': 'ListItem', position: index + 2, name: crumb.name, item: absolute(crumb.path) })),
+      { '@type': 'ListItem', position: 1, name: english ? 'Home' : 'Ana Sayfa', item: absoluteUrl(english ? '/en' : '/') },
+      ...crumbs.map((crumb, index) => ({ '@type': 'ListItem', position: index + 2, name: crumb.name, item: absoluteUrl(crumb.path) })),
     ],
   };
   const schema: Record<string, unknown>[] = [
-    { '@context': 'https://schema.org', '@type': 'WebPage', name: page.title, description: page.seoDescription, inLanguage: english ? 'en' : 'tr-TR', url: absolute(page.path), isPartOf: { '@id': `${absolute('/')}#website` } },
+    { '@context': 'https://schema.org', '@type': 'WebPage', name: page.title, description: page.seoDescription, inLanguage: english ? 'en' : 'tr-TR', url: absoluteUrl(page.path), isPartOf: { '@id': `${absoluteUrl('/')}#website` } },
     { '@context': 'https://schema.org', ...breadcrumbSchema },
   ];
   if (page.faq) schema.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: page.faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) });

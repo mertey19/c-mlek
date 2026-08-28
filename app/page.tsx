@@ -9,21 +9,20 @@ import { TrackedLink } from '@/components/tracked-link';
 import { business, categories, faqs, products, whatsappUrl } from '@/lib/site-data';
 import { IconInstagram, IconWhatsApp } from '@/components/icons';
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-const absolute = (path: string) => new URL(path, baseUrl).toString();
+import { absoluteUrl } from '@/lib/site-url';
 
 export default function Home() {
   const schemas = [
     {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
-      '@id': `${absolute('/')}#organization`,
+      '@id': `${absoluteUrl('/')}#organization`,
       name: business.name,
       alternateName: business.legalName,
       foundingDate: business.founded,
-      url: absolute('/'),
-      logo: absolute('/og.png'),
-      image: absolute('/og.png'),
+      url: absoluteUrl('/'),
+      logo: absoluteUrl('/og.png'),
+      image: absoluteUrl('/og.png'),
       telephone: `+${business.phone}`,
       address: {
         '@type': 'PostalAddress',
@@ -37,8 +36,8 @@ export default function Home() {
       areaServed: [{ '@type': 'Country', name: 'Türkiye' }, { '@type': 'AdministrativeArea', name: 'Mersin' }],
     },
     {
-      '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${absolute('/')}#website`, name: business.name, url: absolute('/'),
-      inLanguage: ['tr-TR', 'en'], publisher: { '@id': `${absolute('/')}#organization` },
+      '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${absoluteUrl('/')}#website`, name: business.name, url: absoluteUrl('/'),
+      inLanguage: ['tr-TR', 'en'], publisher: { '@id': `${absoluteUrl('/')}#organization` },
     },
     {
       '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })),
