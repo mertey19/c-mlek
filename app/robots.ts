@@ -7,6 +7,5 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: production ? { userAgent: '*', allow: '/' } : { userAgent: '*', disallow: '/' },
     sitemap: absoluteUrl('/sitemap.xml'),
-    host: production ? 'https://www.tarsuscomlekcilik.com' : undefined,
   };
 }
