@@ -53,12 +53,18 @@ export default function Home() {
         postalCode: business.postalCode,
         addressCountry: 'TR',
       },
-      sameAs: [business.instagram, business.youtube, business.googleBusinessUrl],
+      sameAs: [business.website, business.instagram, business.youtube, business.googleBusinessUrl, business.googleMapsUrl],
       areaServed: [{ '@type': 'Country', name: 'Türkiye' }, { '@type': 'AdministrativeArea', name: 'Mersin' }],
     },
     {
-      '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${absoluteUrl('/')}#website`, name: business.name, url: absoluteUrl('/'),
-      inLanguage: ['tr-TR', 'en'], publisher: { '@id': `${absoluteUrl('/')}#organization` },
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${absoluteUrl('/')}#website`,
+      name: business.name,
+      alternateName: [business.legalName, 'Tarsus Pottery', 'Mersin terracotta'],
+      url: absoluteUrl('/'),
+      inLanguage: ['tr-TR', 'en'],
+      publisher: { '@id': `${absoluteUrl('/')}#organization` },
     },
     {
       '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })),
@@ -73,8 +79,9 @@ export default function Home() {
           <div className="hero__shade" />
           <SiteHeader overlay />
           <div className="hero__content shell">
-            <p className="eyebrow">Tarsus’ta el yapımı · 1927’den günümüze</p>
+            <p className="eyebrow">Tarsus Çömlekçilik · Tarsus’ta el yapımı · 1927’den günümüze</p>
             <h1 id="hero-title">Toprağın ustalığı,<br />mekânların karakteri.</h1>
+            <p className="hero__brand">Özçereciler Toprak Sanatları — Mersin Tarsus el yapımı terracotta üreticisi</p>
             <p className="hero__lead">El yapımı terracotta küp ve saksıları; bahçeler, oteller, villalar, peyzaj projeleri ve toptan tedarik için Tarsus’tan dünyaya taşıyoruz.</p>
             <div className="hero__actions">
               <Link className="button button--solid" href="/urunler">Ürünleri keşfet</Link>

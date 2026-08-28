@@ -20,6 +20,7 @@ export const business = {
   googleBusinessUrl: 'https://share.google/7QKseWR7XjQwdUpvi',
   googleMapsUrl:
     'https://www.google.com/maps/search/?api=1&query=Tarsus+%C3%87%C3%B6mlek%C3%A7ilik+4202+Sokak+Ye%C5%9Fil+Mahalle+Tarsus+Mersin',
+  website: 'https://www.tarsuscomlekcilik.com',
   quoteEndpoint: null as string | null,
 };
 

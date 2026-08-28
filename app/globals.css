@@ -91,6 +91,7 @@ img { max-width: 100%; }
 .hero .eyebrow, .project-feature .eyebrow, .final-cta .eyebrow { color: var(--sand); }
 .hero h1 { max-width: 900px; margin: 0; font-family: var(--font-serif); font-size: clamp(66px, 7.8vw, 118px); font-weight: 500; line-height: .83; letter-spacing: -.05em; text-wrap: balance; }
 .hero__lead { max-width: 620px; margin: 30px 0 0; color: rgba(255,255,255,.77); font-size: clamp(16px, 1.3vw, 19px); line-height: 1.75; }
+.hero__brand { max-width: 620px; margin: 18px 0 0; color: rgba(255,255,255,.62); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
 .concept-note { margin: 18px 0 0; color: rgba(255,255,255,.45); font-size: 9px; letter-spacing: .04em; }
 .trust-strip { position: absolute; inset: auto 0 0; z-index: 2; border-top: 1px solid rgba(255,255,255,.18); background: rgba(24,21,18,.56); backdrop-filter: blur(10px); }
