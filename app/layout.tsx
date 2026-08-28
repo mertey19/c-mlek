@@ -18,7 +18,8 @@ const sans = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: 'Tarsus Çömlekçilik | El Yapımı Terracotta & Çömlek Üreticisi',
-  description: 'Tarsus’ta el yapımı çömlek, terracotta saksı ve dekoratif küp üretimi. Toptan satış, proje tedariki ve ihracat seçeneklerini keşfedin.',
+  description:
+    'Mersin Tarsus\'ta el yapımı terracotta saksı, büyük küp ve çömlek üreticisi. Toptan satış, otel-villa peyzaj projeleri ve ihracat.',
   keywords: [
     'Tarsus çömlekçilik',
     'Mersin çömlekçi',

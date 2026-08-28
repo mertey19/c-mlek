@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ContactBars } from '@/components/contact-bars';
@@ -8,8 +9,28 @@ import { SiteHeader } from '@/components/site-header';
 import { TrackedLink } from '@/components/tracked-link';
 import { business, categories, faqs, products, whatsappUrl } from '@/lib/site-data';
 import { IconInstagram, IconWhatsApp } from '@/components/icons';
-
 import { absoluteUrl } from '@/lib/site-url';
+
+export const metadata: Metadata = {
+  title: 'Mersin Çömlekçi & El Yapımı Terracotta | Tarsus Çömlekçilik',
+  description:
+    'Mersin ve Tarsus\'ta el yapımı terracotta saksı, büyük küp ve çömlek üreticisi. Toptan satış, otel-villa peyzaj projeleri ve ihracat için WhatsApp\'tan teklif alın.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Mersin Çömlekçi & Terracotta Üreticisi | Tarsus Çömlekçilik',
+    description:
+      '1927\'den günümüze Mersin Tarsus\'ta el yapımı terracotta. Toptan tedarik, proje bazlı üretim ve ihracat.',
+    url: '/',
+    type: 'website',
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Tarsus Çömlekçilik — Mersin terracotta üreticisi' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mersin Çömlekçi & Terracotta | Tarsus Çömlekçilik',
+    description: 'El yapımı terracotta saksı ve büyük küp — Mersin Tarsus\'tan toptan ve proje tedariki.',
+    images: ['/og.png'],
+  },
+};
 
 export default function Home() {
   const schemas = [
