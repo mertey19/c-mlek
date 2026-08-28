@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Tarsus Çömlekçilik">
+  <circle cx="256" cy="256" r="256" fill="#a85f3d"/>
+  <circle cx="256" cy="256" r="228" fill="none" stroke="#fbf8f2" stroke-width="10" opacity="0.35"/>
+  <text
+    x="256"
+    y="300"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="210"
+    font-weight="600"
+    fill="#fbf8f2"
+  >TÇ</text>
+</svg>
