@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import { AnalyticsReady } from '@/components/analytics-ready';
 import './globals.css';
 
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <a className="skip-link" href="#main-content">İçeriğe geç</a>
         <AnalyticsReady />
         <div id="main-content">{children}</div>
+        <Analytics />
       </body>
     </html>
   );
