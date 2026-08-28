@@ -14,7 +14,12 @@ export const business = {
   phoneDisplay: '+90 501 016 30 96',
   whatsapp: '905010163096',
   email: null as string | null,
-  address: null as string | null,
+  streetAddress: 'Yeşil Mah., Hasan Özçivi Cd., 4202. Sk. No: 60',
+  postalCode: '33450',
+  address: 'Yeşil Mah., Hasan Özçivi Cd., 4202. Sk. No: 60, 33450 Tarsus/Mersin',
+  googleBusinessUrl: 'https://share.google/7QKseWR7XjQwdUpvi',
+  googleMapsUrl:
+    'https://www.google.com/maps/search/?api=1&query=Tarsus+%C3%87%C3%B6mlek%C3%A7ilik+4202+Sokak+Ye%C5%9Fil+Mahalle+Tarsus+Mersin',
   quoteEndpoint: null as string | null,
 };
 
@@ -230,6 +235,7 @@ const trPages: PageContent[] = [
     image: '/images/hero-terracotta.webp', imageAlt: 'Tarsus Çömlekçilik büyük terracotta küp detayları — temsili görsel',
     blocks: [
       { title: 'WhatsApp üzerinden hızlı teklif', body: 'Toptan, proje ve ihracat taleplerini Instagram bio’daki doğrulanmış WhatsApp hattından alın. Form gönderimi de WhatsApp mesajına dönüştürülür.', link: { href: whatsappUrl('default'), label: 'WhatsApp’tan yazın' } },
+      { title: 'Atölye adresi', body: 'Yeşil Mah., Hasan Özçivi Cd., 4202. Sk. No: 60, 33450 Tarsus/Mersin. Ziyaret veya teslimat planı için önceden haber vermenizi rica ederiz.', link: { href: business.googleMapsUrl, label: 'Google Haritalar’da aç' } },
       { title: 'Teklifinizi hızlandırın', body: 'Firma, ülke/şehir, ürün grubu, tahmini adet ve kullanım alanı bilgilerini hazırlayın. Proje taleplerinde ölçü veya mekân fotoğrafı eklemek ürün seçimini kolaylaştırır.' },
     ], faq: faqs,
   },

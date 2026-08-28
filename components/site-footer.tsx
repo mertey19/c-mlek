@@ -24,7 +24,7 @@ export function SiteFooter({ english = false }: { english?: boolean }) {
               ? 'Handmade terracotta for wholesale, hospitality, landscape and architectural projects.'
               : 'Toptan tedarik, otel, villa, peyzaj ve mimari projeler için Tarsus’ta el yapımı terracotta.'}
           </p>
-          <p className="footer-location">Tarsus · Mersin · Türkiye</p>
+          <p className="footer-location">{business.address}</p>
           <div className="footer-social">
             <TrackedLink
               href={wa}
@@ -84,6 +84,9 @@ export function SiteFooter({ english = false }: { english?: boolean }) {
           </TrackedLink>
           <a href={business.youtube} target="_blank" rel="noreferrer">
             YouTube {business.youtubeHandle}
+          </a>
+          <a href={business.googleMapsUrl} target="_blank" rel="noreferrer">
+            {english ? 'Google Maps' : 'Google Haritalar'}
           </a>
           {!english && <Link href="/rehber">Terracotta rehberi</Link>}
         </div>

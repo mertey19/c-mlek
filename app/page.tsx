@@ -15,10 +15,26 @@ const absolute = (path: string) => new URL(path, baseUrl).toString();
 export default function Home() {
   const schemas = [
     {
-      '@context': 'https://schema.org', '@type': 'Organization', '@id': `${absolute('/')}#organization`, name: business.name,
-      alternateName: business.legalName, foundingDate: business.founded, url: absolute('/'), logo: absolute('/og.png'),
-      sameAs: [business.instagram, business.youtube], areaServed: [{ '@type': 'Country', name: 'Türkiye' }, { '@type': 'AdministrativeArea', name: 'Mersin' }],
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      '@id': `${absolute('/')}#organization`,
+      name: business.name,
+      alternateName: business.legalName,
+      foundingDate: business.founded,
+      url: absolute('/'),
+      logo: absolute('/og.png'),
+      image: absolute('/og.png'),
       telephone: `+${business.phone}`,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: business.streetAddress,
+        addressLocality: business.locality,
+        addressRegion: business.region,
+        postalCode: business.postalCode,
+        addressCountry: 'TR',
+      },
+      sameAs: [business.instagram, business.youtube, business.googleBusinessUrl],
+      areaServed: [{ '@type': 'Country', name: 'Türkiye' }, { '@type': 'AdministrativeArea', name: 'Mersin' }],
     },
     {
       '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${absolute('/')}#website`, name: business.name, url: absolute('/'),
