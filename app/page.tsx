@@ -114,6 +114,30 @@ export default function Home() {
 
         <section className="faq-section section shell" aria-labelledby="home-faq-title"><div className="section-heading"><p className="eyebrow">Satış öncesi</p><h2 id="home-faq-title">Sık sorulan sorular</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></section>
 
+        <section className="section shell" aria-labelledby="blog-home-title">
+          <div className="section-heading section-heading--split">
+            <div>
+              <p className="eyebrow">Blog</p>
+              <h2 id="blog-home-title">Mersin çömlekçi ve terracotta rehberi</h2>
+            </div>
+            <p>Mersin terracotta, Tarsus çömlek atölyesi ve toptan tedarik hakkında güncel yazılar.</p>
+          </div>
+          <div className="blog-grid blog-grid--compact">
+            <article className="blog-card">
+              <Link className="blog-card__media" href="/blog/mersin-comlekci"><Image src="/images/workshop.webp" alt="Mersin çömlekçi rehberi" fill sizes="(max-width: 700px) 100vw, 33vw" /></Link>
+              <div className="blog-card__body"><h3><Link href="/blog/mersin-comlekci">Mersin çömlekçi arayanlar için Tarsus’ta el yapımı üretim</Link></h3><Link className="text-link text-link--dark" href="/blog">Tüm yazılar <span>↗</span></Link></div>
+            </article>
+            <article className="blog-card">
+              <Link className="blog-card__media" href="/blog/mersin-terracotta"><Image src="/images/collection.webp" alt="Mersin terracotta rehberi" fill sizes="(max-width: 700px) 100vw, 33vw" /></Link>
+              <div className="blog-card__body"><h3><Link href="/blog/mersin-terracotta">Mersin terracotta saksı ve küp üreticisi</Link></h3><Link className="text-link text-link--dark" href="/blog/mersin-terracotta">Yazıyı oku <span>↗</span></Link></div>
+            </article>
+            <article className="blog-card">
+              <Link className="blog-card__media" href="/blog/tarsus-comlek-atolyesi"><Image src="/images/workshop.webp" alt="Tarsus çömlek atölyesi" fill sizes="(max-width: 700px) 100vw, 33vw" /></Link>
+              <div className="blog-card__body"><h3><Link href="/blog/tarsus-comlek-atolyesi">Tarsus çömlek atölyesi: 1927’den günümüze</Link></h3><Link className="text-link text-link--dark" href="/blog/tarsus-comlek-atolyesi">Yazıyı oku <span>↗</span></Link></div>
+            </article>
+          </div>
+        </section>
+
         <section className="instagram-section"><div className="shell instagram-section__grid"><div><p className="eyebrow">Atölyeden güncel kareler</p><h2>Atölyemizi Instagram’da takip edin</h2><p>{business.instagramHandle}</p><TrackedLink className="button button--dark button--with-icon" href={business.instagram} target="_blank" rel="noreferrer" eventName="instagram_click"><IconInstagram /> Instagram’ı aç</TrackedLink></div><div className="instagram-section__images"><figure><Image src="/images/workshop.webp" alt="Terracotta üretim süreci — temsili görsel" fill sizes="35vw" /></figure><figure><Image src="/images/collection.webp" alt="Terracotta ürün koleksiyonu — temsili görsel" fill sizes="35vw" /></figure></div></div></section>
 
         <div className="shell section"><QuoteForm /></div>

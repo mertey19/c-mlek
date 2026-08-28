@@ -241,7 +241,7 @@ const trPages: PageContent[] = [
   },
   {
     path: '/rehber', locale: 'tr', kicker: 'Terracotta rehberi', title: 'Doğru ürün için doğru bilgi',
-    intro: 'Terracotta malzemeyi, büyük saksı seçimini, peyzaj kullanımını ve toptan tedarik sürecini karar vermeyi kolaylaştıracak biçimde ele alan içerik merkezi.',
+    intro: 'Terracotta malzemeyi, büyük saksı seçimini, peyzaj kullanımını ve toptan tedarik sürecini karar vermeyi kolaylaştıracak biçimde ele alan içerik merkezi. Yerel üretim ve Mersin terracotta konuları için blog sayfamıza da göz atın.',
     seoTitle: 'Terracotta Saksı & Çömlek Rehberi | Tarsus Çömlekçilik',
     seoDescription: 'Terracotta saksı nedir, büyük saksı nasıl seçilir ve toptan alımda nelere dikkat edilir? Uygulama odaklı rehberleri keşfedin.',
     image: '/images/collection.webp', imageAlt: 'Terracotta malzeme ve farklı saksı formları — temsili görsel',
@@ -250,6 +250,7 @@ const trPages: PageContent[] = [
       { title: 'Büyük Boy Saksı Seçimi', body: 'Ölçek, drenaj, kök hacmi, rüzgâr ve taşıma rotası; yalnızca estetik değil uygulama kararlarıdır.', link: { href: '/rehber/buyuk-boy-saksi-secerken', label: 'Seçim kriterlerini incele' } },
       { title: 'Otel Peyzajında Saksı', body: 'Sirkülasyon, bakım ve tekrar ritmi üzerinden konaklama alanlarında büyük saksı kullanımını planlayın.', link: { href: '/rehber/otel-peyzajinda-saksi-secimi', label: 'Proje rehberini oku' } },
       { title: 'Toptan Saksı Alımı', body: 'Ürün standardı, adet, paketleme, teslimat ve numune sürecini teklif öncesinde netleştirin.', link: { href: '/rehber/toptan-saksi-alirken', label: 'Toptan alım rehberi' } },
+      { title: 'Mersin & Tarsus blog', body: 'Mersin çömlekçi, terracotta üretimi ve toptan tedarik hakkında SEO odaklı güncel yazılar.', link: { href: '/blog', label: 'Blog yazılarını oku' } },
     ],
   },
 ];
@@ -403,6 +404,7 @@ export const routePairs: Record<string, string> = {
   '/ihracat': '/en/export',
   '/hakkimizda': '/en/about',
   '/iletisim': '/en/contact',
+  '/blog': '/en/blog',
   '/en': '/',
   '/en/products': '/urunler',
   '/en/wholesale': '/toptan-satis',
@@ -410,6 +412,7 @@ export const routePairs: Record<string, string> = {
   '/en/export': '/ihracat',
   '/en/about': '/hakkimizda',
   '/en/contact': '/iletisim',
+  '/en/blog': '/blog',
 };
 
 export const indexablePaths = ['/', ...pages.map((page) => page.path)];

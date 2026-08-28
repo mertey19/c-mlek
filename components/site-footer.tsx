@@ -70,6 +70,7 @@ export function SiteFooter({ english = false }: { english?: boolean }) {
           <Link href={english ? '/en/projects' : '/projeler'}>{english ? 'Projects' : 'Projeler'}</Link>
           <Link href={english ? '/en/export' : '/ihracat'}>{english ? 'Export' : 'İhracat'}</Link>
           <Link href={english ? '/en/about' : '/hakkimizda'}>{english ? 'About' : 'Hakkımızda'}</Link>
+          <Link href={english ? '/en/blog' : '/blog'}>{english ? 'Blog' : 'Blog'}</Link>
         </div>
         <div>
           <h2>{english ? 'Contact' : 'İletişim'}</h2>
@@ -89,6 +90,7 @@ export function SiteFooter({ english = false }: { english?: boolean }) {
             {english ? 'Google Maps' : 'Google Haritalar'}
           </a>
           {!english && <Link href="/rehber">Terracotta rehberi</Link>}
+          <Link href={english ? '/en/blog' : '/blog'}>{english ? 'Terracotta blog' : 'Terracotta blog'}</Link>
         </div>
       </div>
       <div className="shell site-footer__legal">

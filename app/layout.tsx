@@ -18,7 +18,16 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: 'Tarsus Çömlekçilik | El Yapımı Terracotta & Çömlek Üreticisi',
   description: 'Tarsus’ta el yapımı çömlek, terracotta saksı ve dekoratif küp üretimi. Toptan satış, proje tedariki ve ihracat seçeneklerini keşfedin.',
-  keywords: ['Tarsus çömlekçilik', 'terracotta saksı', 'toptan çömlek', 'büyük toprak saksı', 'terracotta manufacturer Turkey'],
+  keywords: [
+    'Tarsus çömlekçilik',
+    'Mersin çömlekçi',
+    'Mersin terracotta',
+    'Tarsus çömlek atölyesi',
+    'terracotta saksı',
+    'toptan çömlek',
+    'el yapımı terracotta Mersin',
+    'terracotta manufacturer Turkey',
+  ],
   alternates: { canonical: '/', languages: { 'tr-TR': '/', en: '/en', 'x-default': '/' } },
   openGraph: {
     title: 'Tarsus Çömlekçilik | Toprağın Ustalığı',

@@ -16,6 +16,7 @@ const trNav = [
   ['/ihracat', 'İhracat'],
   ['/hakkimizda', 'Hakkımızda'],
   ['/atolye', 'Atölye'],
+  ['/blog', 'Blog'],
   ['/iletisim', 'İletişim'],
 ] as const;
 
@@ -25,6 +26,7 @@ const enNav = [
   ['/en/wholesale', 'Wholesale'],
   ['/en/export', 'Export'],
   ['/en/about', 'About'],
+  ['/en/blog', 'Blog'],
   ['/en/contact', 'Contact'],
 ] as const;
 
