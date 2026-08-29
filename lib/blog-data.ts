@@ -244,6 +244,131 @@ const trBlogSeeds: BlogSeed[] = [
       },
     ],
   },
+  {
+    slug: 'tarsus-comlekci',
+    locale: 'tr',
+    kicker: 'Tarsus çömlekçi',
+    title: 'Tarsus çömlekçi: el yapımı terracotta üretim merkezi',
+    intro:
+      '“Tarsus çömlekçi” araması yapanlar için Yeşil Mahalle’deki atölyemiz; büyük küp, saksı ve dekoratif terracotta formları üreticiden doğrudan sunar.',
+    seoTitle: 'Tarsus Çömlekçi | El Yapımı Terracotta Atölyesi',
+    seoDescription:
+      'Tarsus çömlekçi arayanlar için el yapımı terracotta saksı, büyük küp ve çömlek üretimi. Toptan, proje ve ihracat teklifi alın.',
+    image: '/images/workshop.webp',
+    imageAlt: 'Tarsus çömlekçi atölyesi — el yapımı terracotta üretimi',
+    publishedAt: '2026-08-29',
+    tags: ['Tarsus çömlekçi', 'Tarsus çömlek', 'terracotta atölye'],
+    readingMinutes: 5,
+    blocks: [
+      {
+        title: 'Tarsus’ta çömlekçilik geleneği',
+        body: 'Tarsus, Mersin bölgesinde toprak sanatları ve çömlekçilik için köklü bir üretim hattına sahiptir. Tarsus Çömlekçilik bu geleneği günümüzün otel, villa, bahçe ve mimari projelerine taşır.',
+      },
+      {
+        title: 'Kimler başvurur?',
+        body: 'Peyzaj mimarları, otel işletmecileri, toptancılar, iç mimarlar ve bireysel bahçe sahipleri en sık talep eden gruplardır. Ürün grubu ve adet bilgisi paylaşıldığında teklif süreci başlar.',
+        link: { href: '/iletisim', label: 'İletişime geç' },
+      },
+      {
+        title: 'Atölyeyi ziyaret',
+        body: `Atölye adresi: ${business.address}. Ziyaret öncesi WhatsApp üzerinden haber vermeniz üretim planına göre en uygun görüşme saatini belirlememize yardımcı olur.`,
+        link: { href: business.googleMapsUrl, label: 'Haritada gör' },
+      },
+    ],
+  },
+  {
+    slug: 'otel-villa-terracotta-saksi',
+    locale: 'tr',
+    kicker: 'Otel & villa',
+    title: 'Otel ve villa projeleri için terracotta saksı seçimi',
+    intro:
+      'Konaklama ve villa projelerinde terracotta saksılar; giriş, avlu ve teras alanlarında hem dekoratif hem mimari bir rol üstlenir.',
+    seoTitle: 'Otel & Villa Terracotta Saksı | Tarsus Üretici',
+    seoDescription:
+      'Otel, villa ve resort projeleri için büyük terracotta saksı ve küp. El yapımı üretim, toptan tedarik ve proje teklifi — Tarsus.',
+    image: '/images/project-concept.webp',
+    imageAlt: 'Otel villa terracotta saksı projesi — temsili konsept',
+    publishedAt: '2026-08-28',
+    tags: ['otel saksı', 'villa terracotta', 'peyzaj projesi'],
+    readingMinutes: 5,
+    blocks: [
+      {
+        title: 'Proje dilini belirlemek',
+        body: 'Otel ve villa projelerinde aynı form ailesinin farklı ölçülerde kullanılması, geniş alanlarda tutarlı bir koleksiyon dili oluşturur. Giriş, lobiden avluya uzanan bir terracotta ritmi kurulabilir.',
+        bullets: ['Karşılama ve giriş aksları', 'Avlu ve iç bahçe', 'Teras ve havuz çevresi', 'Restoran açık alanları'],
+      },
+      {
+        title: 'Bakım ve operasyon',
+        body: 'Büyük saksılarda drenaj, sulama erişimi ve mevsimsel bakım planı proje aşamasında düşünülmelidir. Form seçimi bu operasyonel ihtiyaçlarla birlikte değerlendirilir.',
+        link: { href: '/otel-villa-peyzaj', label: 'Otel & villa çözümleri' },
+      },
+      {
+        title: 'Teklif süreci',
+        body: 'Mekân planı, yaklaşık ölçü, adet ve teslimat şehri paylaşıldığında proje bazlı terracotta teklifi hazırlanır.',
+        link: { href: whatsappUrl('project'), label: 'Proje teklifi gönder' },
+      },
+    ],
+  },
+  {
+    slug: 'bahce-terracotta-saksi',
+    locale: 'tr',
+    kicker: 'Bahçe saksısı',
+    title: 'Bahçe için terracotta saksı: Akdeniz iklimine uygun seçim',
+    intro:
+      'Mersin ve Akdeniz bölgesinde bahçe düzenlemelerinde terracotta saksılar; doğal görünüm, dayanıklılık ve bitki sağlığı açısından güçlü bir tercihtir.',
+    seoTitle: 'Bahçe Terracotta Saksı | El Yapımı — Tarsus',
+    seoDescription:
+      'Bahçe terracotta saksı ve büyük küp seçenekleri. El yapımı üretim, toptan tedarik ve Mersin-Tarsus sevkiyatı için teklif alın.',
+    image: '/images/collection.webp',
+    imageAlt: 'Bahçe terracotta saksı koleksiyonu — temsili görsel',
+    publishedAt: '2026-08-27',
+    tags: ['bahçe saksısı', 'terracotta bahçe', 'Akdeniz peyzaj'],
+    readingMinutes: 4,
+    blocks: [
+      {
+        title: 'Neden terracotta?',
+        body: 'Pişmiş toprağın gözenekli yapısı kök bölgesinde daha dengeli bir ortam sağlar. Doğal renk tonları yeşillikle uyumlu bir zemin oluşturur; plastik saksılara kıyasla daha premium bir bahçe karakteri verir.',
+      },
+      {
+        title: 'Ölçek ve yerleşim',
+        body: 'Tek büyük küp ile odak noktası yaratılabilir; farklı ölçülerde tekrarlayan formlarla bahçede ritim kurulabilir. Yürüyüş aksları, girişler ve oturma alanları için farklı hacimler değerlendirilir.',
+        link: { href: '/urunler', label: 'Saksı koleksiyonları' },
+      },
+    ],
+  },
+  {
+    slug: 'terracotta-ihracat-turkiye',
+    locale: 'tr',
+    kicker: 'İhracat',
+    title: 'Türkiye’den terracotta ihracat: Tarsus üreticiden dünyaya',
+    intro:
+      'Yurtdışı toptancıları, oteller ve peyzaj firmaları için Türkiye’den el yapımı terracotta ihracat tedariki.',
+    seoTitle: 'Terracotta İhracat Türkiye | Tarsus Üretici',
+    seoDescription:
+      'Türkiye’den terracotta ihracat. El yapımı saksı ve büyük küp; toptan, otel ve peyzaj projeleri için ihracat teklifi alın.',
+    image: '/images/hero-terracotta.webp',
+    imageAlt: 'Türkiye terracotta ihracat — temsili ürün görseli',
+    publishedAt: '2026-08-26',
+    tags: ['terracotta ihracat', 'Türkiye çömlek', 'wholesale export'],
+    readingMinutes: 5,
+    blocks: [
+      {
+        title: 'İhracat talebinde gerekli bilgiler',
+        body: 'Hedef ülke, ürün grubu, tahmini adet, teslimat noktası ve hedef takvim ihracat teklifinin temelini oluşturur. Paketleme ve taşıma planı ürün ölçüsüne göre ayrıca değerlendirilir.',
+        bullets: ['Ürün listesi ve ölçüler', 'Tahmini sipariş adedi', 'Hedef ülke ve liman/şehir', 'Proje veya toptan kapsamı'],
+      },
+      {
+        title: 'İngilizce iletişim',
+        body: 'Uluslararası alıcılar için İngilizce ürün ve ihracat sayfalarımız mevcuttur. Teklif talebi WhatsApp veya web formu üzerinden iletilebilir.',
+        link: { href: '/ihracat', label: 'İhracat sayfası' },
+      },
+      {
+        title: 'Üretim kapasitesi',
+        body: 'El yapımı üretimde her parça usta eliyle şekillendirilir; büyük siparişlerde üretim takvimi teklif aşamasında netleştirilir.',
+        link: { href: '/en/export', label: 'Export page in English' },
+      },
+    ],
+  },
 ];
 
 const enBlogSeeds: BlogSeed[] = [
