@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { phoneHref, whatsappUrl } from '@/lib/site-data';
+import { business, phoneHref, whatsappUrl } from '@/lib/site-data';
 import { IconPhone, IconQuote, IconWhatsApp } from './icons';
 import { TrackedLink } from './tracked-link';
 

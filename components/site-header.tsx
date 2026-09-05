@@ -43,15 +43,15 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
   const menuId = useId();
 
   useEffect(() => {
-    queueMicrotask(() => setMounted(true));
+    setMounted(true);
   }, []);
 
   useEffect(() => {
-    queueMicrotask(() => setOpen(false));
+    setOpen(false);
   }, [pathname]);
 
   useEffect(() => {
-    if (isDesktop) queueMicrotask(() => setOpen(false));
+    if (isDesktop) setOpen(false);
   }, [isDesktop]);
 
   useEffect(() => {
