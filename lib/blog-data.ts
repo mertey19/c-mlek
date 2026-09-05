@@ -369,6 +369,71 @@ const trBlogSeeds: BlogSeed[] = [
       },
     ],
   },
+  {
+    slug: 'comlekci-nedir',
+    locale: 'tr',
+    kicker: 'Çömlekçi',
+    title: 'Çömlekçi nedir? El yapımı terracotta üreticisini tanımak',
+    intro:
+      '“Çömlekçi” araması; kil ile şekillenen, fırınlanan ve mekâna doğal karakter katan ürünlerin ustasını arayanlar içindir. Tarsus’taki atölyemiz bu geleneği toptan ve proje ölçeğinde sürdürür.',
+    seoTitle: 'Çömlekçi Nedir? | El Yapımı Terracotta Üreticisi — Tarsus',
+    seoDescription:
+      'Çömlekçi kimdir, nasıl çalışır? Tarsus’ta el yapımı terracotta saksı ve büyük küp üreten çömlekçi atölyesi. Toptan ve proje teklifi alın.',
+    image: '/images/workshop.webp',
+    imageAlt: 'Çömlekçi atölyesinde el yapımı terracotta üretimi — temsili görsel',
+    publishedAt: '2026-09-05',
+    tags: ['çömlekçi', 'çömlek ustası', 'terracotta üretici'],
+    readingMinutes: 5,
+    blocks: [
+      {
+        title: 'Çömlekçi ne üretir?',
+        body: 'Çömlekçi; toprağın hazırlanması, şekillendirme, kurutma ve fırınlama adımlarıyla saksı, küp ve dekoratif toprak formlar üretir. El yapımı terracotta’da yüzey tonları ve küçük ölçü farkları doğal kabul edilir.',
+        bullets: ['El şekillendirme', 'Fırınlanmış terracotta', 'Bahçe ve mimari ölçek', 'Toptan / proje tedariki'],
+      },
+      {
+        title: 'Neden üreticiden almak avantajlı?',
+        body: 'Aracı olmadan üreticiyle çalışmak; ölçü, adet, paketleme ve teslimat planını tek konuşmada netleştirmenizi sağlar. Tarsus Çömlekçilik, Mersin bölgesinde doğrudan atölye tedariki sunar.',
+        link: { href: '/toptan-satis', label: 'Toptan tedarik' },
+      },
+      {
+        title: 'İletişim',
+        body: 'Ürün grubu, tahmini adet ve teslimat şehrini paylaşarak teklif sürecini başlatabilirsiniz.',
+        link: { href: whatsappUrl('default'), label: 'WhatsApp’tan yaz' },
+      },
+    ],
+  },
+  {
+    slug: 'comlek-ureticisi',
+    locale: 'tr',
+    kicker: 'Comlek',
+    title: 'Comlek / çömlek üreticisi: Tarsus’tan el yapımı terracotta',
+    intro:
+      '“Comlek” veya “çömlek” yazarak arayanlar için: Tarsus’ta el yapımı terracotta saksı, büyük küp ve dekoratif form üreten atölye.',
+    seoTitle: 'Comlek & Çömlek Üreticisi | Tarsus Terracotta',
+    seoDescription:
+      'Comlek, çömlek ve terracotta üreticisi Tarsus. El yapımı saksı ve büyük küp; toptan, proje ve WhatsApp teklifi.',
+    image: '/images/collection.webp',
+    imageAlt: 'Comlek çömlek terracotta ürün grubu — temsili görsel',
+    publishedAt: '2026-09-05',
+    tags: ['comlek', 'çömlek', 'çömlek üreticisi'],
+    readingMinutes: 4,
+    blocks: [
+      {
+        title: 'Comlek araması neden önemli?',
+        body: 'Birçok kullanıcı Türkçe karakter kullanmadan “comlek” yazar. Bu sayfa hem comlek hem çömlek aramalarını karşılayacak şekilde hazırlandı; ürünlerimiz el yapımı terracotta’dır.',
+      },
+      {
+        title: 'Ürün yelpazesi',
+        body: 'Büyük boy küpler, bahçe saksıları, dekoratif ve mimari formlar. Ölçü ve adet projeye göre planlanır; liste fiyatı yerine teklif ile ilerlenir.',
+        link: { href: '/urunler', label: 'Ürünleri incele' },
+      },
+      {
+        title: 'Teklif alın',
+        body: 'Comlek / çömlek tedariki için ürün tipi ve adedi WhatsApp’tan paylaşın.',
+        link: { href: whatsappUrl('wholesale'), label: 'Toptan teklif' },
+      },
+    ],
+  },
 ];
 
 const enBlogSeeds: BlogSeed[] = [
@@ -436,6 +501,103 @@ const enBlogSeeds: BlogSeed[] = [
       },
     ],
   },
+  {
+    slug: 'tarsus-products',
+    locale: 'en',
+    kicker: 'Tarsus products',
+    title: 'Tarsus products: handmade terracotta pots and jars from Turkey',
+    intro:
+      'Looking for Tarsus products? Our workshop in Tarsus, Mersin produces handmade terracotta pots, oversized jars and decorative pottery for wholesale and project buyers.',
+    seoTitle: 'Tarsus Products | Handmade Terracotta Pots & Jars',
+    seoDescription:
+      'Tarsus products: handmade terracotta pots, jars and planters from Tarsus, Turkey. Wholesale, hospitality and export enquiries welcome.',
+    image: '/images/collection.webp',
+    imageAlt: 'Tarsus products — handmade terracotta collection concept',
+    publishedAt: '2026-09-05',
+    tags: ['Tarsus products', 'Tarsus pottery', 'Turkish terracotta'],
+    readingMinutes: 4,
+    blocks: [
+      {
+        title: 'What “Tarsus products” usually means',
+        body: 'Buyers searching for Tarsus products often want authentic handmade pottery from the Mersin–Tarsus region: large terracotta jars, garden planters and architectural forms made by local craftsmanship.',
+      },
+      {
+        title: 'Product families we supply',
+        body: 'Oversized jars, garden terracotta, decorative pots and project-scale planters. Each piece is handmade, so natural tone and surface variation are part of the material.',
+        link: { href: '/en/products', label: 'Browse products' },
+      },
+      {
+        title: 'Request a quote',
+        body: 'Share product type, quantity and destination to start a structured wholesale or project quotation.',
+        link: { href: whatsappUrl('default', undefined, true), label: 'WhatsApp enquiry' },
+      },
+    ],
+  },
+  {
+    slug: 'terracotta-shop-near-me',
+    locale: 'en',
+    kicker: 'Near me',
+    title: 'Terracotta shop near me? Source directly from a Tarsus maker',
+    intro:
+      'Searching “terracotta shop near me”? If you need handmade terracotta at production scale, buy directly from our workshop in Tarsus, Mersin — with shipping planned for Turkey and export.',
+    seoTitle: 'Terracotta Shop Near Me | Maker in Tarsus, Turkey',
+    seoDescription:
+      'Terracotta shop near me alternatives: buy handmade terracotta pots and jars directly from a Tarsus workshop. Wholesale and project supply.',
+    image: '/images/workshop.webp',
+    imageAlt: 'Terracotta workshop in Tarsus — concept image',
+    publishedAt: '2026-09-05',
+    tags: ['terracotta shop near me', 'terracotta store', 'pottery near me'],
+    readingMinutes: 4,
+    blocks: [
+      {
+        title: 'Local shop vs. maker supply',
+        body: 'A retail terracotta shop near you may stock small decorative pieces. For large jars, garden planters and project quantities, working with a maker in Tarsus often gives better control over size, packing and delivery timing.',
+      },
+      {
+        title: 'Where we are',
+        body: `Our workshop is in Tarsus, Mersin (${business.address}). Visits by appointment; WhatsApp is the fastest way to start a quote.`,
+        link: { href: business.googleMapsUrl, label: 'Open in Google Maps' },
+      },
+      {
+        title: 'How to order',
+        body: 'Send photos of your space or a product type, estimated quantity and city/country. We reply with a focused wholesale or project plan.',
+        link: { href: '/en/contact', label: 'Contact / quote' },
+      },
+    ],
+  },
+  {
+    slug: 'pot-wholesale',
+    locale: 'en',
+    kicker: 'Pot wholesale',
+    title: 'Pot wholesale: handmade terracotta pots from Tarsus',
+    intro:
+      'Need pot wholesale for retail, landscape or hospitality? Order handmade terracotta pots and oversized jars directly from our Tarsus production workshop.',
+    seoTitle: 'Pot Wholesale | Handmade Terracotta from Tarsus',
+    seoDescription:
+      'Pot wholesale from Turkey: handmade terracotta pots and jars from Tarsus. Direct-from-maker pricing for retailers, hotels and landscape projects.',
+    image: '/images/hero-terracotta.webp',
+    imageAlt: 'Pot wholesale terracotta jars — concept image',
+    publishedAt: '2026-09-05',
+    tags: ['pot wholesale', 'wholesale pots', 'terracotta wholesale'],
+    readingMinutes: 5,
+    blocks: [
+      {
+        title: 'What wholesale buyers should prepare',
+        body: 'Clear product type, target size range, estimated quantity, destination and packing expectations speed up pot wholesale quotes. Unit price alone is not enough for large terracotta forms.',
+        bullets: ['Product family and sizes', 'Estimated quantity', 'Delivery city or country', 'Timeline'],
+      },
+      {
+        title: 'Why buy from the maker',
+        body: 'Direct pot wholesale from Tarsus reduces intermediary layers and makes production scheduling, packing and surface variation easier to discuss before you commit.',
+        link: { href: '/en/wholesale', label: 'Wholesale page' },
+      },
+      {
+        title: 'Start a wholesale enquiry',
+        body: 'Message us on WhatsApp with your pot wholesale brief — we continue the conversation in English when needed.',
+        link: { href: whatsappUrl('wholesale', undefined, true), label: 'WhatsApp wholesale' },
+      },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = [...trBlogSeeds, ...enBlogSeeds].map(post);
@@ -450,7 +612,7 @@ export const blogIndexPages: PageContent[] = [
       'Mersin çömlekçi, terracotta saksı, toptan tedarik ve el yapımı üretim hakkında SEO odaklı rehber yazıları. Tarsus’taki atölyemizden güncel bilgiler.',
     seoTitle: 'Blog | Mersin Çömlekçi & Terracotta Rehberi — Tarsus',
     seoDescription:
-      'Mersin çömlekçi, Mersin terracotta, Tarsus çömlek atölyesi ve toptan tedarik hakkında blog yazıları. El yapımı terracotta üretimi ve proje tedariki.',
+      'Çömlekçi, comlek, Mersin terracotta, Tarsus products, pot wholesale ve terracotta shop near me aramaları için rehber yazılar.',
     image: '/images/collection.webp',
     imageAlt: 'Mersin ve Tarsus terracotta blog — temsili görsel',
     blocks: [],
