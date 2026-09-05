@@ -463,4 +463,65 @@ img { max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+  .hero__canvas { opacity: 0 !important; pointer-events: none; }
+  .hero__fallback { opacity: 1 !important; }
+}
+
+/* 3D + motion */
+.hero__canvas-wrap { position: absolute; inset: 0; z-index: 0; }
+.hero__fallback, .hero__canvas, .webgl-fallback { position: absolute; inset: 0; }
+.webgl-fallback__image { object-fit: cover; object-position: 57% center; }
+.hero__fallback { transition: opacity .7s ease; }
+.hero__fallback--hidden { opacity: 0; pointer-events: none; }
+.hero__canvas { opacity: 0; transition: opacity .8s ease; pointer-events: none; }
+.hero__canvas--ready { opacity: 1; }
+.pottery-canvas, .production-canvas, .product-viewer-canvas { width: 100% !important; height: 100% !important; touch-action: pan-y; }
+
+.tilt-card-wrap { height: 100%; transition: transform .35s cubic-bezier(.22,1,.36,1); transform-style: preserve-3d; }
+.tilt-card-wrap .category-card { height: 100%; min-height: inherit; }
+.category-grid .tilt-card-wrap:nth-child(1) { grid-column: span 7; grid-row: span 2; }
+.category-grid .tilt-card-wrap:nth-child(2),
+.category-grid .tilt-card-wrap:nth-child(3) { grid-column: span 5; }
+.category-grid .tilt-card-wrap:nth-child(n+4) { grid-column: span 4; }
+
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; transition-delay: var(--reveal-delay, 0ms); }
+.reveal--visible { opacity: 1; transform: none; }
+
+.heritage-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 34px; padding: 0; list-style: none; }
+.heritage-timeline li { padding: 14px 0; border-top: 1px solid var(--line); }
+.heritage-timeline strong { display: block; font-family: var(--font-serif); font-size: 22px; font-weight: 600; }
+.heritage-timeline span { display: block; margin-top: 6px; color: rgba(24,21,18,.55); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+
+.parallax-image { position: absolute; inset: 0; overflow: hidden; }
+.parallax-image__inner { position: absolute; inset: -4%; will-change: transform; }
+.parallax-image__inner img, .project-feature__parallax img { object-fit: cover; }
+.project-feature__parallax { z-index: 0; }
+
+.production-experience { padding-block: clamp(92px, 11vw, 160px); background: var(--cream); }
+.production-experience__intro { margin-bottom: 48px; }
+.production-experience__layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+.production-experience__stage { position: sticky; top: 96px; min-height: min(72vh, 640px); overflow: hidden; background: #1a1410; border: 1px solid var(--line); }
+.production-experience__steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.production-experience__steps li { padding: 22px 20px; border: 1px solid transparent; border-bottom: 1px solid var(--line); transition: background .35s ease, border-color .35s ease; }
+.production-experience__steps li.is-active { background: rgba(168,95,61,.08); border-color: rgba(168,95,61,.28); }
+.production-experience__steps span { color: var(--terracotta); font-family: var(--font-serif); font-size: 16px; }
+.production-experience__steps h3 { margin: 10px 0 8px; font-family: var(--font-serif); font-size: 28px; font-weight: 600; line-height: 1.05; }
+.production-experience__steps p { margin: 0; color: rgba(24,21,18,.62); font-size: 13px; line-height: 1.7; }
+
+.product-viewer, .product-viewer-fallback { position: absolute; inset: 0; }
+.product-viewer__hint { position: absolute; z-index: 2; left: 16px; bottom: 16px; margin: 0; padding: 8px 10px; background: rgba(24,21,18,.72); color: rgba(255,255,255,.8); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
+.featured-product__media > span { z-index: 3; }
+
+@media (max-width: 900px) {
+  .category-grid .tilt-card-wrap:nth-child(n) { grid-column: auto; grid-row: auto; }
+  .heritage-timeline { grid-template-columns: repeat(2, 1fr); }
+  .production-experience__layout { grid-template-columns: 1fr; }
+  .production-experience__stage { position: relative; top: auto; min-height: 420px; }
+  .hero__canvas { pointer-events: none; }
+}
+
+@media (max-width: 700px) {
+  .production-experience__stage { min-height: 360px; }
+  .heritage-timeline strong { font-size: 18px; }
 }
