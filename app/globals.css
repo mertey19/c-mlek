@@ -114,7 +114,8 @@ img { max-width: 100%; }
 .category-card > span { position: absolute; z-index: 2; inset: auto 24px 22px; display: flex; align-items: end; justify-content: space-between; gap: 18px; }
 .category-card strong { max-width: 70%; font-family: var(--font-serif); font-size: clamp(24px, 2.5vw, 36px); font-weight: 500; line-height: 1; }
 .category-card small { padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,.55); font-size: 8px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
-.category-grid--inner .category-card { min-height: 330px; }
+.category-grid--inner { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 340px; }
+.category-grid--inner .category-card { grid-column: auto; grid-row: auto; }
 
 /* Brand story */
 .story-section { padding: clamp(80px, 11vw, 170px) 0; background: var(--cream); }
