@@ -52,5 +52,11 @@
     "name": "Özel Üretim",
     "en": "Made to Order",
     "image": "/images/workshop.webp"
+  },
+  {
+    "slug": "toptan",
+    "name": "Seramik Çömlek",
+    "en": "ceramic pottery",
+    "image": "/images/uploads/img-3610-20260923180048.webp"
   }
 ]
