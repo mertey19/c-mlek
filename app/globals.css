@@ -102,20 +102,14 @@ img { max-width: 100%; }
 .trust-strip span { margin-top: 5px; color: rgba(255,255,255,.58); font-size: 10px; }
 
 /* Collections */
-.category-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 250px; gap: 14px; }
-.category-card { position: relative; grid-column: span 4; overflow: hidden; background: var(--sand); color: var(--ivory); }
-.category-card--1 { grid-column: span 7; grid-row: span 2; }
-.category-card--2 { grid-column: span 5; }
-.category-card--3 { grid-column: span 5; }
-.category-card--4, .category-card--5, .category-card--6 { grid-column: span 4; }
+.category-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 340px; gap: 14px; }
+.category-card { position: relative; overflow: hidden; background: var(--sand); color: var(--ivory); }
 .category-card img { object-fit: cover; transition: transform .6s cubic-bezier(.22,1,.36,1); }
 .category-card::after { content: ''; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, rgba(18,14,11,.82)); }
 .category-card:hover img { transform: scale(1.035); }
 .category-card > span { position: absolute; z-index: 2; inset: auto 24px 22px; display: flex; align-items: end; justify-content: space-between; gap: 18px; }
 .category-card strong { max-width: 70%; font-family: var(--font-serif); font-size: clamp(24px, 2.5vw, 36px); font-weight: 500; line-height: 1; }
 .category-card small { padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,.55); font-size: 8px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
-.category-grid--inner { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 340px; }
-.category-grid--inner .category-card { grid-column: auto; grid-row: auto; }
 
 /* Brand story */
 .story-section { padding: clamp(80px, 11vw, 170px) 0; background: var(--cream); }
@@ -295,7 +289,7 @@ img { max-width: 100%; }
   .section-heading--split, .story-section__grid, .trade-grid, .featured-product, .faq-section, .instagram-section__grid, .quote-panel, .page-hero__grid, .content-section { grid-template-columns: 1fr; }
   .section-heading--split { gap: 26px; }
   .category-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 360px; }
-  .category-card, .category-card--1, .category-card--2, .category-card--3, .category-card--4, .category-card--5, .category-card--6 { grid-column: auto; grid-row: auto; }
+
   .story-section__media { min-height: 620px; }
   .story-section__copy { max-width: 650px; }
   .trade-card { min-height: 500px; }
