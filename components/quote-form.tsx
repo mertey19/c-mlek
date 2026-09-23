@@ -5,6 +5,26 @@ import { business, whatsappUrl } from '@/lib/site-data';
 import { IconWhatsApp } from './icons';
 import { track } from './tracked-link';
 
+/**
+ * Talebi admin panelindeki "Teklif talepleri" listesine kaydeder. Kayıt başarısız olsa ya da
+ * gecikse bile kullanıcı WhatsApp'a yönlendirilir; en fazla ~1,5 sn beklenir.
+ */
+async function saveLead(form: FormData, english: boolean) {
+  const payload = Object.fromEntries(
+    ['name', 'company', 'phone', 'email', 'country', 'city', 'product', 'quantity', 'message', 'website'].map((key) => [
+      key,
+      String(form.get(key) || ''),
+    ]),
+  );
+  const request = fetch('/api/leads', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...payload, language: english ? 'en' : 'tr', page: window.location.pathname }),
+    keepalive: true,
+  }).catch(() => undefined);
+  await Promise.race([request, new Promise((resolve) => setTimeout(resolve, 1500))]);
+}
+
 export function QuoteForm({ english = false }: { english?: boolean }) {
   const [status, setStatus] = useState<'idle' | 'loading'>('idle');
   const started = useRef(false);
@@ -16,10 +36,11 @@ export function QuoteForm({ english = false }: { english?: boolean }) {
     }
   }
 
-  function submit(event: React.FormEvent<HTMLFormElement>) {
+  async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus('loading');
     const form = new FormData(event.currentTarget);
+    await saveLead(form, english);
     const lines = english
       ? [
           'Hello Tarsus Pottery, quote request from the website:',
@@ -53,7 +74,7 @@ export function QuoteForm({ english = false }: { english?: boolean }) {
   const labels = english
     ? {
         title: 'Trade & project enquiry',
-        intro: 'Fields marked * are required. Submit opens WhatsApp with your details.',
+        intro: 'Fields marked * are required. Your details are stored to prepare the quote, then WhatsApp opens.',
         name: 'Full name',
         company: 'Company',
         phone: 'Phone',
@@ -69,7 +90,7 @@ export function QuoteForm({ english = false }: { english?: boolean }) {
       }
     : {
         title: 'Toptan & proje teklif formu',
-        intro: '* işaretli alanlar zorunludur. Gönderince talebiniz WhatsApp’ta açılır.',
+        intro: '* işaretli alanlar zorunludur. Bilgileriniz teklif hazırlamak için kaydedilir, ardından WhatsApp açılır.',
         name: 'Ad soyad',
         company: 'Firma',
         phone: 'Telefon',
@@ -136,6 +157,10 @@ export function QuoteForm({ english = false }: { english?: boolean }) {
         <label>
           <span>{labels.quantity}</span>
           <input name="quantity" inputMode="numeric" />
+        </label>
+        <label className="quote-form__trap" aria-hidden="true">
+          <span>Website</span>
+          <input name="website" tabIndex={-1} autoComplete="off" />
         </label>
         <label className="quote-form__wide">
           <span>{labels.message} *</span>

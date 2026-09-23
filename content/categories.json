@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "buyuk-boy-kupler",
+    "name": "Büyük Boy Küpler",
+    "en": "Oversized Jars",
+    "image": "/images/hero-terracotta.webp"
+  },
+  {
+    "slug": "terracotta-saksilar",
+    "name": "Terracotta Saksılar",
+    "en": "Terracotta Planters",
+    "image": "/images/collection.webp"
+  },
+  {
+    "slug": "dekoratif-saksilar",
+    "name": "Dekoratif Saksılar",
+    "en": "Decorative Planters",
+    "image": "/images/project-concept.webp"
+  },
+  {
+    "slug": "bahce-saksilari",
+    "name": "Bahçe Saksıları",
+    "en": "Garden Planters",
+    "image": "/images/collection.webp"
+  },
+  {
+    "slug": "seramik-urunler",
+    "name": "Seramik Ürünler",
+    "en": "Ceramic Objects",
+    "image": "/images/workshop.webp"
+  },
+  {
+    "slug": "mimari-saksilar",
+    "name": "Mimari Saksılar",
+    "en": "Architectural Planters",
+    "image": "/images/project-concept.webp"
+  },
+  {
+    "slug": "otel-villa-koleksiyonlari",
+    "name": "Otel & Villa",
+    "en": "Hotel & Villa",
+    "image": "/images/project-concept.webp"
+  },
+  {
+    "slug": "peyzaj-projeleri",
+    "name": "Peyzaj Projeleri",
+    "en": "Landscape Projects",
+    "image": "/images/project-concept.webp"
+  },
+  {
+    "slug": "ozel-uretim",
+    "name": "Özel Üretim",
+    "en": "Made to Order",
+    "image": "/images/workshop.webp"
+  }
+]

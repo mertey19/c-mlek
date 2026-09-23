@@ -1,30 +1,20 @@
-export const business = {
-  name: 'Tarsus Çömlekçilik',
-  legalName: 'Özçereciler Toprak Sanatları',
-  instagram: 'https://www.instagram.com/tarsus_comlekcilik/',
-  instagramHandle: '@tarsus_comlekcilik',
-  youtube: 'https://www.youtube.com/@tarsuscomlekcilik',
-  youtubeHandle: '@tarsuscomlekcilik',
-  founded: '1927',
-  locality: 'Tarsus',
-  region: 'Mersin',
-  country: 'Türkiye',
-  /** Instagram bio — doğrulandı */
-  phone: '905010163096',
-  phoneDisplay: '+90 501 016 30 96',
-  whatsapp: '905010163096',
-  email: null as string | null,
-  streetAddress: 'Yeşil Mah., Hasan Özçivi Cd., 4202. Sk. No: 60',
-  postalCode: '33450',
-  address: 'Yeşil Mah., Hasan Özçivi Cd., 4202. Sk. No: 60, 33450 Tarsus/Mersin',
-  googleBusinessUrl: 'https://share.google/7QKseWR7XjQwdUpvi',
-  googleMapsUrl:
-    'https://www.google.com/maps/search/?api=1&query=Tarsus+%C3%87%C3%B6mlek%C3%A7ilik+4202+Sokak+Ye%C5%9Fil+Mahalle+Tarsus+Mersin',
-  website: 'https://www.tarsuscomlekcilik.com',
-  quoteEndpoint: null as string | null,
-};
+import businessJson from '@/content/business.json';
+import categoriesJson from '@/content/categories.json';
+import productsJson from '@/content/products.json';
+import {
+  WHATSAPP_HREF_CONTEXTS,
+  type Business,
+  type Category,
+  type ContentBlock,
+  type Product,
+} from './content-types';
 
-export type WhatsAppContext = 'default' | 'product' | 'project' | 'wholesale' | 'export' | 'quote';
+export type { ContentBlock, Product } from './content-types';
+
+/** content/business.json — admin panelindeki "Firma bilgileri" ekranından düzenlenir. */
+export const business: Business = businessJson;
+
+export type WhatsAppContext = (typeof WHATSAPP_HREF_CONTEXTS)[number];
 
 export function whatsappMessage(context: WhatsAppContext = 'default', detail?: string, english = false) {
   if (english) {
@@ -69,50 +59,23 @@ export function phoneHref() {
   return `tel:+${business.phone}`;
 }
 
-export type Product = {
-  slug: string;
-  name: string;
-  category: string;
-  shortDescription: string;
-  description: string;
-  images: string[];
-  dimensions?: string;
-  material?: string;
-  color?: string;
-  applications?: string[];
-  featured?: boolean;
-  seoTitle?: string;
-  seoDescription?: string;
-};
+/** Blok linklerinde `whatsapp:<bağlam>` kısayolunu güncel WhatsApp bağlantısına çevirir. */
+export function resolveHref(href: string, english = false) {
+  const context = href.startsWith('whatsapp:') ? href.slice('whatsapp:'.length) : null;
+  if (context && (WHATSAPP_HREF_CONTEXTS as readonly string[]).includes(context)) {
+    return whatsappUrl(context as WhatsAppContext, undefined, english);
+  }
+  return href;
+}
 
-export const products: Product[] = [
-  {
-    slug: 'buyuk-terracotta-kup',
-    name: 'Büyük Terracotta Küp',
-    category: 'Büyük Boy Küpler',
-    shortDescription: 'Girişler, avlular, bahçeler ve peyzaj aksları için heykelsi el yapımı form.',
-    description: 'El işçiliğinin izlerini taşıyan büyük terracotta küpler, tek başına odak parçası veya farklı ölçülerle ritmik bir yerleşim kurmak için değerlendirilir. Her parça el yapımı olduğundan yüzey, ton ve ölçüde doğal küçük farklılıklar görülebilir.',
-    images: ['/images/hero-terracotta.webp', '/images/collection.webp'],
-    material: 'Pişmiş toprak / terracotta',
-    color: 'Doğal terracotta tonları',
-    applications: ['Otel ve resort girişleri', 'Villa bahçeleri', 'Peyzaj projeleri', 'Restoran ve ticari mekânlar'],
-    featured: true,
-    seoTitle: 'Büyük Terracotta Küp | El Yapımı Mimari Çömlek',
-    seoDescription: 'Otel, villa, bahçe ve peyzaj projeleri için el yapımı büyük terracotta küp. Ölçü, üretim ve toptan tedarik seçenekleri için teklif alın.',
-  },
-];
+/** content/products.json — admin panelindeki "Ürünler" ekranından düzenlenir. */
+export const products: Product[] = productsJson;
 
-export const categories = [
-  { slug: 'buyuk-boy-kupler', name: 'Büyük Boy Küpler', en: 'Oversized Jars', image: '/images/hero-terracotta.webp' },
-  { slug: 'terracotta-saksilar', name: 'Terracotta Saksılar', en: 'Terracotta Planters', image: '/images/collection.webp' },
-  { slug: 'dekoratif-saksilar', name: 'Dekoratif Saksılar', en: 'Decorative Planters', image: '/images/project-concept.webp' },
-  { slug: 'bahce-saksilari', name: 'Bahçe Saksıları', en: 'Garden Planters', image: '/images/collection.webp' },
-  { slug: 'seramik-urunler', name: 'Seramik Ürünler', en: 'Ceramic Objects', image: '/images/workshop.webp' },
-  { slug: 'mimari-saksilar', name: 'Mimari Saksılar', en: 'Architectural Planters', image: '/images/project-concept.webp' },
-  { slug: 'otel-villa-koleksiyonlari', name: 'Otel & Villa', en: 'Hotel & Villa', image: '/images/project-concept.webp' },
-  { slug: 'peyzaj-projeleri', name: 'Peyzaj Projeleri', en: 'Landscape Projects', image: '/images/project-concept.webp' },
-  { slug: 'ozel-uretim', name: 'Özel Üretim', en: 'Made to Order', image: '/images/workshop.webp' },
-] as const;
+/** Ana sayfadaki "Öne çıkan form" alanında gösterilen ürün. */
+export const featuredProduct: Product = products.find((product) => product.featured) ?? products[0];
+
+/** content/categories.json — admin panelindeki "Kategoriler" ekranından düzenlenir. */
+export const categories: Category[] = categoriesJson;
 
 export const faqs = [
   ['Toptan satış yapıyor musunuz?', 'Evet. Ürün grubu, adet ve teslimat planına göre toptan tedarik talepleri değerlendirilmektedir.'],
@@ -124,7 +87,6 @@ export const faqs = [
   ['Minimum sipariş miktarı nedir?', 'Sipariş miktarı ürün ve projeye göre değişmektedir. Detaylı bilgi için teklif talebi oluşturabilirsiniz.'],
 ] as const;
 
-export type ContentBlock = { title: string; body: string; bullets?: string[]; link?: { href: string; label: string } };
 export type PageContent = {
   path: string;
   locale: 'tr' | 'en';
@@ -256,7 +218,7 @@ const trPages: PageContent[] = [
   },
 ];
 
-const categoryPages: PageContent[] = categories.slice(0, 5).map((category) => ({
+const categoryPages: PageContent[] = categories.map((category) => ({
   path: `/urunler/${category.slug}`,
   locale: 'tr' as const,
   kicker: 'Ürün koleksiyonu',
@@ -368,19 +330,30 @@ const enPages: PageContent[] = [
   },
 ];
 
+export type ProductPage = PageContent & { product: Product };
+
+// Kategori sayfalarıyla aynı adreste bir ürün olursa kategori sayfası önceliklidir; panel bunu engeller.
+const productPages: ProductPage[] = products.map((product) => ({
+  path: `/urunler/${product.slug}`, locale: 'tr', kicker: 'El yapımı · Büyük ölçek', title: product.name,
+  intro: product.shortDescription,
+  seoTitle: product.seoTitle || `${product.name} | Tarsus Çömlekçilik`,
+  seoDescription: product.seoDescription || product.shortDescription,
+  image: product.images[0], imageAlt: `${product.name} — temsili ürün görseli`,
+  blocks: [
+    { title: 'Heykelsi bir terracotta form', body: product.description, bullets: product.applications },
+    { title: 'Fiyat için teklif alın', body: 'Fiyat; ölçü, adet, üretim durumu, paketleme ve teslimat noktasına göre hazırlanır. Sahte veya bağlayıcı olmayan liste fiyatı yayınlanmaz.', link: { href: '/iletisim#teklif', label: 'Ürün teklifi iste' } },
+  ], faq: faqs.slice(0, 6),
+  product,
+}));
+
+export function productFromPath(path: string) {
+  return productPages.find((page) => page.path === path)?.product;
+}
+
 const utilityPages: PageContent[] = [
-  {
-    path: '/urunler/buyuk-terracotta-kup', locale: 'tr', kicker: 'El yapımı · Büyük ölçek', title: products[0].name,
-    intro: products[0].shortDescription,
-    seoTitle: products[0].seoTitle!, seoDescription: products[0].seoDescription!,
-    image: products[0].images[0], imageAlt: 'El yapımı büyük terracotta küp — temsili ürün görseli',
-    blocks: [
-      { title: 'Heykelsi bir terracotta form', body: products[0].description, bullets: products[0].applications },
-      { title: 'Fiyat için teklif alın', body: 'Fiyat; ölçü, adet, üretim durumu, paketleme ve teslimat noktasına göre hazırlanır. Sahte veya bağlayıcı olmayan liste fiyatı yayınlanmaz.', link: { href: '/iletisim#teklif', label: 'Ürün teklifi iste' } },
-    ], faq: faqs.slice(0, 6),
-  },
+  ...productPages,
   ...[
-    ['/gizlilik', 'Gizlilik Politikası', 'Bu önizleme sürümü kullanıcı hesabı açmaz, form verisi kaydetmez ve doğrulanmış bir analiz/izleme sağlayıcısı bağlanana kadar pazarlama çerezi çalıştırmaz.'],
+    ['/gizlilik', 'Gizlilik Politikası', 'Bu önizleme sürümü kullanıcı hesabı açmaz; teklif formuna yazılan bilgiler yalnızca talebi yanıtlamak amacıyla işletmenin teklif kayıtlarına alınır ve doğrulanmış bir analiz/izleme sağlayıcısı bağlanana kadar pazarlama çerezi çalıştırmaz.'],
     ['/kvkk', 'KVKK Aydınlatma Metni', 'İletişim formunun veri sorumlusu, alıcı adresi, saklama süresi ve hukuki dayanak bilgileri işletme tarafından doğrulanmadan form gönderimi etkinleştirilmez.'],
     ['/cerez-politikasi', 'Çerez Politikası', 'Bu sürüm yalnızca sitenin çalışması için gerekli teknik işlevleri kullanır. Analiz veya reklam etiketleri, açık rıza ve onay yönetimi kurulmadan otomatik başlatılmaz.'],
   ].map(([path, title, intro]) => ({

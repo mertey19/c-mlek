@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { categories, products, whatsappUrl, type PageContent } from '@/lib/site-data';
+import { categories, productFromPath, whatsappUrl, type PageContent } from '@/lib/site-data';
 import { absoluteUrl } from '@/lib/site-url';
 import { ContactBars } from './contact-bars';
 import { IconWhatsApp } from './icons';
@@ -21,6 +21,7 @@ export function PageShell({ page }: { page: PageContent }) {
   const segments = page.path.split('/').filter(Boolean);
   const showCategories = page.path === '/urunler' || page.path === '/en/products';
   const showGallery = page.path === '/galeri';
+  const product = productFromPath(page.path);
   const showQuote = /toptan-satis|projeler|otel-villa-peyzaj|ihracat|iletisim|en\/(wholesale|projects|export|contact)|urunler\//.test(page.path);
   const crumbs = segments.map((segment, index) => ({
     name: labelMap[segment] || page.title,
@@ -106,10 +107,10 @@ export function PageShell({ page }: { page: PageContent }) {
           </div>
         </section>
 
-        {page.path === '/urunler/buyuk-terracotta-kup' && (
+        {product && (
           <section className="section shell product-specs">
             <div className="section-heading"><p className="eyebrow">Ürün bilgileri</p><h2>Teklif öncesi temel kapsam</h2></div>
-            <dl><div><dt>Malzeme</dt><dd>{products[0].material}</dd></div><div><dt>Renk</dt><dd>{products[0].color}</dd></div><div><dt>Ölçüler</dt><dd>Üretim ve mevcut seçenekler için teyit edilir</dd></div><div><dt>Minimum sipariş</dt><dd>Ürün ve projeye göre değişir</dd></div></dl>
+            <dl><div><dt>Malzeme</dt><dd>{product.material || 'Pişmiş toprak / terracotta'}</dd></div><div><dt>Renk</dt><dd>{product.color || 'Doğal terracotta tonları'}</dd></div><div><dt>Ölçüler</dt><dd>{product.dimensions || 'Üretim ve mevcut seçenekler için teyit edilir'}</dd></div><div><dt>Minimum sipariş</dt><dd>Ürün ve projeye göre değişir</dd></div></dl>
           </section>
         )}
 

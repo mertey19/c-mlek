@@ -4,11 +4,12 @@ import { blogPosts } from '@/lib/blog-data';
 import { SITE_URL } from '@/lib/site-url';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const blogPaths = new Set(blogPosts.map((post) => post.path));
+  const blogDates = new Map(blogPosts.map((post) => [post.path, post.updatedAt ?? post.publishedAt]));
+  const blogPaths = new Set(blogDates.keys());
 
   return allIndexablePaths.map((path) => ({
     url: new URL(path, SITE_URL).toString(),
-    lastModified: blogPaths.has(path) ? new Date('2026-08-28') : new Date('2026-08-25'),
+    lastModified: new Date(blogDates.get(path) ?? '2026-08-25'),
     changeFrequency:
       path === '/'
         ? 'weekly'

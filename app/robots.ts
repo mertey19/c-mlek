@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
   const production = process.env.NODE_ENV === 'production';
 
   return {
-    rules: production ? { userAgent: '*', allow: '/' } : { userAgent: '*', disallow: '/' },
+    rules: production ? { userAgent: '*', allow: '/', disallow: ['/admin', '/api/'] } : { userAgent: '*', disallow: '/' },
     sitemap: absoluteUrl('/sitemap.xml'),
   };
 }

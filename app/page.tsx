@@ -7,7 +7,7 @@ import { QuoteForm } from '@/components/quote-form';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { TrackedLink } from '@/components/tracked-link';
-import { business, categories, faqs, products, whatsappUrl } from '@/lib/site-data';
+import { business, categories, faqs, featuredProduct, whatsappUrl } from '@/lib/site-data';
 import { IconInstagram, IconWhatsApp } from '@/components/icons';
 import { absoluteUrl } from '@/lib/site-url';
 
@@ -135,8 +135,8 @@ export default function Home() {
         </section>
 
         <section className="featured-product section shell">
-          <div className="featured-product__media"><Image src={products[0].images[1]} alt="El yapımı büyük terracotta küp koleksiyonu — temsili ürün görseli" fill sizes="(max-width: 800px) 100vw, 58vw" /><span>Temsili ürün görseli</span></div>
-          <div className="featured-product__copy"><p className="eyebrow">Öne çıkan form</p><h2>{products[0].name}</h2><p>{products[0].description}</p><dl><div><dt>Malzeme</dt><dd>{products[0].material}</dd></div><div><dt>Kullanım</dt><dd>Mimari, bahçe ve peyzaj</dd></div><div><dt>Fiyat</dt><dd>Teklif ile</dd></div></dl><TrackedLink className="button button--dark" href={`/urunler/${products[0].slug}`} eventName="product_view" eventData={{ product: products[0].slug }}>Ürünü incele</TrackedLink></div>
+          <div className="featured-product__media"><Image src={featuredProduct.images[1] ?? featuredProduct.images[0]} alt={`${featuredProduct.name} — temsili ürün görseli`} fill sizes="(max-width: 800px) 100vw, 58vw" /><span>Temsili ürün görseli</span></div>
+          <div className="featured-product__copy"><p className="eyebrow">Öne çıkan form</p><h2>{featuredProduct.name}</h2><p>{featuredProduct.description}</p><dl><div><dt>Malzeme</dt><dd>{featuredProduct.material}</dd></div><div><dt>Kullanım</dt><dd>Mimari, bahçe ve peyzaj</dd></div><div><dt>Fiyat</dt><dd>Teklif ile</dd></div></dl><TrackedLink className="button button--dark" href={`/urunler/${featuredProduct.slug}`} eventName="product_view" eventData={{ product: featuredProduct.slug }}>Ürünü incele</TrackedLink></div>
         </section>
 
         <section className="faq-section section shell" aria-labelledby="home-faq-title"><div className="section-heading"><p className="eyebrow">Satış öncesi</p><h2 id="home-faq-title">Sık sorulan sorular</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></section>
