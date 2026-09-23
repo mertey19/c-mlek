@@ -11,14 +11,31 @@
     ],
     "material": "Pişmiş toprak / terracotta",
     "color": "Doğal terracotta tonları",
+    "seoTitle": "Büyük Terracotta Küp | El Yapımı Mimari Çömlek",
+    "seoDescription": "Otel, villa, bahçe ve peyzaj projeleri için el yapımı büyük terracotta küp. Ölçü, üretim ve toptan tedarik seçenekleri için teklif alın.",
     "applications": [
       "Otel ve resort girişleri",
       "Villa bahçeleri",
       "Peyzaj projeleri",
       "Restoran ve ticari mekânlar"
+    ]
+  },
+  {
+    "slug": "seramik-comlek",
+    "name": "Seramik Çömlek",
+    "category": "Seramik Ürünler",
+    "shortDescription": "Topraktan el yapımı seramik terracota",
+    "description": "Evinize renk ve değer katmak isteyenlerin tercihi",
+    "images": [
+      "/images/uploads/img-2038-20260923174902.jpg",
+      "/images/uploads/img-3609-20260923174922.webp",
+      "/images/uploads/img-3598-20260923174940.webp",
+      "/images/uploads/img-3612-20260923175001.webp"
     ],
-    "featured": true,
-    "seoTitle": "Büyük Terracotta Küp | El Yapımı Mimari Çömlek",
-    "seoDescription": "Otel, villa, bahçe ve peyzaj projeleri için el yapımı büyük terracotta küp. Ölçü, üretim ve toptan tedarik seçenekleri için teklif alın."
+    "dimensions": "H-36 W-25 - KG-3.5",
+    "applications": [
+      "Dekoratif- çiçek saksısı"
+    ],
+    "featured": true
   }
 ]
