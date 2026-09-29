@@ -35,6 +35,23 @@
     "dimensions": "H-36 W-25 - KG-3.5",
     "applications": [
       "Dekoratif- çiçek saksısı"
+    ]
+  },
+  {
+    "slug": "ceramic",
+    "name": "Ceramic",
+    "category": "Ceramic-pottery",
+    "shortDescription": "100% handmade ceramic pottery",
+    "description": "Add a rustic touch and a splash of color to your home with 100% handmade ceramic pottery.",
+    "images": [
+      "/images/uploads/img-2047-20260929223308.jpg",
+      "/images/uploads/img-2048-20260929223328.jpg"
+    ],
+    "dimensions": "40x14",
+    "material": "Pişmiş toprak",
+    "color": "Açık mavi ve yeşil",
+    "applications": [
+      "Dekorasyon"
     ],
     "featured": true
   }
