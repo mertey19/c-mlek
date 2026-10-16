@@ -90,6 +90,7 @@ export function SiteFooter({ english = false }: { english?: boolean }) {
             {english ? 'Google Maps' : 'Google Haritalar'}
           </a>
           {!english && <Link href="/rehber">Terracotta rehberi</Link>}
+          {!english && <Link href="/mersin">Mersin ilçe tedarik rehberi</Link>}
           <Link href={english ? '/en/blog' : '/blog'}>{english ? 'Terracotta blog' : 'Terracotta blog'}</Link>
         </div>
       </div>

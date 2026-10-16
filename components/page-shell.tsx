@@ -9,22 +9,31 @@ import { QuoteForm } from './quote-form';
 import { SiteFooter } from './site-footer';
 import { SiteHeader } from './site-header';
 import { TrackedLink } from './tracked-link';
+import { ServiceAreaDirectory } from './service-area-directory';
+import { districtFromPath, districtPath, mersinDistricts, SERVICE_AREAS_UPDATED } from '@/lib/service-areas';
+import { localBusinessSchema } from '@/lib/business-schema';
+import { postsForServiceArea } from '@/lib/blog-data';
 
 const labelMap: Record<string, string> = {
   urunler: 'Ürünler', projeler: 'Projeler', 'toptan-satis': 'Toptan Satış', ihracat: 'İhracat', atolye: 'Atölye',
   hakkimizda: 'Hakkımızda', galeri: 'Galeri', iletisim: 'İletişim', rehber: 'Rehber', en: 'English',
   products: 'Products', wholesale: 'Wholesale', projects: 'Projects', export: 'Export', about: 'About', contact: 'Contact',
+  mersin: 'Mersin',
 };
 
 export function PageShell({ page }: { page: PageContent }) {
   const english = page.locale === 'en';
+  const district = districtFromPath(page.path);
+  const isAreaHub = page.path === '/mersin';
+  const isServiceArea = !!district || isAreaHub;
+  const areaPosts = isServiceArea ? postsForServiceArea(page.path) : [];
   const segments = page.path.split('/').filter(Boolean);
   const showCategories = page.path === '/urunler' || page.path === '/en/products';
   const showGallery = page.path === '/galeri';
   const product = productFromPath(page.path);
-  const showQuote = /toptan-satis|projeler|otel-villa-peyzaj|ihracat|iletisim|en\/(wholesale|projects|export|contact)|urunler\//.test(page.path);
+  const showQuote = isServiceArea || /toptan-satis|projeler|otel-villa-peyzaj|ihracat|iletisim|en\/(wholesale|projects|export|contact)|urunler\//.test(page.path);
   const crumbs = segments.map((segment, index) => ({
-    name: labelMap[segment] || page.title,
+    name: labelMap[segment] || (district?.slug === segment ? district.name : page.title),
     path: `/${segments.slice(0, index + 1).join('/')}`,
   }));
   const breadcrumbSchema = {
@@ -39,6 +48,19 @@ export function PageShell({ page }: { page: PageContent }) {
     { '@context': 'https://schema.org', ...breadcrumbSchema },
   ];
   if (page.faq) schema.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: page.faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) });
+  if (isServiceArea) schema.push(localBusinessSchema());
+  if (district) schema.push({
+    '@context': 'https://schema.org', '@type': 'Service', '@id': `${absoluteUrl(page.path)}#service`,
+    name: `${district.name} için çömlek ve terracotta tedariki`, serviceType: 'El yapımı terracotta ürün tedariki',
+    description: page.seoDescription, url: absoluteUrl(page.path),
+    provider: { '@id': `${absoluteUrl('/')}#organization` },
+    areaServed: { '@type': 'AdministrativeArea', name: `${district.name}, Mersin`, containedInPlace: { '@type': 'AdministrativeArea', name: 'Mersin, Türkiye' } },
+  });
+  if (isAreaHub) schema.push({
+    '@context': 'https://schema.org', '@type': 'ItemList', name: 'Mersin ilçe tedarik rehberi',
+    numberOfItems: mersinDistricts.length,
+    itemListElement: mersinDistricts.map((area, index) => ({ '@type': 'ListItem', position: index + 1, name: area.name, url: absoluteUrl(districtPath(area.slug)) })),
+  });
 
   return (
     <>
@@ -57,11 +79,11 @@ export function PageShell({ page }: { page: PageContent }) {
               <div className="page-hero__actions">
                 <TrackedLink
                   className="button button--whatsapp"
-                  href={whatsappUrl(english ? 'default' : 'default', undefined, english)}
+                  href={district ? whatsappUrl('quote', `Merhaba, ${district.name} / Mersin için çömlek ve terracotta ürün teklifi almak istiyorum. Ürün, adet ve teslimat ayrıntılarını paylaşmak istiyorum.`) : whatsappUrl('default', undefined, english)}
                   target="_blank"
                   rel="noreferrer"
                   eventName="whatsapp_click"
-                  eventData={{ location: 'page_hero' }}
+                  eventData={{ location: 'page_hero', ...(district ? { district: district.slug } : {}) }}
                 >
                   <IconWhatsApp />
                   {english ? 'WhatsApp quote' : 'WhatsApp’tan teklif'}
@@ -77,6 +99,8 @@ export function PageShell({ page }: { page: PageContent }) {
             </figure>
           </div>
         </div>
+
+        {isAreaHub && <ServiceAreaDirectory />}
 
         {showCategories && (
           <section className="section shell" aria-labelledby="collections-title">
@@ -115,6 +139,13 @@ export function PageShell({ page }: { page: PageContent }) {
         )}
 
         {showGallery && <EditorialGallery />}
+        {isServiceArea && <div className="service-area-note shell"><p>Üretim ve ziyaret noktası Tarsus’taki atölyemizdir. İlçe bazlı sayfalar ayrı şube veya mağaza adresi değildir.</p><p>Son içerik güncellemesi: <time dateTime={SERVICE_AREAS_UPDATED}>{new Intl.DateTimeFormat('tr-TR', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(SERVICE_AREAS_UPDATED))}</time></p>{district && <Link className="text-link text-link--dark" href="/mersin">Diğer Mersin ilçeleri <span>↗</span></Link>}</div>}
+        {areaPosts.length > 0 && <section className="section shell" aria-labelledby="district-reading-title">
+          <div className="section-heading"><p className="eyebrow">Ürün seçimine hazırlanırken</p><h2 id="district-reading-title">{district ? `${district.name} için pratik rehber` : 'Mersin ilçelerinden kullanım rehberleri'}</h2></div>
+          <div className="blog-grid">{areaPosts.map((post) => <article key={post.path} className="blog-card"><div className="blog-card__body">
+            <h3><Link href={post.path}>{post.title}</Link></h3><p>{post.intro}</p><Link className="text-link text-link--dark" href={post.path}>Rehberi okuyun <span>↗</span></Link>
+          </div></article>)}</div>
+        </section>}
         {page.faq && <Faq items={page.faq} english={english} />}
         {showQuote && <div className="shell section"><QuoteForm english={english} /></div>}
         <FinalCta english={english} />

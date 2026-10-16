@@ -10,6 +10,8 @@ import { TrackedLink } from '@/components/tracked-link';
 import { business, categories, faqs, featuredProduct, whatsappUrl } from '@/lib/site-data';
 import { IconInstagram, IconWhatsApp } from '@/components/icons';
 import { absoluteUrl } from '@/lib/site-url';
+import { ServiceAreaDirectory } from '@/components/service-area-directory';
+import { localBusinessSchema } from '@/lib/business-schema';
 
 export const metadata: Metadata = {
   title: 'Mersin Çömlekçi & El Yapımı Terracotta | Tarsus Çömlekçilik',
@@ -34,28 +36,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const schemas = [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      '@id': `${absoluteUrl('/')}#organization`,
-      name: business.name,
-      alternateName: business.legalName,
-      foundingDate: business.founded,
-      url: absoluteUrl('/'),
-      logo: absoluteUrl('/og.png'),
-      image: absoluteUrl('/og.png'),
-      telephone: `+${business.phone}`,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: business.streetAddress,
-        addressLocality: business.locality,
-        addressRegion: business.region,
-        postalCode: business.postalCode,
-        addressCountry: 'TR',
-      },
-      sameAs: [business.website, business.instagram, business.youtube, business.googleBusinessUrl, business.googleMapsUrl],
-      areaServed: [{ '@type': 'Country', name: 'Türkiye' }, { '@type': 'AdministrativeArea', name: 'Mersin' }],
-    },
+    localBusinessSchema(),
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
@@ -168,6 +149,7 @@ export default function Home() {
         <section className="instagram-section"><div className="shell instagram-section__grid"><div><p className="eyebrow">Atölyeden güncel kareler</p><h2>Atölyemizi Instagram’da takip edin</h2><p>{business.instagramHandle}</p><TrackedLink className="button button--dark button--with-icon" href={business.instagram} target="_blank" rel="noreferrer" eventName="instagram_click"><IconInstagram /> Instagram’ı aç</TrackedLink></div><div className="instagram-section__images"><figure><Image src="/images/workshop.webp" alt="Terracotta üretim süreci — temsili görsel" fill sizes="35vw" /></figure><figure><Image src="/images/collection.webp" alt="Terracotta ürün koleksiyonu — temsili görsel" fill sizes="35vw" /></figure></div></div></section>
 
         <div className="shell section"><QuoteForm /></div>
+        <ServiceAreaDirectory compact />
 
         <section className="final-cta"><div className="shell final-cta__inner"><p className="eyebrow">Toptan · Proje · İhracat</p><h2>Projeniz için doğru çömleği birlikte seçelim.</h2><p>Ürün türü, adet ve teslimat noktasını WhatsApp’tan paylaşın; doğru tedarik planıyla başlayalım.</p><div className="final-cta__actions"><TrackedLink className="button button--whatsapp" href={whatsappUrl('default')} target="_blank" rel="noreferrer" eventName="whatsapp_click" eventData={{ location: 'final_cta' }}><IconWhatsApp /> WhatsApp’tan teklif al</TrackedLink><Link className="button button--light" href="#teklif">Teklif formunu aç</Link></div></div></section>
       </main>

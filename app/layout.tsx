@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import { AnalyticsReady } from '@/components/analytics-ready';
 import { SITE_URL } from '@/lib/site-url';
+import { allowIndexing } from '@/lib/indexing';
 import './globals.css';
 
 const serif = Cormorant_Garamond({
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image', title: 'Tarsus Çömlekçilik | Toprağın Ustalığı',
     description: 'El yapımı terracotta; toptan, proje ve ihracat için Tarsus’tan dünyaya.', images: ['/og.png'],
   },
-  robots: { index: true, follow: true },
+  robots: { index: allowIndexing, follow: true },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32' },

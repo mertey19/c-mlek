@@ -248,7 +248,7 @@ function BlogArticle({ post }: { post: BlogPost }) {
             headline: post.title,
             description: post.seoDescription,
             datePublished: post.publishedAt,
-            dateModified: post.publishedAt,
+            dateModified: post.updatedAt ?? post.publishedAt,
             inLanguage: english ? 'en' : 'tr-TR',
             url: absoluteUrl(post.path),
             image: [absoluteUrl(post.image)],

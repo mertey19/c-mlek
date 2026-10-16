@@ -84,6 +84,13 @@ export function isBlogPath(path: string) {
   return path === '/blog' || path === '/en/blog' || path.startsWith('/blog/') || path.startsWith('/en/blog/');
 }
 
+/** Infer the district relationship from an editable article link, not a duplicate slug registry. */
+export function postsForServiceArea(path: string) {
+  return postsForLocale('tr').filter((item) => item.blocks.some((block) =>
+    path === '/mersin' ? block.link?.href.startsWith('/mersin/') : block.link?.href === path,
+  ));
+}
+
 export function blogPostFromPath(path: string) {
   return blogPosts.find((item) => item.path === path);
 }

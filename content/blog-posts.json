@@ -714,5 +714,648 @@
         }
       }
     ]
+  },
+  {
+    "slug": "akdeniz-isletme-girisi-terracotta-saksi-secimi",
+    "locale": "tr",
+    "kicker": "Akdeniz · İşletme girişleri",
+    "title": "Akdeniz’de işletme girişine terracotta saksı seçerken ölçü ve adet planı",
+    "intro": "Akdeniz’de mağaza, ofis veya restoran girişiniz için çömlek seçerken yalnızca görünüme bakmayın. Kapı hareketi, ürünün en geniş çapı ve teslim alma düzeni aynı planın parçalarıdır.",
+    "seoTitle": "Akdeniz Terracotta Saksı | İşletme Girişi Rehberi",
+    "seoDescription": "Akdeniz’de işletme girişi için terracotta saksı nasıl seçilir? Ölçü alma, tekli ve ikili yerleşim, toplu sipariş ve teslimat hazırlığı rehberi.",
+    "image": "/images/project-concept.webp",
+    "imageAlt": "İşletme girişinde terracotta yerleşimini anlatan temsili mimari konsept",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Akdeniz çömlek",
+      "işletme giriş saksısı",
+      "terracotta"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Önce kapının kullandığı alanı belirleyin",
+        "body": "Giriş fotoğrafını kapı kapalıyken çekmek tek başına yeterli değildir. Kapı açıkken kalan boşluğu, insanların beklediği noktayı ve servis malzemelerinin geçtiği hattı da kaydedin. Saksının tabanı dar olsa bile gövdesi dışarı doğru genişleyebilir. Teklif için taban çapının yanında en geniş dış çapı istemek, ürün geldikten sonra yer değiştirme ihtiyacını azaltır.",
+        "bullets": [
+          "Kapının açık ve kapalı halini fotoğraflayın.",
+          "Kullanılabilir alanı zemine sökülebilir bantla işaretleyin.",
+          "Temizlik ve servis geçişini ayrıca kontrol edin."
+        ]
+      },
+      {
+        "title": "Tek büyük form mu, karşılıklı iki saksı mı?",
+        "body": "İkili yerleşim düzenli bir giriş vurgusu oluşturabilir; ancak iki tarafa aynı büyüklüğü sığdırmaya çalışmak zorunda değilsiniz. Bir yanda tabela veya basamak varsa tek odak parçası daha anlaşılır bir çözüm olabilir. Örnek bir karşılaştırmada, iki orta boy bitkili saksı ile bir büyük dekoratif küpü ayrı teklif kalemleri olarak isteyin. Bunlar aynı kullanım ve bakım kapsamına sahip değildir.",
+        "link": {
+          "href": "/urunler/mimari-saksilar",
+          "label": "Mimari saksı grubunu inceleyin"
+        }
+      },
+      {
+        "title": "Çok adresli alımlarda ürünleri konumla eşleştirin",
+        "body": "Akdeniz’de birden fazla işletme noktanız için alım yapıyorsanız sadece toplam adet yazmayın. Her girişe bir kod verip karşısına form, yaklaşık ölçü ve adet ekleyin. Aynı görünüm istenen parçaların birlikte değerlendirilmesi yararlıdır; el yapımı ürünlerde ton ve yüzey farklılıkları beklenebilir. Sonradan ilave edilen siparişin önceki partiyle birebir aynı olacağını varsaymayın."
+      },
+      {
+        "title": "Teklifleri aynı kapsam üzerinden karşılaştırın",
+        "body": "Birim ürün fiyatına ek olarak ambalaj, sevkiyat ve indirme kapsamını sorun. Bina girişine teslim, ürünün son yerine taşınması ve bitki dikimi farklı işlerdir. Örneğin iki tekliften biri yalnızca ürünleri, diğeri ambalajı da içeriyorsa görünen toplamlar doğrudan karşılaştırılamaz. İşletmenizin teslim alabileceği saat aralığını baştan belirtin; kesin gün ve bedel sipariş değerlendirmesinde netleşir."
+      },
+      {
+        "title": "Akdeniz için teklif dosyanızı tamamlayın",
+        "body": "Giriş fotoğrafları, ölçü krokisi, ürün listesi ve teslimat mahallesi başlangıç için yeterli bir çerçeve oluşturur. Tarsus’taki atölyemiz bu bilgiler üzerinden seçenekleri değerlendirir; Akdeniz’de ayrı bir mağaza adresimiz bulunduğu anlamı çıkarılmamalıdır. Ziyaret etmek isterseniz {{adres}} adresindeki atölye için önceden iletişime geçin. İlçeye yönelik tedarik sayfasında teklif hazırlığı bilgilerini bulabilirsiniz.",
+        "link": {
+          "href": "/mersin/akdeniz",
+          "label": "Akdeniz ürün ve tedarik bilgileri"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "anamur-bahce-terracotta-saksi-yerlesimi",
+    "locale": "tr",
+    "kicker": "Anamur · Bahçe düzeni",
+    "title": "Anamur’da bahçe için terracotta saksı yerleşimi nasıl planlanır?",
+    "intro": "Anamur’daki bahçenize saksı seçerken tek bir ürün fotoğrafından başlayıp bütün alanı doldurmak yerine giriş, oturma köşesi ve yürüyüş yoluna farklı görevler verin.",
+    "seoTitle": "Anamur Bahçe Saksısı | Terracotta Yerleşim Rehberi",
+    "seoDescription": "Anamur bahçeleri için terracotta saksı yerleşimini planlayın. Odak küpü, bitkili saksı grubu, ölçü listesi ve toplu teslimat hazırlığı önerileri.",
+    "image": "/images/collection.webp",
+    "imageAlt": "Farklı ölçülerde terracotta saksılar için temsili koleksiyon görseli",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Anamur bahçe saksısı",
+      "terracotta yerleşimi",
+      "dekoratif küp"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Bahçeyi üç kullanım alanına ayırın",
+        "body": "Önce girişte neyin dikkat çekmesini istediğinizi belirleyin. Ardından oturma bölümünde konuşma ve hareket alanını, yürüyüş yolunda ise geçişi düşünün. Her noktaya büyük bir küp koymak görsel bir bütünlük yaratmak zorunda değildir. Basit bir kroki üzerinde odak parçasını, yardımcı saksıları ve boş bırakılacak alanları işaretlemek ürün sayısını gerçekten ihtiyacınız olan düzeyde tutar."
+      },
+      {
+        "title": "Yüksekliği değil, bütün silueti karşılaştırın",
+        "body": "Aynı yükseklikteki iki saksıdan biri dar ağızlı, diğeri geniş omuzlu olabilir. Bu fark hem uzaktan görünüşü hem de zeminde kaplanan alanı değiştirir. Örnek olarak bir giriş küpüyle iki alçak bitki saksısını düşünüyorsanız üçünün fotoğrafını aynı ölçekte yan yana isteyin. Fotoğraflar farklı uzaklıklardan çekilmişse boyut ilişkisi yanıltıcı olabilir.",
+        "link": {
+          "href": "/urunler/bahce-saksilari",
+          "label": "Bahçe saksısı seçenekleri"
+        }
+      },
+      {
+        "title": "Bitkili kullanımın bilgilerini ayrı yazın",
+        "body": "Dekoratif küp ile dikim için kullanılacak saksıyı aynı ürün listesinde açıkça ayırın. Bitkili kullanım için iç hacim, ağız açıklığı, drenaj ve iç saksı tercihini sorun. Bitkinin ihtiyaçları konusunda bakımını üstlenecek kişiyle görüşün; sadece dış görünüşten uygunluk sonucu çıkarmayın. Mevcut bir iç saksıyı yerleştirecekseniz onun en geniş çapını ve yüksekliğini de ölçün."
+      },
+      {
+        "title": "Birlikte siparişin hesabını ambalajla yapın",
+        "body": "Anamur adresinize gönderilecek kalemleri form, ölçü ve adet olarak tek listede toplamak sevkiyat hesabını anlaşılır kılar. Sonradan eklenen büyük bir parça farklı ambalaj veya taşıma düzeni gerektirebilir. Ürünlerin aynı zamanda hazır olmasını talep edebilirsiniz, fakat bunun mümkün olup olmadığı stok ve üretim durumuna bağlıdır. Teslimatta ambalajlı ürünlerin geçici olarak duracağı alanı da planınıza ekleyin."
+      },
+      {
+        "title": "Sipariş öncesi son kontrol",
+        "body": "Krokideki bütün saksıları sayın ve her birinin kullanımını not edin. Aynı ürün için farklı isimler kullanmak yerine basit kodlar seçin: giriş küpü, oturma köşesi birinci saksı gibi. Anamur tedarik talebinizi bu listeyle Tarsus atölyemize iletebilirsiniz. İlçedeki teslimat noktası, erişim koşulları ve tercih edilen tarih aralığı değerlendirilerek teklif hazırlanır; sabit teslimat günü veya ücretsiz sevkiyat varsayılmamalıdır.",
+        "bullets": [
+          "Form ve yaklaşık ölçü",
+          "Bitkili veya dekoratif kullanım",
+          "Her konum için adet",
+          "Teslim alacak kişi ve erişim bilgisi"
+        ],
+        "link": {
+          "href": "/mersin/anamur",
+          "label": "Anamur için tedarik talebi oluşturun"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "aydincik-kucuk-mekan-dekoratif-comlek-secimi",
+    "locale": "tr",
+    "kicker": "Aydıncık · Küçük mekânlar",
+    "title": "Aydıncık’ta küçük bir kafe veya giriş için dekoratif çömlek seçimi",
+    "intro": "Dar bir alanda doğru çömlek en büyük olan değildir. Aydıncık’taki küçük kafeniz, ev girişiniz veya oturma köşeniz için çap, görüş ve günlük kullanımı birlikte değerlendirin.",
+    "seoTitle": "Aydıncık Dekoratif Çömlek | Küçük Mekân Rehberi",
+    "seoDescription": "Aydıncık’ta küçük kafe ve ev girişleri için dekoratif çömlek seçimi. Karton ölçü denemesi, gövde çapı, görüş alanı ve teklif hazırlığı önerileri.",
+    "image": "/images/project-concept.webp",
+    "imageAlt": "Dekoratif çömleğin mimari alanda kullanımına ilişkin temsili konsept",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Aydıncık çömlek",
+      "dekoratif saksı",
+      "küçük mekân"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Fotoğrafa bakmadan önce zeminde deneyin",
+        "body": "Beğendiğiniz ürünün en geniş çapını öğrenip yaklaşık aynı büyüklükte bir karton daire hazırlayın. Daireyi düşündüğünüz noktaya koyarak kapıyı açın, sandalyeyi çekin ve temizlik için yanından geçin. Bu prova ürünün yüksekliğini göstermez, fakat zeminde ayrılması gereken alanı anlaşılır kılar. Ölçüler kesinleşmeden yapılan görsel denemeyi bir montaj veya güvenlik onayı olarak değerlendirmeyin."
+      },
+      {
+        "title": "Masa yanına ve kapı önüne farklı sorular sorun",
+        "body": "Masa yanında ürünün gövdesi sandalye hareketini etkiler; kapı önünde ise kapının açılma yönü öne çıkar. Küçük kafe düzeninde aynı modeli her noktaya tekrarlamak yerine kullanım farkını listeleyin. Oturan birinin görüşünü kapatan yüksek form ile alçak bir saksı farklı sonuç verir. Ürüne bitki eklenecekse toplam görünümün yalnızca çömlek yüksekliğinden oluşmadığını unutmayın.",
+        "link": {
+          "href": "/urunler/dekoratif-saksilar",
+          "label": "Dekoratif saksı grubunu keşfedin"
+        }
+      },
+      {
+        "title": "Bir odak parçasına yer açın",
+        "body": "Küçük bir alanda birbiriyle yarışan çok sayıda form yerine tek bir dikkat noktası belirlemek seçimi kolaylaştırır. Örnek olarak raf, tabela ve desenli duvarın bulunduğu bir köşede sade bir formu değerlendirebilirsiniz. Daha boş bir duvarda ise belirgin omuzlu bir küp düşünülebilir. Bu bir stil zorunluluğu değil, seçenekleri karşılaştırmak için kullanabileceğiniz bir yöntemdir."
+      },
+      {
+        "title": "Bakım sırasında ürünün çevresine erişebiliyor musunuz?",
+        "body": "Yerleşim kararı yalnızca ilk gün için verilmez. Temizlik, bitki bakımı ve masa düzeni değişirken saksının çevresine erişmek gerekir. Sürekli taşınması gerekecek bir noktaya büyük form seçmeden önce bu ihtiyacı atölyeye anlatın. Dolu ve boş ağırlığı aynı kabul etmeyin; ürünün nasıl tutulacağı veya taşınacağı seçilen form için ayrıca sorulmalıdır."
+      },
+      {
+        "title": "Aydıncık talebiniz için üç fotoğraf hazırlayın",
+        "body": "Alanın genel görünüşünü, ürünün düşünüldüğü köşeyi ve giriş yolunu fotoğraflayın. Yanına kullanılabilir genişliği, tahmini ürün yüksekliğini ve adedi yazın. Tarsus atölyemiz Aydıncık taleplerini bu bilgilerle değerlendirir; yerel şube veya hazır stok sözü verilmez. Ürün seçimiyle birlikte teslimat adresi ve erişim koşullarını paylaşmanız, teklifin kullanım alanınıza göre hazırlanmasını sağlar.",
+        "link": {
+          "href": "/mersin/aydincik",
+          "label": "Aydıncık çömlek ve tedarik rehberi"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "bozyazi-yazlik-ev-terracotta-saksi-planlama",
+    "locale": "tr",
+    "kicker": "Bozyazı · Dönemsel kullanım",
+    "title": "Bozyazı’daki yazlık ev için terracotta saksı seçimi ve sezon planı",
+    "intro": "Yalnızca yılın bir bölümünde kullandığınız evde saksı seçimi, evde olmadığınız dönemi de kapsar. Bozyazı için ürün listesi hazırlarken bakım sorumluluğunu ve teslim alma zamanını netleştirin.",
+    "seoTitle": "Bozyazı Terracotta Saksı | Yazlık Ev İçin Seçim",
+    "seoDescription": "Bozyazı’daki yazlık ev için terracotta saksı ve küp planlayın. Bitkili veya dekoratif kullanım, sezon sonu düzeni ve teslim alma kontrol listesi.",
+    "image": "/images/hero-terracotta.webp",
+    "imageAlt": "Bahçe ve avlu kullanımını temsil eden terracotta küp konsepti",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Bozyazı saksı",
+      "yazlık ev dekorasyonu",
+      "terracotta küp"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Ev boşken ürünün kullanımını düşünün",
+        "body": "Saksıyı bitki yetiştirmek için mi, yalnızca dekoratif bir odak olarak mı istediğinizi baştan yazın. Bitkili kullanımda bakımın kim tarafından sürdürüleceği ayrı bir karardır. Dekoratif küpte ise yerleşim, yüzey koşulları ve kullanılmadığı dönemde korunma düzeni öne çıkar. İki seçeneği aynı ürün fotoğrafı üzerinden değerlendirmek, ihtiyaç duyduğunuz özellikleri gözden kaçırmanıza neden olabilir."
+      },
+      {
+        "title": "Terastaki görünümle günlük erişimi birlikte test edin",
+        "body": "Bozyazı’daki evin terasına ürün düşünüyorsanız masa ve oturma elemanlarını kullanım konumlarına getirin. Kapı, perde veya gölgelik hareket ederken kalan alanı kontrol edin. Boş bir terasta uygun görünen büyük form, eşyalar yerleştiğinde baskın olabilir. Ürün ağırlığı veya terasın taşıma kapasitesi hakkında tahmin yapmayın; bu konular gerektiğinde ilgili uygulama uzmanıyla değerlendirilmelidir.",
+        "link": {
+          "href": "/urunler/terracotta-saksilar",
+          "label": "Terracotta saksı seçeneklerini görün"
+        }
+      },
+      {
+        "title": "Taşınacak ürün ile yerinde kalacak ürünü ayırın",
+        "body": "Sezon sonunda bütün saksıları kapalı bir alana almayı planlıyorsanız geçiş güzergâhı ve depolama alanı ürün seçiminin parçasıdır. Büyük bir küpün her dönem kolayca taşınabileceğini varsaymayın. Yerinde kalacak ürün için seçilen formun dış ortam uygunluğunu ve bakım talimatlarını sorun. Satın almadan önce bu iki senaryoyu ayrı değerlendirmek sonradan doğabilecek taşıma ihtiyacını görünür kılar."
+      },
+      {
+        "title": "Sezon sonu notlarını ürün bazında tutun",
+        "body": "Her parçanın fotoğrafı, ölçüsü, kullanım yeri ve bakım bilgisini tek bir dosyada saklayın. Böylece eve bakım veren kişi hangi ürünün nasıl kullanılacağını görebilir. Temizlikte yüzeye uygulanacak yöntemi atölyeden teyit edin; güçlü kimyasalları veya basınçlı temizliği her terracotta ürüne uygun kabul etmeyin. Çatlak veya yüzey değişikliği fark edildiğinde fotoğrafla bilgi istemek daha sağlıklı bir başlangıçtır."
+      },
+      {
+        "title": "Teslimatı eve varış tarihinizle eşleştirin",
+        "body": "Ürünü teslim alacak kişinin bulunmadığı bir gün için sevkiyat istemeden önce bekletme ve teslim sorumluluğunu netleştirin. Bozyazı adresindeki kapı ölçüsünü, araç yaklaşımını ve ambalajların konulacağı alanı paylaşın. Tarsus atölyemizden fiyat ve plan talep edebilirsiniz; üretim süresi ile sevkiyat tarihi siparişe göre teyit edilir. İlçeye ait sayfa üzerinden gerekli bilgileri gözden geçirebilirsiniz.",
+        "link": {
+          "href": "/mersin/bozyazi",
+          "label": "Bozyazı için ürün ve teslimat hazırlığı"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "camliyayla-terracotta-saksi-mevsimlik-kullanim",
+    "locale": "tr",
+    "kicker": "Çamlıyayla · Mevsimlik kullanım",
+    "title": "Çamlıyayla’da terracotta saksı için dış mekân ve saklama planı",
+    "intro": "Çamlıyayla’da açık alan için çömlek seçerken ürünün görünüşü kadar kullanım mevsimi ve korunacağı yer de önemlidir. Dış mekân uygunluğu her form için ayrı sorulmalıdır.",
+    "seoTitle": "Çamlıyayla Saksı Rehberi | Dış Mekân ve Saklama",
+    "seoDescription": "Çamlıyayla için terracotta saksı seçerken dış mekân uygunluğu, mevsimlik kullanım, depolama alanı ve sipariş öncesi sorulacak soruları inceleyin.",
+    "image": "/images/collection.webp",
+    "imageAlt": "Mevsimlik kullanımı değerlendirilecek terracotta saksılar için temsili görsel",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Çamlıyayla saksı",
+      "dış mekân terracotta",
+      "çömlek bakımı"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Yayla kullanımı için ürüne özel bilgi isteyin",
+        "body": "Mersin Valiliği Çamlıyayla’yı ilin yaylalarından biri olarak tanımlar. Bu yerel bağlam, bütün çömleklerin aynı koşullarda kullanılabileceği anlamına gelmez. Açık bahçe, saçak altı ve kapalı veranda farklı kullanım noktalarıdır. Teklif isterken ürünü nerede ve hangi dönemlerde kullanacağınızı anlatın; yalnızca ilçe adını vererek dış ortam dayanımı hakkında kesin sonuç beklemeyin.",
+        "link": {
+          "href": "https://mersin.gov.tr/camliyayla",
+          "label": "Çamlıyayla hakkında Mersin Valiliği bilgisi"
+        }
+      },
+      {
+        "title": "Dona dayanıklılık ifadesini genelleştirmeyin",
+        "body": "Her terracotta ürünün don koşullarına uygun olduğu varsayılmamalıdır. Seçilen form için üreticinin kullanım ve koruma önerisini isteyin. Ürünün içinde su birikmesi, dikim düzeni ve bulunduğu nokta gibi ayrıntıları görüşmeye dahil edin. Bir blog yazısındaki genel bilgi, belirli bir ürünün test sonucu veya dayanım garantisi yerine geçmez; bu konuda ürün bazında teyit arayın."
+      },
+      {
+        "title": "Saklama yolunu satın almadan önce ölçün",
+        "body": "Mevsim sonunda saksıyı kapalı alana almayı düşünüyorsanız kapı genişliği, koridor dönüşü ve depoda ayrılan yeri ölçün. Bahçeye sığan bir form depoya sığmayabilir. Örnek olarak dar bir kapısı olan depoda sadece ürünün tabanına değil en geniş gövde çapına bakmak gerekir. Ambalajlı ölçü ile kullanım ölçüsünü ayrı isteyin; taşıma yöntemi de önceden değerlendirilmelidir."
+      },
+      {
+        "title": "Bakım talimatını ürünle birlikte saklayın",
+        "body": "Sipariş listesine her ürün için kullanım yeri ve sorumlu kişiyi ekleyin. Temizlik, kullanılmadığı dönemde koruma ve yeniden yerleştirme hakkında verilen bilgileri aynı dosyada tutun. Birden fazla farklı form aldığınızda tek bir bakım notunun hepsini kapsadığını varsaymayın. Görünür bir değişiklik olduğunda önce fotoğrafla atölyeye danışmak, uygun olmayan bir müdahaleyi önlemeye yardımcı olabilir.",
+        "link": {
+          "href": "/urunler/terracotta-saksilar",
+          "label": "Terracotta ürün grubunu inceleyin"
+        }
+      },
+      {
+        "title": "Çamlıyayla teklifine kullanım takviminizi ekleyin",
+        "body": "Ürün tipi ve adedin yanında açık alanda kullanım dönemi, depolama tercihi ve teslimat adresini paylaşın. Atölyemiz Tarsus’tadır; Çamlıyayla sayfası ayrı bir mağaza değil, tedarik taleplerine yönelik bilgi sunar. Hazır ürün veya özel üretim durumuna göre plan değişebilir. Üretim, ambalaj ve sevkiyat kapsamını kesinleştirmeden yerel teslim günü ya da koşulsuz dış mekân garantisi varsaymayın.",
+        "link": {
+          "href": "/mersin/camliyayla",
+          "label": "Çamlıyayla tedarik ve teklif bilgileri"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "erdemli-site-bahcesi-toplu-saksi-alimi",
+    "locale": "tr",
+    "kicker": "Erdemli · Ortak alanlar",
+    "title": "Erdemli’de site bahçesi için toplu saksı alımı nasıl hazırlanır?",
+    "intro": "Bir site veya ortak alan için çok adetli saksı alırken ürün seçimi kadar kararın kayıt altına alınması da işe yarar. Erdemli için teklifleri aynı ürün ve teslimat listesiyle karşılaştırın.",
+    "seoTitle": "Erdemli Toplu Saksı Alımı | Site Bahçesi Rehberi",
+    "seoDescription": "Erdemli’de site bahçesi için toplu terracotta saksı alımı. Konum listesi, numune beklentisi, teklif kapsamı ve teslim sayımı için pratik rehber.",
+    "image": "/images/project-concept.webp",
+    "imageAlt": "Ortak alanlarda terracotta kullanımına ilişkin temsili peyzaj konsepti",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Erdemli saksı",
+      "toplu saksı alımı",
+      "site bahçesi"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Ortak alanları kodlayarak başlayın",
+        "body": "Giriş, yürüyüş aksı ve oturma bölümü için ayrı konum kodları oluşturun. Her koda ürün tipi, yaklaşık ölçü, adet ve kullanım amacı ekleyin. Örneğin A girişini tanımlayan küpler ile B oturma alanındaki bitkili saksılar aynı satırda toplanmamalıdır. Böyle bir liste, farklı kişilerin aynı ürünü farklı isimlerle tarif etmesinden doğan belirsizliği azaltır."
+      },
+      {
+        "title": "Karar verilecek özellikleri açıkça belirleyin",
+        "body": "Toplu alımda yalnızca bir görsele onay vermek yeterli olmayabilir. Form, ölçü aralığı, yüzey beklentisi ve doğal ton farklılıklarının nasıl değerlendirileceğini konuşun. El yapımı parçaların endüstriyel olarak birebir eş olması beklenmemelidir. Numune veya önce örnek parça görme talebiniz varsa bunun olanaklarını ve koşullarını sorun; her siparişte ücretsiz numune veya hazır stok bulunduğunu varsaymayın.",
+        "link": {
+          "href": "/toptan-satis",
+          "label": "Toptan tedarik kapsamını inceleyin"
+        }
+      },
+      {
+        "title": "Ürün fiyatını teslim edilmiş toplamdan ayırın",
+        "body": "Bir teklif karşılaştırmasında ürün bedeli, paketleme, sevkiyat ve indirme kalemleri ayrı görünmelidir. Yerleştirme ve bitki dikimi gibi işler dahil değilse bunu not edin. Daha düşük birim fiyat, bütün kapsam tamamlandığında daha düşük toplam anlamına gelmeyebilir. Teklifleri karşılaştıran kişinin her firmaya aynı listeyi iletmesi, farklı kapsamların tek rakam üzerinden değerlendirilmesini önler."
+      },
+      {
+        "title": "Teslimat sayımı için önceden bir yöntem seçin",
+        "body": "Erdemli’deki teslimat noktasında ürünleri kimin karşılayacağını, hangi alana alınacağını ve konumlara nasıl dağıtılacağını belirleyin. Paket üzerindeki ürün kodlarını sipariş listenizle eşleştirmek sayımı kolaylaştırır. Ambalaj açma ve görünür hasar kontrol sürecini satıcıyla önceden görüşün. Bir eksiklik fark edildiğinde ürün kodu ve fotoğrafla kayıt oluşturmak, durumu yalnızca sözlü tarif etmekten daha açıklayıcıdır."
+      },
+      {
+        "title": "Değişiklikleri yeni bir liste sürümünde toplayın",
+        "body": "Sipariş görüşmesi sırasında adetler değişirse eski mesajların arasından tahmin yürütmek yerine güncel listeyi yeniden paylaşın. Hangi kalemlerin onaylandığını ve hangilerinin değerlendirme aşamasında olduğunu ayırın. Tarsus atölyemize Erdemli teslimat mahallesi, ürün listesi ve tercih edilen zaman aralığıyla başvurabilirsiniz. Üretim ile sevkiyat koşulları sipariş bazında teyit edilir; ilçedeki sayfamız ayrı bir şubeyi temsil etmez.",
+        "link": {
+          "href": "/mersin/erdemli",
+          "label": "Erdemli için toplu ürün talebi"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "gulnar-buyuk-comlek-teslimat-hazirligi",
+    "locale": "tr",
+    "kicker": "Gülnar · Teslimat hazırlığı",
+    "title": "Gülnar’a büyük çömlek siparişinde adres ve erişim bilgisi nasıl hazırlanır?",
+    "intro": "Büyük çömlek siparişinde açık adres tek başına bütün taşıma koşullarını anlatmaz. Gülnar teslimatı için araçtan ürünün konulacağı yere kadar olan bölümü ölçü ve fotoğrafla tarif edin.",
+    "seoTitle": "Gülnar Büyük Çömlek | Teslimat Hazırlığı Rehberi",
+    "seoDescription": "Gülnar’a büyük çömlek ve terracotta saksı siparişi için erişim dosyası hazırlayın. Kapı ölçüsü, son taşıma mesafesi, ambalaj ve teslim kontrolü.",
+    "image": "/images/hero-terracotta.webp",
+    "imageAlt": "Büyük çömlek ölçüsü ve teslimatı için temsili terracotta küp görseli",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Gülnar çömlek",
+      "büyük küp teslimatı",
+      "terracotta siparişi"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Harita konumu ile giriş tarifini birlikte verin",
+        "body": "Teslimat mahallesi ve açık adresin yanına doğru girişin konumunu ekleyin. Bir parselde birden fazla kapı varsa ürünün hangi kapıdan alınacağını belirtin. Güzergâhın araç uygunluğu konusunda yalnızca haritadaki çizgiye güvenmeyin. Dar geçiş, rampa veya dönüş varsa güncel fotoğraf paylaşın; uygun araç ve taşıma düzeni bu bilgiler üzerinden ayrıca değerlendirilmelidir."
+      },
+      {
+        "title": "Ürünün en geniş noktasını güzergâhla karşılaştırın",
+        "body": "Küpün tabanı kapıdan geçse bile omuz bölümü daha geniş olabilir. Bu nedenle ürünün en geniş dış çapını ve ambalajlı ölçülerini sorun. Kapı açıklığının yanında menteşe, çıkıntı ve dönüş alanlarını ölçün. Örnek olarak kapı sonrasında hemen dar bir koridora dönülüyorsa tek bir genişlik ölçüsü yeterli olmaz. Son taşıma yolunun tamamını kısa bir krokiyle göstermek daha yararlıdır.",
+        "link": {
+          "href": "/urunler/buyuk-boy-kupler",
+          "label": "Büyük boy küp grubunu inceleyin"
+        }
+      },
+      {
+        "title": "İndirme ve son yerleştirmeyi aynı iş saymayın",
+        "body": "Taşıma aracından ürünün indirilmesi ile bahçedeki son noktaya yerleştirilmesi farklı kapsamlar olabilir. Gülnar adresinizde kimlerin hazır bulunacağını, ekipman ihtiyacının nasıl karşılanacağını ve hangi işlerin teklife dahil olduğunu önceden görüşün. Gerekli taşıma yöntemini ürün ağırlığına ve erişime göre uzman ekip belirlemelidir; genel bir yazı üzerinden kişi sayısı veya kaldırma yöntemi seçmeyin."
+      },
+      {
+        "title": "Bekleme alanını ve teslim kaydını hazırlayın",
+        "body": "Ürün hemen yerleştirilmeyecekse ambalajların nerede bekleyeceğini belirleyin. Yürüyüş yolunu veya kapıyı kapatan geçici bir alan sonradan ek taşıma gerektirir. Sipariş listesi, teslim alacak kişinin iletişimi ve ambalaj kontrol talimatı erişilebilir olsun. Görünür bir sorun varsa fotoğrafları ve ürün bilgisini birlikte saklayıp satıcıya iletin; uygulanacak işlem sipariş ve taşıma koşullarına göre netleşir."
+      },
+      {
+        "title": "Teklif talebini dört bilgiyle tamamlayın",
+        "body": "Ürün ölçüsü ve adedi, açık adres, giriş ölçüleri ve tercih edilen tarih aralığı görüşmenin temelini oluşturur. Tarsus’taki atölyemiz Gülnar taleplerini bu kapsamla değerlendirir; her adrese aynı araçla, aynı bedelle veya kesin aynı günde teslimat varsayılmaz. İlçe tedarik sayfasından ürün ve sevkiyat talebine geçebilirsiniz. Atölye ziyareti ve teslim alma seçenekleri de önceden görüşülmelidir.",
+        "link": {
+          "href": "/mersin/gulnar",
+          "label": "Gülnar tedarik bilgilerine geçin"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "mezitli-balkon-teras-terracotta-saksi-secimi",
+    "locale": "tr",
+    "kicker": "Mezitli · Balkon ve teras",
+    "title": "Mezitli’de balkon ve teras için terracotta saksı seçme rehberi",
+    "intro": "Mezitli’de balkon veya teras düzenlerken saksının dış çapı, iç kullanım hacmi ve bakım erişimi farklı sorulara cevap verir. Alışverişe başlamadan önce bu üç bilgiyi ayrı değerlendirin.",
+    "seoTitle": "Mezitli Balkon Saksısı | Terracotta Seçim Rehberi",
+    "seoDescription": "Mezitli balkon ve terasları için terracotta saksı seçimi. Dış çap, iç saksı, tabak, bakım erişimi ve sipariş öncesi ölçü hazırlığını öğrenin.",
+    "image": "/images/collection.webp",
+    "imageAlt": "Balkon ve teras için form karşılaştırmasını temsil eden terracotta koleksiyonu",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Mezitli balkon saksısı",
+      "teras saksısı",
+      "terracotta"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Dış çap ile iç ölçüyü karıştırmayın",
+        "body": "Dış çap zeminde kaplanacak alanı, iç ölçüler ise dikim veya iç saksı yerleşimi için ayrılan hacmi anlatır. Aynı dış genişlikteki iki formun iç kullanımı farklı olabilir. Mevcut plastik iç saksıyı terracotta kabın içine koymayı düşünüyorsanız ağız açıklığını, iç yüksekliği ve taban biçimini sorun. Sadece ürünün genel yüksekliğini bilmek bu eşleşmeyi doğrulamaz."
+      },
+      {
+        "title": "Tabak ve bakım boşluğu için de yer ayırın",
+        "body": "Zeminde yaptığınız ölçüye varsa saksı tabağının kapladığı alanı ekleyin. Sulama ve temizlik sırasında ürüne hangi taraftan erişeceğinizi düşünün. Köşeye tam oturan bir saksı, tabağı çıkarılmak istendiğinde zorlayabilir. Drenaj ve fazla suyun nasıl yönetileceğini bitkinin bakımını üstlenen kişiyle birlikte değerlendirin; her dekoratif formu doğrudan dikime uygun kabul etmeyin.",
+        "link": {
+          "href": "/urunler/terracotta-saksilar",
+          "label": "Terracotta saksı formlarına bakın"
+        }
+      },
+      {
+        "title": "Mobilyaları günlük konumlarında deneyin",
+        "body": "Balkon boşken alınan ölçüler kullanım halini göstermeyebilir. Sandalyeleri geri çekin, kapıyı açın ve kurutmalık gibi dönemsel eşyaların yerini düşünün. Örnek bir denemede planlanan saksı çapını zemine bantla işaretleyip normal günlük hareketi kontrol edebilirsiniz. Yerleşim sığsa bile ağırlık, düşme riski veya taşıyıcı kapasiteyle ilgili bir uygunluk sonucu çıkarılmaz; gerekirse ilgili uzmandan değerlendirme alın."
+      },
+      {
+        "title": "Büyük görünüm için tek seçenek büyük saksı değildir",
+        "body": "Bir alanı vurgulamak için tek büyük form ile daha küçük bir grubun oluşturduğu görünümü karşılaştırın. Karşılaştırmayı aynı fotoğraf üzerinde, ölçüler belirtilmiş halde yapmak yararlıdır. Küçük ürünlerin toplam bakım alanı veya adet maliyeti farklı olabilir. Hangi düzenin daha kullanışlı olduğu balkonunuzun gerçek ölçülerine bağlıdır; sadece katalogdaki bir kurgu üzerinden karar vermeyin."
+      },
+      {
+        "title": "Mezitli siparişinde bina içi erişimi belirtin",
+        "body": "Ürün önerisi isterken kat, kapı ve varsa asansör ölçüsünü de paylaşın. Ürünün dış ölçüsüyle ambalajlı ölçüsü farklı olabilir; son konuma taşımanın teklif kapsamını sorun. Tarsus atölyemiz Mezitli talepleri için ürün, adet ve adres bilgileri üzerinden değerlendirme yapar. İlçede ayrı mağaza olduğu veya siparişin koşulsuz kata teslim edileceği varsayılmamalıdır.",
+        "link": {
+          "href": "/mersin/mezitli",
+          "label": "Mezitli ürün ve tedarik bilgileri"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "mut-avlu-dekoratif-kup-bitkili-saksi-farki",
+    "locale": "tr",
+    "kicker": "Mut · Avlu düzeni",
+    "title": "Mut’ta avlu düzenlerken dekoratif küp mü, bitkili saksı mı seçilmeli?",
+    "intro": "Mut’taki ev veya işletme avlunuzda çömleğe vermek istediğiniz görev, seçeceğiniz formu değiştirir. Dekoratif küp ile bitki yetiştirmek için kullanılacak saksıyı aynı ölçütlerle karşılaştırmayın.",
+    "seoTitle": "Mut Çömlek Rehberi | Dekoratif Küp ve Bitkili Saksı",
+    "seoDescription": "Mut’ta avlu için dekoratif küp ve bitkili saksı arasındaki farkları öğrenin. Ağız açıklığı, iç hacim, bakım erişimi ve form seçimi için rehber.",
+    "image": "/images/hero-terracotta.webp",
+    "imageAlt": "Avluda dekoratif odak olarak terracotta küp kullanımını temsil eden görsel",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Mut çömlek",
+      "dekoratif küp",
+      "bitkili saksı"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Ürünün görevi görünüşünden önce gelir",
+        "body": "Dekoratif küp, bir duvarın veya girişin önünde tek başına görsel odak oluşturmak için düşünülebilir. Bitkili saksıda ise bitkinin yerleşimi, bakımı ve zaman içindeki ihtiyaçları da değerlendirilir. Bir küpün içine bitki konulabilmesi, doğrudan dikime uygun olduğu anlamına gelmez. Alışveriş listesinin ilk satırına dekoratif kullanım veya bitkili kullanım yazmak görüşmenin doğru sorularla başlamasını sağlar."
+      },
+      {
+        "title": "Dar ağızlı formun kullanımını önceden sorun",
+        "body": "Gövdesi geniş bir küpün ağız açıklığı dar olabilir. Bu durum iç saksının yerleştirilmesini veya daha sonra çıkarılmasını etkiler. Mevcut bitkinizi kullanmayı düşünüyorsanız yalnızca gövde çapını değil, iç saksının ağızdan geçip geçmeyeceğini de kontrol edin. Doğrudan dikim, çıkarılabilir iç saksı ve boş dekoratif kullanım seçeneklerini atölyeye ayrı sorular olarak iletin.",
+        "link": {
+          "href": "/urunler/buyuk-boy-kupler",
+          "label": "Büyük küp formlarını inceleyin"
+        }
+      },
+      {
+        "title": "Avluda bakış yönünü seçin",
+        "body": "Ürünü en çok kapıdan girerken mi, oturma bölümünden mi göreceksiniz? Aynı form farklı açıdan daha dar veya daha geniş algılanabilir. Basit bir prova için düşündüğünüz noktayı işaretleyip avlunun iki farklı yerinden fotoğraf çekin. Birden fazla ürün kullanacaksanız aralarındaki boşluğu da gösterin. Boş alan, yerleşimin eksik kalması değil tasarım kararının bir parçası olabilir."
+      },
+      {
+        "title": "Bakım yolunu görünümden ayrı değerlendirin",
+        "body": "Bitkili bir saksıya sulama ve temizlik için düzenli erişim gerekir. Ağır bir parçayı her bakımda hareket ettirmek zorunda kalacak bir düzen seçmeyin. Drenaj ve zeminle temas konusunda ürüne özel bilgi isteyin; altına konulacak ek parçaların uygunluğunu tahmin etmeyin. Dekoratif kullanımda da temizlik yöntemini ve açık alanda korunma gereksinimini seçilen form üzerinden teyit edin."
+      },
+      {
+        "title": "Mut için iki seçenekli teklif hazırlayın",
+        "body": "Kararsızsanız aynı konum için bir dekoratif küp ve bir bitkili saksı alternatifini ayrı ayrı fiyatlandırmayı talep edebilirsiniz. Yaklaşık ölçü, adet, kullanım fotoğrafı ve teslimat adresini paylaşın. Tarsus atölyemizden alınacak teklif ürün ve sevkiyat kapsamına göre hazırlanır; Mut’ta ayrı bir üretim adresi bulunduğu anlamı taşımaz. İlçe rehberi, iletişime geçmeden önce bilgilerinizi tamamlamanıza yardımcı olur.",
+        "link": {
+          "href": "/mersin/mut",
+          "label": "Mut için çömlek tedarik rehberi"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "silifke-otel-peyzaj-terracotta-tedarik-plani",
+    "locale": "tr",
+    "kicker": "Silifke · Otel ve peyzaj",
+    "title": "Silifke’de otel ve peyzaj projeleri için terracotta tedarik planı",
+    "intro": "Silifke’de bir konaklama veya peyzaj projesi için çömlek alırken alanları, uygulama etaplarını ve teslim sorumluluklarını ayrı tanımlayın. Ürün listesi proje takvimiyle birlikte anlam kazanır.",
+    "seoTitle": "Silifke Otel Saksıları | Terracotta Tedarik Planı",
+    "seoDescription": "Silifke otel ve peyzaj projelerinde terracotta tedarikini planlayın. Alan bazlı ürün listesi, etaplı sipariş, ton beklentisi ve teslimat kapsamı.",
+    "image": "/images/project-concept.webp",
+    "imageAlt": "Otel peyzajında terracotta kullanımı için temsili konsept; gerçek müşteri projesi değildir",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Silifke otel saksıları",
+      "peyzaj çömleği",
+      "proje tedariki"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Karşılama alanı ile dinlenme alanını ayırın",
+        "body": "Girişteki bir küpün görevi uzaktan algılanan bir odak oluşturmak olabilir. Oturma bölümündeki bitkili saksıda ise masa düzeni ve bakım erişimi önem kazanır. Projede bütün terracotta ürünlerini tek kalemde toplamak bu farkları gizler. Giriş, restoran önü, bahçe ve diğer kullanım alanlarını ayrı kodlayıp her biri için ölçü aralığı, adet ve kullanım amacını yazın."
+      },
+      {
+        "title": "Tasarım onayını ürün bilgisine dönüştürün",
+        "body": "Bir konsept görseli, kesin ölçü veya tedarik listesi değildir. Uygulamaya geçerken seçilen formun adı, dış çapı, yüksekliği ve yüzey beklentisi netleşmelidir. Örnek bir proje listesinde her satırın yanında onay bekliyor veya teklif için hazır gibi bir durum bilgisi bulunabilir. Böylece henüz tasarım kararı verilmemiş parçalar kesin sipariş gibi değerlendirilmez.",
+        "link": {
+          "href": "/otel-villa-peyzaj",
+          "label": "Otel ve peyzaj için tedarik yaklaşımı"
+        }
+      },
+      {
+        "title": "Etapları sadece tarihle değil, ürünle tanımlayın",
+        "body": "İlk etapta hangi ürünlerin gerekeceğini kod ve adetleriyle belirtin. Sonraki etap için ayrılan kalemleri ayrı tutun. El yapımı terracotta ürünlerde farklı üretim zamanları arasında doğal ton değişimleri görülebileceğini görüşün. Aynı alanın parçalarını farklı siparişlere bölmeden önce görsel uyum beklentisini açıklayın; sonraki üretimin öncekiyle birebir eş olacağını varsaymayın."
+      },
+      {
+        "title": "Şantiyede bekleme ihtiyacını maliyete dahil düşünün",
+        "body": "Ürünler uygulama alanı hazır olmadan gelirse korunacak bir bekleme alanı gerekir. Alan hazır olana kadar oluşabilecek ek taşıma ve depolama işlerinin kime ait olduğunu netleştirin. İndirme, son yerleştirme, dikim ve ambalaj atığının kaldırılması aynı hizmet değildir. Teklif karşılaştırırken hangi işlerin dahil olduğunu ayrı satırlarda görmek, toplam kapsamı daha anlaşılır hale getirir."
+      },
+      {
+        "title": "Silifke teslimatı için sorumlulukları yazılı netleştirin",
+        "body": "Teslim alacak kişi, giriş saatleri, araç yaklaşımı ve ürünlerin kontrol yöntemi sipariş dosyasında yer alsın. Tercih edilen tarihin üretim ve taşıma açısından teyit edilmesi gerekir. Tarsus atölyemiz Silifke taleplerini ürün listesi ve adres bazında değerlendirir. Bu yazı bir müşteri projesi veya tamamlanmış uygulama referansı sunmaz; kendi projenizin kapsamını hazırlamanız için bir çalışma çerçevesidir.",
+        "link": {
+          "href": "/mersin/silifke",
+          "label": "Silifke çömlek ve proje tedariki"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "tarsus-comlek-atolyesi-ziyaret-rehberi",
+    "locale": "tr",
+    "kicker": "Tarsus · Atölye ziyareti",
+    "title": "Tarsus çömlek atölyesini ziyaret etmeden önce hazırlamanız gerekenler",
+    "intro": "Atölyede ürünleri yerinde görmek, form ve yüzey karşılaştırmasını kolaylaştırır. Tarsus ziyaretinizden verim almak için alan fotoğraflarınızı, ölçülerinizi ve kullanım sorularınızı önceden hazırlayın.",
+    "seoTitle": "Tarsus Çömlek Atölyesi | Ziyaret ve Ürün Seçimi",
+    "seoDescription": "Tarsus çömlek atölyesi ziyareti için hazırlık rehberi. Ölçü listesi, yüzey ve form karşılaştırması, özel üretim soruları ve teslim alma planı.",
+    "image": "/images/workshop.webp",
+    "imageAlt": "Çömlek şekillendirme sürecini anlatan temsili atölye görseli",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Tarsus çömlek atölyesi",
+      "el yapımı çömlek",
+      "atölye ziyareti"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Ziyaret saatini ve görmek istediğiniz ürünleri teyit edin",
+        "body": "Atölyemizin üretim ve ziyaret adresi {{adres}}. Yola çıkmadan önce {{telefon}} üzerinden iletişime geçerek uygun zamanı ve ilgilendiğiniz ürün grubunu paylaşın. Web sitesindeki her fotoğrafın o gün hazır bulunan bir parçayı gösterdiğini varsaymayın. Özellikle büyük form veya belirli ölçü arıyorsanız bunu önceden bildirmek, ziyaret sırasında hangi seçenekleri değerlendirebileceğinizi netleştirir."
+      },
+      {
+        "title": "Yanınıza alan fotoğrafı ve kısa bir ölçü listesi alın",
+        "body": "Saksının yerleşeceği alanın genel fotoğrafı ile kapı, basamak veya dar geçişin yakın fotoğrafı farklı bilgiler verir. Yaklaşık ürün yüksekliği, kullanılabilir genişlik ve adet bilgisini yazın. Bitkili kullanım düşünüyorsanız mevcut iç saksının ölçüsünü de ekleyin. Bu hazırlık, yalnızca atölyede hoş görünen bir parçayı değil, kendi alanınızda işe yarayacak bir formu karşılaştırmanızı sağlar.",
+        "link": {
+          "href": "/urunler",
+          "label": "Ziyaret öncesi ürün gruplarına bakın"
+        }
+      },
+      {
+        "title": "Formu ağız, omuz ve tabanıyla birlikte inceleyin",
+        "body": "İki küp benzer yükseklikte olsa bile ağız genişliği ve gövde oranı farklı olabilir. Ürüne sadece önden değil, yandan da bakın. Yerine koymayı düşündüğünüz açıdan fotoğraf çekme olanağını sorun. El yapımı yüzeyde doğal iz ve ton farklılıkları görülebilir; bunların beklentinize uygunluğunu değerlendirin. Görünür bir ayrıntı hakkında kararsızsanız kusur veya özellik olduğuna kendiniz hükmetmek yerine atölyeye sorun."
+      },
+      {
+        "title": "Özel üretim talebinizi karşılaştırılabilir hale getirin",
+        "body": "Özel ölçü istiyorsanız bir fotoğrafın yanına hedef ölçü, adet ve kullanım amacı ekleyin. Yapılabilirlik, üretim süresi ve ölçü beklentisi birlikte görüşülmelidir. İstenen her formun aynı yöntemle üretilebileceği veya ölçünün koşulsuz birebir çıkacağı varsayılmamalıdır. Teklifte hangi ayrıntıların teyit edildiğini not edin; daha sonra değişen taleplerin kapsamı da yeniden değerlendirilmelidir.",
+        "link": {
+          "href": "/atolye",
+          "label": "Atölyedeki üretim sürecini tanıyın"
+        }
+      },
+      {
+        "title": "Ürünü kendi aracınızla alma kararını erkenden vermeyin",
+        "body": "Bir ürün araç bagajına görsel olarak sığıyor gibi görünse de ambalaj, ağırlık ve güvenli taşıma düzeni ayrıca ele alınmalıdır. Teslim alma yöntemi için atölyeden bilgi isteyin; ambalajlı ölçü ve yükleme planı netleşmeden yola çıkmayın. Tarsus sayfamızda ziyaret ve tedarik bilgilerini bulabilirsiniz. Görüşme sonrasında ürün seçimi, adet, teslim yöntemi ve fiyat kapsamını tek bir listede toplamak yararlıdır.",
+        "link": {
+          "href": "/mersin/tarsus",
+          "label": "Tarsus atölye ve tedarik bilgileri"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "toroslar-buyuk-terracotta-kup-bahce-yerlesimi",
+    "locale": "tr",
+    "kicker": "Toroslar · Büyük formlar",
+    "title": "Toroslar’da büyük terracotta küp için yerleşim ve taşıma yolu planı",
+    "intro": "Büyük bir küp seçerken bahçede duracağı noktayı ve oraya nasıl ulaşacağını birlikte düşünün. Toroslar’daki projeniz için ölçü, görüş açısı ve erişim bilgilerini ayrı ayrı hazırlayın.",
+    "seoTitle": "Toroslar Büyük Küp | Bahçe Yerleşim Rehberi",
+    "seoDescription": "Toroslar bahçeleri için büyük terracotta küp seçimi. Görüş açısı, gövde çapı, basamaklı erişim ve yerleştirme öncesi hazırlık kontrol listesi.",
+    "image": "/images/hero-terracotta.webp",
+    "imageAlt": "Büyük terracotta küpün bahçede odak kullanımını temsil eden konsept görsel",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Toroslar büyük küp",
+      "bahçe çömleği",
+      "terracotta yerleşimi"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Önce küpün görüleceği noktayı seçin",
+        "body": "Girişten görülen bir odak parçasıyla oturma alanının yanındaki form aynı etkiyi yaratmaz. Küpün düşünüldüğü yeri işaretleyip kapıdan, pencereden ve bahçe içinden fotoğraf çekin. Arka plandaki duvar yüksekliğini ve bitkileri de kadraja alın. Yalnızca ürünün yakın plan fotoğrafıyla karar vermek, çevresiyle kuracağı oranı değerlendirmenizi zorlaştırabilir."
+      },
+      {
+        "title": "En büyük formu değil, uygun oranı arayın",
+        "body": "Yüksekliği artırmak her zaman daha dengeli bir görünüm oluşturmaz. Dar bir girişte gövde çapı, alçak bir duvar önünde ise üst çizgi öne çıkabilir. Aynı alan için iki farklı ölçü seçeneğini karşılaştırın. Örnek olarak tek büyük küp ile daha küçük iki formun kapladığı toplam alanı ayrı çizmek, estetik tercihi gerçek ölçülerle birlikte düşünmenizi sağlar.",
+        "link": {
+          "href": "/urunler/buyuk-boy-kupler",
+          "label": "Büyük boy küp koleksiyonunu inceleyin"
+        }
+      },
+      {
+        "title": "Zeminin uygunluğunu görselden çıkarmayın",
+        "body": "Küpün düz, dengeli ve kullanımına uygun bir noktaya yerleştirilmesi gerekir. Eğim, kot farkı veya basamak yakınlığı varsa bunu teklif görüşmesinde belirtin. Fotoğraf, zemin veya taşıyıcı uygunluğu için tek başına yeterli değildir. Altlık, sabitleme veya uygulama çözümü gerekiyorsa ürün ve saha koşullarını bilen uzmanla değerlendirin; genel bir yazıdan güvenli yük veya montaj ölçüsü çıkarmayın."
+      },
+      {
+        "title": "Bahçe kapısından son konuma kadar ölçün",
+        "body": "Toroslar adresinizde basamak, dar dönüş veya uzun bir taşıma mesafesi varsa bunları ayrı gösterin. Ürünün gövdesi kadar ambalajlı ölçüsü de önemlidir. Araç yaklaşabildiği halde son bölüme erişemeyebilir. Teslimat, indirme ve son yerleştirme sorumluluklarını önceden görüşün; kaç kişiyle veya hangi yöntemle taşınacağına ürün ağırlığı ve saha görülmeden karar vermeyin."
+      },
+      {
+        "title": "Seçim dosyanızı teslimat dosyasına bağlayın",
+        "body": "Onaylanan ürünün ölçü ve adedini, yerleşim fotoğraflarını ve erişim krokisini aynı talepte paylaşın. Böylece seçilen form ile taşıma planı farklı bilgiler üzerinden ilerlemez. Tarsus atölyemiz Toroslar için ürün ve tedarik taleplerini değerlendirir; ilçede ayrı şube veya standart ücretsiz yerleştirme hizmeti varsayılmamalıdır. Teklifin hangi işleri kapsadığı sipariş öncesinde netleştirilir.",
+        "link": {
+          "href": "/mersin/toroslar",
+          "label": "Toroslar tedarik ve teklif rehberi"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "yenisehir-kafe-terasi-terracotta-saksi-yerlesimi",
+    "locale": "tr",
+    "kicker": "Yenişehir · Kafe terasları",
+    "title": "Yenişehir’de kafe terası için terracotta saksı yerleşimi ve form seçimi",
+    "intro": "Yenişehir’de kafe veya restoran terası düzenlerken saksıları yalnızca dekor olarak değil, mekânın günlük kullanımını etkileyen öğeler olarak değerlendirin. Dolaşım, masa düzeni ve bakım birlikte planlanmalı.",
+    "seoTitle": "Yenişehir Kafe Saksıları | Terracotta Teras Rehberi",
+    "seoDescription": "Yenişehir kafe ve restoran terasları için terracotta saksı rehberi. Masa düzeni, servis geçişi, form tekrarı, malzeme uyumu ve teslimat hazırlığı.",
+    "image": "/images/project-concept.webp",
+    "imageAlt": "Kafe ve restoran teraslarında terracotta kullanımını anlatan temsili konsept",
+    "publishedAt": "2026-10-16",
+    "tags": [
+      "Yenişehir kafe saksısı",
+      "restoran terası",
+      "mimari terracotta"
+    ],
+    "readingMinutes": 2,
+    "blocks": [
+      {
+        "title": "Yerleşimi boş terasta değil, kullanım düzeninde çizin",
+        "body": "Masa ve sandalyeler yerindeyken servis yolunu, giriş kapısını ve müşterilerin kullandığı geçişleri işaretleyin. Bir sandalyenin geriye çekildiğinde kapladığı alanı da düşünün. Saksıları bu planın üzerine ekleyin; sonradan kalan boşluklara sıkıştırmak dolaşımı zorlaştırabilir. Erişilebilirlik ve güvenli geçiş koşulları için gereken değerlendirmeyi uygulama sorumlusuyla yapın; dekorasyon tercihi bu gerekliliklerin yerine geçmez."
+      },
+      {
+        "title": "Ayırıcı olarak kullanılacak grubun tamamını ölçün",
+        "body": "Tek bir saksının dış çapını bilmek, sıra halinde yerleştirilen grubun toplam uzunluğunu göstermez. Ürünler arasında bırakılacak boşlukları ve bakım erişimini de plana ekleyin. Örnek bir kurgu için üç saksının oluşturduğu hattı zeminde işaretleyebilirsiniz. Bu deneme görsel ve kullanım karşılaştırması içindir; saksı grubunu güvenlik bariyeri veya taşıyıcı bir eleman gibi değerlendirmeyin.",
+        "link": {
+          "href": "/urunler/mimari-saksilar",
+          "label": "Mimari saksı seçeneklerine bakın"
+        }
+      },
+      {
+        "title": "Form tekrarını renk beklentisinden ayırın",
+        "body": "Aynı form ailesinin farklı ölçüleri, terasta düzenli bir ilişki kurmak için değerlendirilebilir. El yapımı ürünlerde ton ve yüzey farklılıkları görülebileceğini baştan konuşun. Seçimi yalnızca ekran rengine bağlamayın; ışık ve çevredeki yüzeyler algıyı değiştirir. Cephe, masa ve zemin fotoğraflarını aynı gün ışığında paylaşmak, hangi görünümü hedeflediğinizi anlatmanızı kolaylaştırır."
+      },
+      {
+        "title": "Bakım ve temizlik görevini siparişten önce sorun",
+        "body": "Bitkili saksıları kim sulayacak, çevresini kim temizleyecek ve gerektiğinde iç saksıyı kim çıkaracak? Bu sorular ürünün ağız açıklığı ve yerleşimiyle ilgilidir. Yoğun kullanım sırasında sık taşınacak bir form için bu ihtiyacı atölyeye bildirin. Doğrudan dikim veya iç saksı tercihinin uygunluğu, seçilen ürün ve bitkinin ihtiyaçları üzerinden ayrıca değerlendirilmelidir."
+      },
+      {
+        "title": "Yenişehir teslimatını işletmenin akışıyla uyumlu planlayın",
+        "body": "Araç yaklaşımı, indirme saati ve ürünlerin geçici olarak bekletileceği alanı paylaşın. Teras üst kattaysa bina içi erişim ölçülerini de ekleyin. Tarsus atölyemiz ürün, adet ve teslimat kapsamıyla birlikte teklif hazırlar; kesin tarih ve taşıma hizmetinin sınırları siparişe göre teyit edilir. Yenişehir sayfası bir yerel mağaza adresi değil, ilçeden gelen talepler için tedarik bilgisi sunar.",
+        "link": {
+          "href": "/mersin/yenisehir",
+          "label": "Yenişehir için çömlek ve terracotta tedariki"
+        }
+      }
+    ]
   }
 ]
