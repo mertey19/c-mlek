@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'Mersin Çömlekçi & El Yapımı Terracotta | Tarsus Çömlekçilik',
   description:
     'Mersin ve Tarsus\'ta el yapımı terracotta saksı, büyük küp ve çömlek üreticisi. Toptan satış, otel-villa peyzaj projeleri ve ihracat için WhatsApp\'tan teklif alın.',
-  alternates: { canonical: '/' },
+  alternates: { canonical: '/', languages: { 'tr-TR': '/', en: '/en', 'x-default': '/' } },
   openGraph: {
     title: 'Mersin Çömlekçi & Terracotta Üreticisi | Tarsus Çömlekçilik',
     description:

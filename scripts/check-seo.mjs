@@ -132,6 +132,18 @@ const featuredProduct = products.find(product => product.featured) ?? products[0
 check(home.includes(`href="/urunler/${featuredProduct.slug}"`), 'Admin-selected featured product lost');
 check(!/PotteryHero|ProductionExperience|ProductViewer3D|pottery\.css/.test(readFileSync('app/page.tsx', 'utf8')), 'Unrequested 3D homepage restored');
 check(!/^['"]use client/m.test(readFileSync('app/page.tsx', 'utf8')), 'Homepage became a Client Component');
+const catalog = await get('/urunler');
+for (const product of products) {
+  check(catalog.includes(`href="/urunler/${product.slug}"`), `Catalog does not link product: ${product.slug}`);
+}
+check(home.includes('href="/galeri"'), 'Gallery has no homepage/footer link');
+const categoryBodies = new Set();
+for (const category of categories) {
+  const html = await get(`/urunler/${category.slug}`);
+  const body = textOnly(html.match(/<div class="content-section__blocks">(.*?)<\/section>/s)?.[1] || '');
+  check(!!body && !categoryBodies.has(body), `Duplicate/missing category content: ${category.slug}`);
+  categoryBodies.add(body);
+}
 
 // Crawl every sitemap URL, including preserved product, blog and English routes.
 for (const url of locations) {

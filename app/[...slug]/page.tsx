@@ -19,7 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const page = pageFromAllSegments(slug);
   if (!page) return {};
-  const paired = routePairs[page.path];
+  const candidate = routePairs[page.path];
+  // The language switch can have a fallback, but hreflang needs a reciprocal equivalent.
+  const paired = candidate && routePairs[candidate] === page.path ? candidate : undefined;
   const image = new URL(page.image, baseUrl).toString();
   const isArticle = page.path.startsWith('/blog/') || page.path.startsWith('/en/blog/');
 

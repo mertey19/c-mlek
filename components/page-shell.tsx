@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { categories, productFromPath, whatsappUrl, type PageContent } from '@/lib/site-data';
+import { categories, categoryFromPath, products, productsForCategory, productFromPath, whatsappUrl, type PageContent } from '@/lib/site-data';
 import { absoluteUrl } from '@/lib/site-url';
 import { ContactBars } from './contact-bars';
 import { IconWhatsApp } from './icons';
@@ -13,6 +13,7 @@ import { ServiceAreaDirectory } from './service-area-directory';
 import { districtFromPath, districtPath, mersinDistricts, SERVICE_AREAS_UPDATED } from '@/lib/service-areas';
 import { localBusinessSchema } from '@/lib/business-schema';
 import { postsForServiceArea } from '@/lib/blog-data';
+import { ProductDirectory } from './product-directory';
 
 const labelMap: Record<string, string> = {
   urunler: 'Ürünler', projeler: 'Projeler', 'toptan-satis': 'Toptan Satış', ihracat: 'İhracat', atolye: 'Atölye',
@@ -31,6 +32,8 @@ export function PageShell({ page }: { page: PageContent }) {
   const showCategories = page.path === '/urunler' || page.path === '/en/products';
   const showGallery = page.path === '/galeri';
   const product = productFromPath(page.path);
+  const category = categoryFromPath(page.path);
+  const catalogProducts = page.path === '/urunler' ? products : category ? productsForCategory(category) : [];
   const showQuote = isServiceArea || /toptan-satis|projeler|otel-villa-peyzaj|ihracat|iletisim|en\/(wholesale|projects|export|contact)|urunler\//.test(page.path);
   const crumbs = segments.map((segment, index) => ({
     name: labelMap[segment] || (district?.slug === segment ? district.name : page.title),
@@ -60,6 +63,11 @@ export function PageShell({ page }: { page: PageContent }) {
     '@context': 'https://schema.org', '@type': 'ItemList', name: 'Mersin ilçe tedarik rehberi',
     numberOfItems: mersinDistricts.length,
     itemListElement: mersinDistricts.map((area, index) => ({ '@type': 'ListItem', position: index + 1, name: area.name, url: absoluteUrl(districtPath(area.slug)) })),
+  });
+  if (catalogProducts.length) schema.push({
+    '@context': 'https://schema.org', '@type': 'ItemList', name: `${page.title} — ürün kataloğu`,
+    numberOfItems: catalogProducts.length,
+    itemListElement: catalogProducts.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, url: absoluteUrl(`/urunler/${item.slug}`) })),
   });
 
   return (
@@ -104,7 +112,7 @@ export function PageShell({ page }: { page: PageContent }) {
 
         {showCategories && (
           <section className="section shell" aria-labelledby="collections-title">
-            <div className="section-heading"><p className="eyebrow">{english ? 'Browse by application' : 'Kullanıma göre keşfet'}</p><h2 id="collections-title">{english ? 'Nine ways to work with terracotta' : 'Terracotta’nın dokuz farklı ölçeği'}</h2></div>
+            <div className="section-heading"><p className="eyebrow">{english ? 'Browse by application' : 'Kullanıma göre keşfet'}</p><h2 id="collections-title">{english ? 'Terracotta collections' : 'Terracotta ürün grupları'}</h2></div>
             <div className="category-grid category-grid--inner">
               {categories.map((category, index) => (
                 <Link className={`category-card category-card--${(index % 4) + 1}`} href={english ? '/en/contact#quote' : `/urunler/${category.slug}`} key={category.slug}>
@@ -115,6 +123,8 @@ export function PageShell({ page }: { page: PageContent }) {
             </div>
           </section>
         )}
+
+        <ProductDirectory products={catalogProducts} title={category ? `${category.name} grubundaki ürünler` : 'Katalogdaki tüm ürünler'} />
 
         <section className="content-section shell">
           <aside><span>01</span><p>{english ? 'Material, scale and supply' : 'Malzeme, ölçek ve tedarik'}</p></aside>

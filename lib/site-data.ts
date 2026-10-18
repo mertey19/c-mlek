@@ -1,6 +1,7 @@
 import businessJson from '@/content/business.json';
 import categoriesJson from '@/content/categories.json';
 import productsJson from '@/content/products.json';
+import { categoryEditorial, CATALOG_CONTENT_UPDATED } from './category-content';
 import {
   WHATSAPP_HREF_CONTEXTS,
   type Business,
@@ -77,6 +78,15 @@ export const featuredProduct: Product = products.find((product) => product.featu
 /** content/categories.json — admin panelindeki "Kategoriler" ekranından düzenlenir. */
 export const categories: Category[] = categoriesJson;
 
+export function categoryFromPath(path: string) {
+  return categories.find((category) => path === `/urunler/${category.slug}`);
+}
+
+export function productsForCategory(category: Category) {
+  const names = [category.name, category.en, category.slug].map((name) => name.trim().toLocaleLowerCase('tr-TR'));
+  return products.filter((product) => names.includes(product.category.trim().toLocaleLowerCase('tr-TR')));
+}
+
 export const faqs = [
   ['Toptan satış yapıyor musunuz?', 'Evet. Ürün grubu, adet ve teslimat planına göre toptan tedarik talepleri değerlendirilmektedir.'],
   ['Türkiye geneline gönderim yapıyor musunuz?', 'Sevkiyat planı ürün ölçüsü, adet ve teslimat noktasına göre teklif aşamasında netleştirilir.'],
@@ -97,6 +107,7 @@ export type PageContent = {
   seoDescription: string;
   image: string;
   imageAlt: string;
+  updatedAt?: string;
   blocks: ContentBlock[];
   faq?: readonly (readonly [string, string])[];
 };
@@ -218,22 +229,23 @@ const trPages: PageContent[] = [
   },
 ];
 
-const categoryPages: PageContent[] = categories.map((category) => ({
-  path: `/urunler/${category.slug}`,
-  locale: 'tr' as const,
-  kicker: 'Ürün koleksiyonu',
-  title: category.name,
-  intro: `${category.name}; bahçe, mimari, ticari mekân ve toptan tedarik ihtiyaçları için doğal terracotta karakterini farklı ölçeklerde sunar.`,
-  seoTitle: `${category.name} | Tarsus Çömlekçilik`,
-  seoDescription: `El yapımı ${category.name.toLocaleLowerCase('tr-TR')} seçeneklerini keşfedin. Toptan, otel, villa ve peyzaj projeleri için üretim ve tedarik teklifi alın.`,
-  image: category.image,
-  imageAlt: `${category.name} koleksiyonu — temsili terracotta görseli`,
-  blocks: [
-    { title: 'El yapımının doğal karakteri', body: 'Terracotta yüzeylerde ton, iz ve ölçü açısından küçük farklılıklar oluşabilir. Bu varyasyonlar seri üretim kusuru değil, el işçiliğinin malzemeyle kurduğu ilişkinin parçasıdır.' },
-    { title: 'Projenize göre teklif', body: 'Kullanım alanı, hedef ölçü, tahmini adet ve teslimat bilgisini paylaşın; uygun üretim ve tedarik seçeneği değerlendirilsin.', link: { href: '/iletisim#teklif', label: 'Teklif talebi oluştur' } },
-  ],
-  faq: faqs.slice(0, 5),
-}));
+const categoryPages: PageContent[] = categories.map((category) => {
+  const editorial = categoryEditorial(category);
+  return {
+    path: `/urunler/${category.slug}`,
+    locale: 'tr' as const,
+    kicker: 'Ürün koleksiyonu',
+    title: category.name,
+    intro: editorial.intro,
+    seoTitle: `${category.name} Modelleri ve Seçim Rehberi`,
+    seoDescription: editorial.description,
+    updatedAt: CATALOG_CONTENT_UPDATED,
+    image: category.image,
+    imageAlt: `${category.name} koleksiyonu — temsili terracotta görseli`,
+    blocks: editorial.blocks,
+    faq: faqs.slice(0, 5),
+  };
+});
 
 const articlePages: PageContent[] = [
   ['terracotta-saksi-nedir', 'Terracotta Saksı Nedir?', 'Terracotta, doğal kilin şekillendirilip kontrollü biçimde pişirilmesiyle oluşan gözenekli bir seramik malzemedir.', ['Gözenekli yüzey', 'Doğal renk varyasyonu', 'İç ve dış mekân uyumu']],
