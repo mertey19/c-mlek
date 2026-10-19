@@ -24,16 +24,6 @@ export const metadata: Metadata = {
   },
   description:
     'Mersin Tarsus\'ta el yapımı terracotta saksı, büyük küp ve çömlek üreticisi. Toptan satış, otel-villa peyzaj projeleri ve ihracat.',
-  keywords: [
-    'Tarsus çömlekçilik',
-    'Mersin çömlekçi',
-    'Mersin terracotta',
-    'Tarsus çömlek atölyesi',
-    'terracotta saksı',
-    'toptan çömlek',
-    'el yapımı terracotta Mersin',
-    'terracotta manufacturer Turkey',
-  ],
   alternates: { canonical: '/', languages: { 'tr-TR': '/', en: '/en', 'x-default': '/' } },
   openGraph: {
     title: 'Tarsus Çömlekçilik | Toprağın Ustalığı',

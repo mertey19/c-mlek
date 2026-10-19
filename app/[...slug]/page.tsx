@@ -26,9 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isArticle = page.path.startsWith('/blog/') || page.path.startsWith('/en/blog/');
 
   return {
-    title: page.seoTitle,
+    title: { absolute: page.seoTitle },
     description: page.seoDescription,
-    keywords: 'tags' in page && Array.isArray((page as { tags?: string[] }).tags) ? (page as { tags: string[] }).tags : undefined,
     alternates: {
       canonical: page.path,
       languages: paired

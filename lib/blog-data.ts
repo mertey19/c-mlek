@@ -49,11 +49,12 @@ export const blogIndexPages: PageContent[] = [
     locale: 'tr',
     kicker: 'Blog',
     title: 'Mersin & Tarsus terracotta rehberi',
+    updatedAt: '2026-10-19',
     intro:
-      'Mersin çömlekçi, terracotta saksı, toptan tedarik ve el yapımı üretim hakkında SEO odaklı rehber yazıları. Tarsus’taki atölyemizden güncel bilgiler.',
+      'Mersin ve Tarsus’ta bahçe, teras ve ticari mekânlar için terracotta seçimi. El yapımı çömlek üretimini, ilçe bazlı teslimat hazırlığını ve toptan alımda sorulacak soruları keşfedin.',
     seoTitle: 'Blog | Mersin Çömlekçi & Terracotta Rehberi — Tarsus',
     seoDescription:
-      'Çömlekçi, comlek, Mersin terracotta, Tarsus products, pot wholesale ve terracotta shop near me aramaları için rehber yazılar.',
+      'Mersin ve Tarsus için çömlek ve terracotta rehberleri. Bahçe saksısı, büyük küp, toptan alım ve ilçe bazlı ürün seçimi hakkında pratik bilgiler.',
     image: '/images/collection.webp',
     imageAlt: 'Mersin ve Tarsus terracotta blog — temsili görsel',
     blocks: [],

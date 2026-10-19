@@ -1,0 +1,30 @@
+{
+  "reviewedAt": "2026-10-19",
+  "purpose": "Editorial ownership of the 50 requested search terms. This planning file is not rendered as a keyword list or used as meta keywords. Related guides support these existing destination pages; rankings are not guaranteed.",
+  "targets": [
+    { "path": "/", "keywords": ["Tarsus çömlekçilik", "Tarsus çömlekçi"] },
+    { "path": "/mersin", "keywords": ["Mersin çömlekçi"] },
+    { "path": "/atolye", "keywords": ["Tarsus çömlek atölyesi", "Mersin çömlek imalatı", "Tarsus terracotta üreticisi", "Tarsus el yapımı çömlek", "Mersin çömlek imalatçısı", "Toprak saksı üreticisi", "Tarsus seramik atölyesi"] },
+    { "path": "/hakkimizda", "keywords": ["Özçereciler Toprak Sanatları"] },
+    { "path": "/urunler/terracotta-saksilar", "keywords": ["Mersin terracotta saksı", "Tarsus toprak saksı", "El yapımı toprak saksı"] },
+    { "path": "/urunler/buyuk-boy-kupler", "keywords": ["Büyük boy toprak küp", "Büyük terracotta küp", "Mersin büyük boy çömlek", "Büyük bahçe küpü", "Bahçe dekoratif toprak küp", "Tarsus büyük boy küp"] },
+    { "path": "/urunler/bahce-saksilari", "keywords": ["Tarsus bahçe saksısı", "Büyük boy toprak saksı", "Mersin el yapımı toprak saksı"] },
+    { "path": "/urunler/dekoratif-saksilar", "keywords": ["Dekoratif terracotta saksı"] },
+    { "path": "/urunler/mimari-saksilar", "keywords": ["Mimari terracotta saksı"] },
+    { "path": "/urunler/seramik-urunler", "keywords": ["Tarsus seramik çömlek"] },
+    { "path": "/toptan-satis", "keywords": ["Toptan çömlek", "Toptan terracotta saksı", "Toptan toprak saksı", "Toptan bahçe saksısı", "Türkiye çömlek üreticisi", "Üreticiden toptan çömlek", "Oteller için toptan saksı", "Mersin toptan çömlek", "Tarsus toptan çömlek"] },
+    { "path": "/urunler/ozel-uretim", "keywords": ["Özel ölçü terracotta saksı", "Özel üretim çömlek"] },
+    { "path": "/otel-villa-peyzaj", "keywords": ["Otel için büyük saksı", "Villa bahçe saksısı", "Restoran dış mekan saksısı", "Teras terracotta saksı"] },
+    { "path": "/urunler/peyzaj-projeleri", "keywords": ["Peyzaj saksıları", "Büyük peyzaj küpü"] },
+    { "path": "/projeler", "keywords": ["Mimari saksı üretimi", "Peyzaj projeleri için terracotta"] },
+    { "path": "/en", "keywords": ["Handmade terracotta pots Turkey", "Terracotta pots manufacturer Turkey"] },
+    { "path": "/en/wholesale", "keywords": ["Wholesale terracotta pots Turkey", "Large terracotta planters wholesale"] },
+    { "path": "/en/export", "keywords": ["Terracotta planters exporter Turkey"] }
+  ],
+  "supportingGuides": [
+    "/rehber/terracotta-saksi-nedir",
+    "/rehber/buyuk-boy-saksi-secerken",
+    "/rehber/otel-peyzajinda-saksi-secimi",
+    "/rehber/toptan-saksi-alirken"
+  ]
+}

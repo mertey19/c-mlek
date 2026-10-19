@@ -145,6 +145,63 @@ for (const category of categories) {
   categoryBodies.add(body);
 }
 
+// The brief is an editorial map, not a keyword-stuffing requirement for page copy.
+const keywordPlan = JSON.parse(readFileSync('docs/seo-keyword-map.json', 'utf8'));
+const requestedKeywords = keywordPlan.targets.flatMap(target => target.keywords);
+check(requestedKeywords.length === 50 && new Set(requestedKeywords).size === 50, 'Expected exactly 50 distinct editorial search targets');
+check(new Set(keywordPlan.targets.map(target => target.path)).size === keywordPlan.targets.length, 'Duplicate primary destination in keyword map');
+const targetTitles = new Set();
+const targetDescriptions = new Set();
+const guideParagraphs = new Set();
+for (const path of [...keywordPlan.targets.map(target => target.path), ...keywordPlan.supportingGuides]) {
+  check(locations.includes(`${origin}${path}`), `${path}: search destination absent from sitemap`);
+  const html = await get(path);
+  const title = textOnly(html.match(/<title>(.*?)<\/title>/s)?.[1] || '');
+  const description = attr(metadata(html, 'description') || '', 'content');
+  check(title && !targetTitles.has(title), `${path}: missing/duplicate search destination title`);
+  check(description && !targetDescriptions.has(description), `${path}: missing/duplicate search destination description`);
+  targetTitles.add(title); targetDescriptions.add(description);
+  const canonical = tags(html, 'link').find(tag => attr(tag, 'rel') === 'canonical');
+  const canonicalHref = attr(canonical || '', 'href');
+  check(canonicalHref && new URL(canonicalHref).href === new URL(path, origin).href, `${path}: search destination canonical changed`);
+  check(!metadata(html, 'keywords'), `${path}: keyword plan must not become meta keywords`);
+  check((html.match(/<h1\b/g) || []).length === 1, `${path}: search destination must have one visible H1`);
+  const schemas = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].flatMap(match => JSON.parse(match[1]));
+  const visibleText = textOnly(html);
+  for (const faq of schemas.filter(item => item['@type'] === 'FAQPage')) {
+    for (const question of faq.mainEntity) {
+      check(visibleText.includes(question.name) && visibleText.includes(question.acceptedAnswer.text), `${path}: structured FAQ does not match visible copy`);
+    }
+  }
+  if (keywordPlan.supportingGuides.includes(path)) {
+    const blocks = [...html.matchAll(/<article[^>]*class="content-block"[^>]*>(.*?)<\/article>/gs)];
+    check(blocks.length >= 5, `${path}: missing substantive guide sections`);
+    for (const block of blocks) {
+      const paragraph = textOnly(block[1].match(/<p>(.*?)<\/p>/s)?.[1] || '');
+      check(paragraph && !guideParagraphs.has(paragraph), `${path}: missing or repeated guide paragraph`);
+      guideParagraphs.add(paragraph);
+    }
+    const entry = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find(match => match[1].includes(`<loc>${origin}${path}</loc>`))?.[1];
+    check(entry?.includes('<lastmod>2026-10-19T00:00:00.000Z</lastmod>'), `${path}: guide revision missing from sitemap`);
+    check(schemas.some(item => item['@type'] === 'WebPage' && item.dateModified === '2026-10-19'), `${path}: page revision missing from schema`);
+  }
+}
+const englishCatalogue = await get('/en/products');
+for (const item of [...categories, ...products]) {
+  check(tags(englishCatalogue, 'a').some(tag => attr(tag, 'href') === `/urunler/${item.slug}` && attr(tag, 'hrefLang') === 'tr'), `English catalogue lacks labelled Turkish link: ${item.slug}`);
+}
+const englishCatalogueSchemas = [...englishCatalogue.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].flatMap(match => JSON.parse(match[1]));
+const englishItems = englishCatalogueSchemas.find(item => item['@type'] === 'ItemList');
+check(englishItems?.numberOfItems === products.length, 'English catalogue schema does not match visible product count');
+check(englishCatalogue.includes('View collection (Turkish)') && englishCatalogue.includes('View product details (Turkish)'), 'English catalogue language labels missing');
+check(!textOnly(await get('/en/export')).includes('before the site goes live'), 'Export page still contains launch placeholder copy');
+for (const path of ['/', '/blog', '/urunler', '/toptan-satis', '/en/products', '/en/wholesale', '/en/export']) {
+  const entry = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find(match => match[1].includes(`<loc>${origin}${path}</loc>`))?.[1];
+  check(entry?.includes('<lastmod>2026-10-19T00:00:00.000Z</lastmod>'), `${path}: revised content date missing`);
+}
+const untouchedDistrict = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find(match => match[1].includes(`<loc>${origin}/mersin/tarsus</loc>`))?.[1];
+check(untouchedDistrict?.includes('<lastmod>2026-10-16T00:00:00.000Z</lastmod>'), 'Unchanged district content date was artificially refreshed');
+
 // Crawl every sitemap URL, including preserved product, blog and English routes.
 for (const url of locations) {
   const path = new URL(url).pathname;

@@ -1,12 +1,13 @@
 import type { Category, ContentBlock } from './content-types';
 
-export const CATALOG_CONTENT_UPDATED = '2026-10-18';
-type Editorial = { intro: string; description: string; blocks: ContentBlock[] };
+export const CATALOG_CONTENT_UPDATED = '2026-10-19';
+type Editorial = { seoTitle?: string; intro: string; description: string; blocks: ContentBlock[] };
 
 /** Selection guidance, not claims about inventory, delivery or tested durability. */
 const editorials: Record<string, Editorial> = {
   'buyuk-boy-kupler': {
-    intro: 'Büyük boy küpler; girişte tek bir odak, avluda heykelsi bir form veya bahçede ölçülü bir vurgu olarak değerlendirilir. Seçimi yüksekliğin yanında gövde çapı ve yerleşim yoluyla birlikte yapın.',
+    seoTitle: 'Büyük Boy Toprak Küp ve Terracotta Küpler | Tarsus',
+    intro: 'Tarsus büyük boy küp koleksiyonunu bahçe, giriş ve avlu için değerlendirin. Büyük boy toprak küp seçiminde yükseklik kadar gövde çapı ve yerleşim yolu da önemlidir. Mersin’de büyük boy çömlek talebinizi kullanım amacı, ölçü ve adetle paylaşabilirsiniz.',
     description: 'Büyük boy terracotta küpler için form, çap ve yerleşim rehberi. Katalogdaki ürünleri inceleyin; ölçü, adet ve teslimat kapsamıyla teklif isteyin.',
     blocks: [
       { title: 'Küpün en geniş noktasını ölçü listesine ekleyin', body: 'Dar tabanlı bir küpün omuz bölümü çok daha geniş olabilir. Ürünün yüksekliğiyle birlikte ağız, en geniş gövde ve taban ölçülerini sorun. Kapıdan geçiş veya duvar önündeki görünüm için bu ölçüler farklı bilgiler verir. Yerleşim fotoğrafında hedef noktayı işaretlemek, formun çevresiyle oranını konuşmayı kolaylaştırır.' },
@@ -15,7 +16,8 @@ const editorials: Record<string, Editorial> = {
     ],
   },
   'terracotta-saksilar': {
-    intro: 'Terracotta saksı seçimini dış görünüş, iç kullanım hacmi ve bakım düzeni üzerinden birlikte değerlendirin. Doğrudan dikim ile çıkarılabilir iç saksı tercihinizi teklif talebinde belirtin.',
+    seoTitle: 'El Yapımı Toprak Saksı ve Terracotta Saksılar | Tarsus',
+    intro: 'Mersin terracotta saksı talepleriniz için Tarsus’taki el yapımı toprak saksı koleksiyonunu inceleyin. Dış görünüş, iç kullanım hacmi ve bakım düzenini birlikte değerlendirin; doğrudan dikim veya çıkarılabilir iç saksı tercihinizi belirtin.',
     description: 'Terracotta saksı modellerinde dış çap, iç hacim, ağız açıklığı ve drenaj seçimi. Kullanım alanınıza göre ürün ve tedarik bilgisi alın.',
     blocks: [
       { title: 'Dış ölçü ve kullanılabilir hacmi ayırın', body: 'Saksının dış çapı zeminde kaplanan alanı gösterir; iç hacmi tek başına anlatmaz. Mevcut bir iç saksıyı kullanacaksanız onun yüksekliğini ve en geniş çapını da ölçün. Ağızdan geçiş, tabana oturma ve gerektiğinde çıkarılabilme koşullarını görüşün. Aynı yükseklikte iki farklı form aynı dikim alanını sunmayabilir.' },
@@ -24,7 +26,8 @@ const editorials: Record<string, Editorial> = {
     ],
   },
   'dekoratif-saksilar': {
-    intro: 'Dekoratif saksılarda form, mekânın görüş hattı ve çevresindeki malzemeler öne çıkar. Bitkisiz bir odak parçasıyla bitkili bir düzen için aynı ürünü seçmek zorunda değilsiniz.',
+    seoTitle: 'Dekoratif Terracotta Saksı ve Çömlek Seçimi | Tarsus',
+    intro: 'Dekoratif terracotta saksı seçiminde form, mekânın görüş hattı ve çevresindeki malzemeler öne çıkar. Bitkisiz bir odak parçasıyla bitkili bir düzen için aynı ürünü seçmek zorunda değilsiniz. Tarsus atölyesine mekân fotoğrafı ve hedef ölçüyle danışabilirsiniz.',
     description: 'Dekoratif saksı seçimi için form, yerleşim ve malzeme uyumu. Ev, kafe ve giriş alanları için çömlek seçeneklerini ölçülerinizle değerlendirin.',
     blocks: [
       { title: 'Tek parça mı, bir grup mu?', body: 'Bir köşede tek bir formu öne çıkarmakla farklı yüksekliklerde grup oluşturmak farklı düzenlerdir. Önce ürünün görüleceği yönü ve çevredeki mobilyaları fotoğraflayın. Bir grupta yalnızca saksı çaplarını değil, aralarında bırakılacak boşluğu da hesaplayın. Fotoğrafları benzer ölçekte karşılaştırmak ürünlerin birbirine oranını anlamayı kolaylaştırır.' },
@@ -33,7 +36,8 @@ const editorials: Record<string, Editorial> = {
     ],
   },
   'bahce-saksilari': {
-    intro: 'Bahçe saksılarını giriş, oturma bölümü ve yürüyüş yolu için ayrı görevlerle planlayın. Bitki, bakım erişimi ve teslimat güzergâhı ürün listesine birlikte yansıtılmalıdır.',
+    seoTitle: 'Tarsus Bahçe Saksısı | Büyük Boy Toprak Saksılar',
+    intro: 'Tarsus bahçe saksısı koleksiyonunda büyük boy toprak saksı ve daha küçük grupları giriş, oturma bölümü ve yürüyüş yolu için ayrı planlayın. Mersin el yapımı toprak saksı taleplerinde bitki, bakım erişimi ve teslimat güzergâhını birlikte paylaşın.',
     description: 'Terracotta bahçe saksıları için yerleşim, bitkili kullanım ve bakım erişimi rehberi. Form, ölçü ve adet bilgisiyle tedarik teklifi alın.',
     blocks: [
       { title: 'Bahçenin kullanım noktalarını belirleyin', body: 'Girişte yüksek bir vurgu ile oturma alanındaki alçak bir saksı farklı görevler üstlenebilir. Basit bir krokide ürünlerin yerini ve boş kalacak geçişleri gösterin. Her noktaya aynı büyük formu yerleştirmek yerine işlevleri ayrı değerlendirin. Ürünlerin arka plandaki duvar ve bitkilerle ilişkisini genel alan fotoğrafında kontrol edin.' },
@@ -42,7 +46,8 @@ const editorials: Record<string, Editorial> = {
     ],
   },
   'seramik-urunler': {
-    intro: 'Seramik ürünlerde form, yüzey rengi ve kullanım amacı birlikte ele alınır. Katalog kaydındaki ürün fotoğraflarını, belirtilen ölçüleri ve uygulama bilgilerini inceleyerek seçim yapın.',
+    seoTitle: 'Tarsus Seramik Çömlek ve Seramik Ürün Koleksiyonu',
+    intro: 'Tarsus seramik çömlek ve seramik ürün koleksiyonunda form, yüzey rengi ve kullanım amacı birlikte ele alınır. Katalog kaydındaki ürün fotoğraflarını, belirtilen ölçüleri ve uygulama bilgilerini inceleyerek seçim yapın.',
     description: 'Seramik ürün koleksiyonunu ve katalogdaki çömlekleri inceleyin. Renk, ölçü, kullanım ve fotoğraf bilgileriyle ürün bazında teklif isteyin.',
     blocks: [
       { title: 'Koleksiyon görseli ile ürün fotoğrafını ayırın', body: 'Bir uygulama görseli yerleşim fikri verir; tek bir ürünün tam ölçüsünü veya stok durumunu göstermeyebilir. Ürün detayına geçerek o kayda ait fotoğrafları ve açıklamayı inceleyin. Renk, yüzey ve form konusunda belirli bir beklentiniz varsa ürün adını ve ilgilendiğiniz görseli görüşmeye ekleyin.' },
@@ -51,7 +56,8 @@ const editorials: Record<string, Editorial> = {
     ],
   },
   'mimari-saksilar': {
-    intro: 'Mimari saksı seçimi, plan üzerindeki bir noktayı ürün ölçüsüne dönüştürmeyi gerektirir. Giriş aksı, cephe oranı, dolaşım ve bakım bilgileri ürün listesinde birlikte ele alınır.',
+    seoTitle: 'Mimari Terracotta Saksı | Projeye Göre Form ve Ölçü',
+    intro: 'Mimari terracotta saksı seçimi, plan üzerindeki bir noktayı ürün ölçüsüne dönüştürmeyi gerektirir. Giriş aksı, cephe oranı, dolaşım ve bakım bilgileri ürün listesinde birlikte ele alınır; üretim ve tedarik kapsamı proje özelinde değerlendirilir.',
     description: 'Mimari saksılar için cephe, giriş aksı ve dolaşım odaklı seçim rehberi. Proje fotoğrafı, ölçü ve adetle terracotta tedarik talebi oluşturun.',
     blocks: [
       { title: 'Konseptten ölçü listesine geçin', body: 'Mimari görseldeki bir formu uygulamaya aktarırken yüksekliğin yanında en geniş çapı ve zeminde kaplayacağı alanı belirleyin. Kapı, tabela ve mobilyalarla ilişkisini gösterin. Ürünün rolünü odak, bitkili grup veya sınır tanımı olarak not etmek farklı seçenekleri daha anlaşılır biçimde karşılaştırmanıza yardımcı olur.' },
@@ -60,7 +66,8 @@ const editorials: Record<string, Editorial> = {
     ],
   },
   'otel-villa-koleksiyonlari': {
-    intro: 'Otel ve villa koleksiyonlarını karşılama, avlu, teras ve bahçe için farklı kullanım gruplarıyla planlayın. Aynı form ailesinin ölçüleri, alanların görevine göre değerlendirilebilir.',
+    seoTitle: 'Otel ve Villa Bahçe Saksısı Koleksiyonları | Tarsus',
+    intro: 'Otel için büyük saksı ve villa bahçe saksısı koleksiyonlarını karşılama, avlu, teras ve bahçe için farklı kullanım gruplarıyla planlayın. Aynı form ailesinin ölçüleri, alanların görevine göre değerlendirilebilir.',
     description: 'Otel ve villa için terracotta koleksiyon seçimi. Karşılama, avlu ve teras alanlarına yönelik ürün listesi, etap ve tedarik hazırlığı.',
     blocks: [
       { title: 'Karşılama ve dinlenme alanlarını ayırın', body: 'Uzaktan görülen giriş küpü ile oturma bölümünün yanındaki bitkili saksının ölçü ve bakım ihtiyaçları farklıdır. Alanları kodlayıp her birine kullanım amacı yazın. Bir koleksiyon bütünlüğü hedeflenirken bütün noktalarda aynı boy ürün kullanılması gerekmez; oranları gerçek alan ölçülerinde karşılaştırın.' },
@@ -69,7 +76,8 @@ const editorials: Record<string, Editorial> = {
     ],
   },
   'peyzaj-projeleri': {
-    intro: 'Peyzajda terracotta ürünleri bitkilendirme planı, bakım erişimi ve sahadaki uygulama sırasıyla birlikte seçin. Formun dış ölçüsü kadar kullanılabilir iç hacmi de önemlidir.',
+    seoTitle: 'Peyzaj Saksıları ve Büyük Peyzaj Küpü | Terracotta',
+    intro: 'Peyzaj saksıları ve büyük peyzaj küpü seçimini bitkilendirme planı, bakım erişimi ve sahadaki uygulama sırasıyla birlikte yapın. Peyzaj projeleri için terracotta ürünlerde dış ölçü kadar kullanılabilir iç hacim de önemlidir.',
     description: 'Peyzaj projeleri için terracotta saksı ve küp seçimi. Bitkilendirme, bakım erişimi, ürün kodları ve saha teslimatı için hazırlık bilgileri.',
     blocks: [
       { title: 'Bitkilendirme planı ile kap ölçüsünü eşleştirin', body: 'Saksıya yerleştirilecek bitki ve bakım yöntemi, iç hacim ve drenaj beklentisini etkiler. Bu bilgileri peyzaj uygulamasını üstlenen kişiyle hazırlayın. Aynı dış ölçüdeki farklı formlar aynı iç kullanımı sağlamayabilir. Ürün listesinde dekoratif küpleri dikim yapılacak saksılardan ayrı tutun.' },
@@ -78,7 +86,8 @@ const editorials: Record<string, Editorial> = {
     ],
   },
   'ozel-uretim': {
-    intro: 'Özel üretim talebinde form fikrini ölçü, adet ve kullanım bilgisine dönüştürün. Her tasarımın uygulanabilirliği, atölyenin üretim değerlendirmesiyle netleştirilir.',
+    seoTitle: 'Özel Ölçü Terracotta Saksı ve Özel Üretim Çömlek',
+    intro: 'Özel ölçü terracotta saksı ve özel üretim çömlek talebinde form fikrini ölçü, adet ve kullanım bilgisine dönüştürün. Her tasarımın uygulanabilirliği, Tarsus atölyesinin üretim değerlendirmesiyle netleştirilir.',
     description: 'Özel ölçü çömlek ve terracotta talepleri için form, ölçü, adet ve üretim hazırlığı rehberi. Uygulanabilirlik ve teslim koşullarını görüşün.',
     blocks: [
       { title: 'Referans görseli ölçülerle birlikte gönderin', body: 'Görselin hangi özelliğini istediğinizi belirtin: ağız açıklığı, omuz oranı, yükseklik veya yüzey karakteri. Hedef ölçüleri ve kullanım amacını ekleyin. Fotoğraftaki her ayrıntının aynı malzeme ve yöntemle üretilebileceğini varsaymayın; benzer form ile birebir yeniden üretim farklı taleplerdir.' },
@@ -87,7 +96,8 @@ const editorials: Record<string, Editorial> = {
     ],
   },
   toptan: {
-    intro: 'Seramik çömlek koleksiyonunda kullanım amacını ve form beklentisini belirleyerek ürün detaylarına geçin. Tek ürün kaydı ile birden fazla seçenek içeren koleksiyon sayfasını ayrı değerlendirin.',
+    seoTitle: 'Seramik Çömlek Modelleri ve Kullanım Rehberi | Tarsus',
+    intro: 'Seramik çömlek koleksiyonunda kullanım amacını ve form beklentisini belirleyerek ürün detaylarına geçin. Tarsus atölyesine adetli alım için ürün bazında liste gönderebilirsiniz; koleksiyon sayfası ile tek bir ürünün kayıtlı ölçü ve kullanım bilgilerini ayrı değerlendirin.',
     description: 'Seramik çömlek modelleri için koleksiyon rehberi. Dekoratif ve bitkili kullanım soruları, ürün detayları ve adet bazında teklif hazırlığı.',
     blocks: [
       { title: 'Koleksiyon içinden ürün detayına geçin', body: 'Bir koleksiyonun kapağı, tek bir ürünün ölçü ve stok bilgisini kapsamaz. İlgilendiğiniz ürünün detay sayfasında fotoğraf, açıklama ve belirtilen uygulamaları inceleyin. Seramik Çömlek adlı ürünle bu koleksiyon sayfası farklı amaç taşır: biri belirli ürün kaydıdır, diğeri seçim yapmanız için grubu tanıtır.' },

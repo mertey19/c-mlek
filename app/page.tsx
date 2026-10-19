@@ -14,12 +14,12 @@ import { ServiceAreaDirectory } from '@/components/service-area-directory';
 import { localBusinessSchema } from '@/lib/business-schema';
 
 export const metadata: Metadata = {
-  title: 'Mersin Çömlekçi & El Yapımı Terracotta | Tarsus Çömlekçilik',
+  title: 'Tarsus Çömlekçilik | Mersin El Yapımı Terracotta Üreticisi',
   description:
-    'Mersin ve Tarsus\'ta el yapımı terracotta saksı, büyük küp ve çömlek üreticisi. Toptan satış, otel-villa peyzaj projeleri ve ihracat için WhatsApp\'tan teklif alın.',
+    'Özçereciler Toprak Sanatları: Tarsus, Mersin’de el yapımı çömlek, toprak saksı ve büyük küpler. Toptan, mimari proje ve ihracat talepleri için bilgi alın.',
   alternates: { canonical: '/', languages: { 'tr-TR': '/', en: '/en', 'x-default': '/' } },
   openGraph: {
-    title: 'Mersin Çömlekçi & Terracotta Üreticisi | Tarsus Çömlekçilik',
+    title: 'Tarsus Çömlekçilik | Mersin El Yapımı Terracotta Üreticisi',
     description:
       '1927\'den günümüze Mersin Tarsus\'ta el yapımı terracotta. Toptan tedarik, proje bazlı üretim ve ihracat.',
     url: '/',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mersin Çömlekçi & Terracotta | Tarsus Çömlekçilik',
+    title: 'Tarsus Çömlekçilik | Mersin El Yapımı Terracotta Üreticisi',
     description: 'El yapımı terracotta saksı ve büyük küp — Mersin Tarsus\'tan toptan ve proje tedariki.',
     images: ['/og.png'],
   },
@@ -73,6 +73,18 @@ export default function Home() {
             <p className="concept-note">Hero görseli temsili konsept çalışmadır.</p>
           </div>
           <div className="trust-strip"><div className="shell trust-strip__grid"><p><strong>1927’den beri</strong><span>Geleneksel üretim mirası</span></p><p><strong>El yapımı</strong><span>Her formda usta dokunuşu</span></p><p><strong>Toptan üretim</strong><span>Projeye göre planlanan tedarik</span></p><p><strong>Dünya geneli</strong><span>İhracat taleplerine açık</span></p></div></div>
+        </section>
+
+        <section className="section shell" aria-labelledby="local-production-title">
+          <div className="section-heading section-heading--split">
+            <div><p className="eyebrow">Özçereciler Toprak Sanatları</p><h2 id="local-production-title">Tarsus’ta el yapımı çömlek, Mersin’den üreticiye doğrudan ulaşım</h2></div>
+            <p>Tarsus çömlekçi geleneğini bahçe, otel ve mimari mekânların ihtiyaçlarıyla buluşturuyoruz. Üretim noktamız Tarsus’taki atölyedir; ürün seçimi, toptan alım ve özel form talepleri burada değerlendirilir.</p>
+          </div>
+          <div className="blog-grid">
+            <article className="blog-card"><div className="blog-card__body"><h3>Büyük boy toprak küp ve saksı</h3><p>Bahçede dekoratif bir odak ile bitki dikilecek büyük saksı farklı ihtiyaçlardır. Ağız açıklığı, iç hacim, gövde çapı ve taşıma yolunu birlikte değerlendirin.</p><Link className="text-link text-link--dark" href="/rehber/buyuk-boy-saksi-secerken">Büyük form seçim rehberi <span>↗</span></Link></div></article>
+            <article className="blog-card"><div className="blog-card__body"><h3>Üreticiden toptan çömlek</h3><p>Mağaza, otel ve peyzaj alımlarında her ürün için ölçü ve adet listesi hazırlayın. Üretim seçeneği, paketleme ve teslimat kapsamını tek teklif üzerinden görüşün.</p><Link className="text-link text-link--dark" href="/toptan-satis">Toptan terracotta saksı tedariki <span>↗</span></Link></div></article>
+            <article className="blog-card"><div className="blog-card__body"><h3>Mimari ve özel ölçü talepleri</h3><p>Referans görsel veya çizimi hedef ölçü, adet ve kullanım yeriyle paylaşın. Özel formun yapılabilirliği atölye tarafından değerlendirilir; her tasarım için üretim sözü verilmez.</p><Link className="text-link text-link--dark" href="/urunler/ozel-uretim">Özel üretim çömlek hazırlığı <span>↗</span></Link></div></article>
+          </div>
         </section>
 
         <section className="section shell" aria-labelledby="categories-title">

@@ -33,7 +33,7 @@ export function PageShell({ page }: { page: PageContent }) {
   const showGallery = page.path === '/galeri';
   const product = productFromPath(page.path);
   const category = categoryFromPath(page.path);
-  const catalogProducts = page.path === '/urunler' ? products : category ? productsForCategory(category) : [];
+  const catalogProducts = showCategories ? products : category ? productsForCategory(category) : [];
   const showQuote = isServiceArea || /toptan-satis|projeler|otel-villa-peyzaj|ihracat|iletisim|en\/(wholesale|projects|export|contact)|urunler\//.test(page.path);
   const crumbs = segments.map((segment, index) => ({
     name: labelMap[segment] || (district?.slug === segment ? district.name : page.title),
@@ -47,7 +47,7 @@ export function PageShell({ page }: { page: PageContent }) {
     ],
   };
   const schema: Record<string, unknown>[] = [
-    { '@context': 'https://schema.org', '@type': 'WebPage', name: page.title, description: page.seoDescription, inLanguage: english ? 'en' : 'tr-TR', url: absoluteUrl(page.path), isPartOf: { '@id': `${absoluteUrl('/')}#website` } },
+    { '@context': 'https://schema.org', '@type': 'WebPage', name: page.title, description: page.seoDescription, inLanguage: english ? 'en' : 'tr-TR', url: absoluteUrl(page.path), ...(page.updatedAt ? { dateModified: page.updatedAt } : {}), isPartOf: { '@id': `${absoluteUrl('/')}#website` } },
     { '@context': 'https://schema.org', ...breadcrumbSchema },
   ];
   if (page.faq) schema.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: page.faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) });
@@ -65,7 +65,7 @@ export function PageShell({ page }: { page: PageContent }) {
     itemListElement: mersinDistricts.map((area, index) => ({ '@type': 'ListItem', position: index + 1, name: area.name, url: absoluteUrl(districtPath(area.slug)) })),
   });
   if (catalogProducts.length) schema.push({
-    '@context': 'https://schema.org', '@type': 'ItemList', name: `${page.title} — ürün kataloğu`,
+    '@context': 'https://schema.org', '@type': 'ItemList', name: `${page.title} — ${english ? 'product catalogue' : 'ürün kataloğu'}`,
     numberOfItems: catalogProducts.length,
     itemListElement: catalogProducts.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, url: absoluteUrl(`/urunler/${item.slug}`) })),
   });
@@ -73,7 +73,7 @@ export function PageShell({ page }: { page: PageContent }) {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main lang={english ? 'en' : 'tr'}>
         <div className="page-hero">
           <div className="shell page-hero__grid">
             <div className="page-hero__copy">
@@ -115,16 +115,16 @@ export function PageShell({ page }: { page: PageContent }) {
             <div className="section-heading"><p className="eyebrow">{english ? 'Browse by application' : 'Kullanıma göre keşfet'}</p><h2 id="collections-title">{english ? 'Terracotta collections' : 'Terracotta ürün grupları'}</h2></div>
             <div className="category-grid category-grid--inner">
               {categories.map((category, index) => (
-                <Link className={`category-card category-card--${(index % 4) + 1}`} href={english ? '/en/contact#quote' : `/urunler/${category.slug}`} key={category.slug}>
+                <Link className={`category-card category-card--${(index % 4) + 1}`} href={`/urunler/${category.slug}`} hrefLang={english ? 'tr' : undefined} key={category.slug}>
                   <Image src={category.image} alt={`${english ? category.en : category.name} — ${english ? 'concept image' : 'temsili görsel'}`} fill sizes="(max-width: 700px) 100vw, 33vw" />
-                  <span><strong>{english ? category.en : category.name}</strong><small>{english ? 'View collection' : 'Koleksiyonu gör'} ↗</small></span>
+                  <span><strong>{english ? category.en : category.name}</strong><small>{english ? 'View collection (Turkish)' : 'Koleksiyonu gör'} ↗</small></span>
                 </Link>
               ))}
             </div>
           </section>
         )}
 
-        <ProductDirectory products={catalogProducts} title={category ? `${category.name} grubundaki ürünler` : 'Katalogdaki tüm ürünler'} />
+        <ProductDirectory products={catalogProducts} title={category ? `${category.name} grubundaki ürünler` : english ? 'Products in the catalogue' : 'Katalogdaki tüm ürünler'} english={english} />
 
         <section className="content-section shell">
           <aside><span>01</span><p>{english ? 'Material, scale and supply' : 'Malzeme, ölçek ve tedarik'}</p></aside>
