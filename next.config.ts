@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  images: {
+    qualities: [75, 90],
+  },
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tarsuscomlekcilik.com',
   },

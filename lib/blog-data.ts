@@ -1,3 +1,4 @@
+import { pagePhoto } from './photography';
 import blogJson from '@/content/blog-posts.json';
 import { applyTextTokens, type BlogSeed } from './content-types';
 import { business, resolveHref, type PageContent } from './site-data';
@@ -55,8 +56,7 @@ export const blogIndexPages: PageContent[] = [
     seoTitle: 'Blog | Mersin Çömlekçi & Terracotta Rehberi — Tarsus',
     seoDescription:
       'Mersin ve Tarsus için çömlek ve terracotta rehberleri. Bahçe saksısı, büyük küp, toptan alım ve ilçe bazlı ürün seçimi hakkında pratik bilgiler.',
-    image: '/images/collection.webp',
-    imageAlt: 'Mersin ve Tarsus terracotta blog — temsili görsel',
+    ...pagePhoto('blueBatch'),
     blocks: [],
   },
   {
@@ -69,8 +69,7 @@ export const blogIndexPages: PageContent[] = [
     seoTitle: 'Blog | Mersin Terracotta & Turkish Pottery — Tarsus',
     seoDescription:
       'Mersin terracotta manufacturer insights, Turkish terracotta wholesale and handmade pottery from Tarsus for export and project supply.',
-    image: '/images/collection.webp',
-    imageAlt: 'Mersin terracotta blog — concept image',
+    ...pagePhoto('blueBatch', 'en'),
     blocks: [],
   },
 ];

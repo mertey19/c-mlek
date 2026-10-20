@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import { AnalyticsReady } from '@/components/analytics-ready';
 import { SITE_URL } from '@/lib/site-url';
 import { allowIndexing } from '@/lib/indexing';
+import { photoById } from '@/lib/photography';
 import './globals.css';
 
 const serif = Cormorant_Garamond({
@@ -29,11 +30,11 @@ export const metadata: Metadata = {
     title: 'Tarsus Çömlekçilik | Toprağın Ustalığı',
     description: '1927’den günümüze el yapımı terracotta; toptan, proje ve ihracat için Tarsus’tan dünyaya.',
     url: '/', siteName: 'Tarsus Çömlekçilik', locale: 'tr_TR', type: 'website',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Tarsus Çömlekçilik — Toprağın Ustalığı' }],
+    images: [{ url: photoById('gardenJars').src, width: 1600, height: 1200, alt: photoById('gardenJars').alt }],
   },
   twitter: {
     card: 'summary_large_image', title: 'Tarsus Çömlekçilik | Toprağın Ustalığı',
-    description: 'El yapımı terracotta; toptan, proje ve ihracat için Tarsus’tan dünyaya.', images: ['/og.png'],
+    description: 'El yapımı terracotta; toptan, proje ve ihracat için Tarsus’tan dünyaya.', images: [photoById('gardenJars').src],
   },
   robots: { index: allowIndexing, follow: true },
   icons: {

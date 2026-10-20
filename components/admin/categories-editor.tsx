@@ -33,7 +33,7 @@ export function CategoriesEditor({ initial, images: initialImages, readOnly }: {
     if (!window.confirm(`"${list[index].name}" kategorisi silinsin mi? /urunler/${list[index].slug} sayfası kaldırılır.`)) return;
     change(list.filter((_, i) => i !== index), keys.filter((_, i) => i !== index));
   };
-  const add = () => change([...list, { slug: '', name: '', en: '', image: '/images/collection.webp' }], [...keys, `new-${counter.current++}`]);
+  const add = () => change([...list, { slug: '', name: '', en: '', image: '/images/photography-2026-10/terracotta-saksi-vazo-koleksiyonu.webp' }], [...keys, `new-${counter.current++}`]);
 
   return (
     <>

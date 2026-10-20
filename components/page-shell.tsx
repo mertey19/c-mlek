@@ -14,6 +14,8 @@ import { districtFromPath, districtPath, mersinDistricts, SERVICE_AREAS_UPDATED 
 import { localBusinessSchema } from '@/lib/business-schema';
 import { postsForServiceArea } from '@/lib/blog-data';
 import { ProductDirectory } from './product-directory';
+import { photoAlt, photoCaption, photoForSrc } from '@/lib/photography';
+import { PhotographyGallery } from './photography-gallery';
 
 const labelMap: Record<string, string> = {
   urunler: 'Ürünler', projeler: 'Projeler', 'toptan-satis': 'Toptan Satış', ihracat: 'İhracat', atolye: 'Atölye',
@@ -24,6 +26,8 @@ const labelMap: Record<string, string> = {
 
 export function PageShell({ page }: { page: PageContent }) {
   const english = page.locale === 'en';
+  const heroPhoto = photoForSrc(page.image);
+  const caption = photoCaption(page.image, english);
   const district = districtFromPath(page.path);
   const isAreaHub = page.path === '/mersin';
   const isServiceArea = !!district || isAreaHub;
@@ -101,9 +105,11 @@ export function PageShell({ page }: { page: PageContent }) {
                 </Link>
               </div>
             </div>
-            <figure className="page-hero__media">
-              <Image src={page.image} alt={page.imageAlt} fill priority sizes="(max-width: 900px) 100vw, 46vw" />
-              <figcaption>{english ? 'Concept image — not a client reference' : 'Temsili konsept — gerçek proje/referans değildir'}</figcaption>
+            <figure className={`page-hero__media${heroPhoto ? ' page-hero__media--photograph' : ''}`}>
+              {heroPhoto
+                ? <Image quality={90} src={page.image} alt={page.imageAlt} width={heroPhoto.width} height={heroPhoto.height} priority sizes="(max-width: 900px) 100vw, 46vw" />
+                : <Image quality={90} src={page.image} alt={page.imageAlt} fill priority sizes="(max-width: 900px) 100vw, 46vw" />}
+              {caption && <figcaption>{caption}</figcaption>}
             </figure>
           </div>
         </div>
@@ -116,7 +122,7 @@ export function PageShell({ page }: { page: PageContent }) {
             <div className="category-grid category-grid--inner">
               {categories.map((category, index) => (
                 <Link className={`category-card category-card--${(index % 4) + 1}`} href={`/urunler/${category.slug}`} hrefLang={english ? 'tr' : undefined} key={category.slug}>
-                  <Image src={category.image} alt={`${english ? category.en : category.name} — ${english ? 'concept image' : 'temsili görsel'}`} fill sizes="(max-width: 700px) 100vw, 33vw" />
+                  <Image quality={90} src={category.image} alt={photoAlt(category.image, english ? category.en : category.name, english)} fill sizes="(max-width: 700px) 100vw, 33vw" />
                   <span><strong>{english ? category.en : category.name}</strong><small>{english ? 'View collection (Turkish)' : 'Koleksiyonu gör'} ↗</small></span>
                 </Link>
               ))}
@@ -148,7 +154,7 @@ export function PageShell({ page }: { page: PageContent }) {
           </section>
         )}
 
-        {showGallery && <EditorialGallery />}
+        {showGallery && <PhotographyGallery />}
         {isServiceArea && <div className="service-area-note shell"><p>Üretim ve ziyaret noktası Tarsus’taki atölyemizdir. İlçe bazlı sayfalar ayrı şube veya mağaza adresi değildir.</p><p>Son içerik güncellemesi: <time dateTime={SERVICE_AREAS_UPDATED}>{new Intl.DateTimeFormat('tr-TR', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(SERVICE_AREAS_UPDATED))}</time></p>{district && <Link className="text-link text-link--dark" href="/mersin">Diğer Mersin ilçeleri <span>↗</span></Link>}</div>}
         {areaPosts.length > 0 && <section className="section shell" aria-labelledby="district-reading-title">
           <div className="section-heading"><p className="eyebrow">Ürün seçimine hazırlanırken</p><h2 id="district-reading-title">{district ? `${district.name} için pratik rehber` : 'Mersin ilçelerinden kullanım rehberleri'}</h2></div>
@@ -165,14 +171,6 @@ export function PageShell({ page }: { page: PageContent }) {
       <JsonLd data={schema} />
     </>
   );
-}
-
-function EditorialGallery() {
-  const images = [
-    ['/images/hero-terracotta.webp', 'Büyük boy küpler'], ['/images/workshop.webp', 'Üretim'], ['/images/collection.webp', 'Ürünler'],
-    ['/images/project-concept.webp', 'Mimari kullanım'], ['/images/collection.webp', 'Koleksiyon'], ['/images/hero-terracotta.webp', 'Yüzey ve form'],
-  ] as const;
-  return <section className="section shell"><div className="editorial-gallery">{images.map(([src, label], index) => <figure key={`${label}-${index}`}><Image src={src} alt={`${label} — temsili konsept görsel`} fill sizes="(max-width: 700px) 100vw, 40vw" /><figcaption>{label}<small>Temsili görsel</small></figcaption></figure>)}</div></section>;
 }
 
 function Faq({ items, english }: { items: readonly (readonly [string, string])[]; english: boolean }) {

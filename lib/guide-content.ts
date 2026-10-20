@@ -1,3 +1,4 @@
+import { pagePhoto } from './photography';
 import type { PageContent } from './site-data';
 
 /** Substantive revisions only: keep these dates independent of build/deploy time. */
@@ -8,8 +9,7 @@ export const guidePages: PageContent[] = [
     intro: 'Terracotta, kilin şekillendirilip pişirilmesiyle elde edilen bir seramik türüdür. El yapımı toprak saksı seçerken doğal görünüm kadar yüzey işlemi, iç hacim ve sulama düzeni de önemlidir.',
     seoTitle: 'Terracotta Saksı Nedir? Toprak Saksı Seçimi ve Bakımı',
     seoDescription: 'Terracotta ile seramik arasındaki ilişkiyi, sırlı ve sırsız yüzeyleri, drenajı ve el yapımı toprak saksıda bakım sorularını öğrenin.',
-    updatedAt: '2026-10-19', image: '/images/collection.webp',
-    imageAlt: 'Terracotta saksı form ve yüzeylerini anlatan temsili koleksiyon görseli',
+    updatedAt: '2026-10-19', ...pagePhoto('clayCollection'),
     blocks: [
       { title: 'Terracotta, toprak saksı ve seramik aynı şey mi?', body: 'Seramik geniş bir malzeme ailesidir; terracotta bu ailenin pişmiş toprak ürünleri arasında yer alır. Günlük dilde toprak saksı denilen ürünün yüzey işlemi ve yapısı değişebilir. Sırlı bir seramik kap ile sırsız terracotta saksının suyla ilişkisini aynı kabul etmeyin. Bir ürünün yalnızca rengine bakarak malzemesini veya dış mekân uygunluğunu kesinleştirmek yerine ürün açıklamasını ve atölyenin kullanım bilgisini esas alın.' },
       { title: 'Gözenekli yüzey sulama kararını nasıl etkiler?', body: 'Sırsız pişmiş toprak su emebilir; buna karşılık sır ve diğer yüzey işlemleri davranışı değiştirebilir. Bitkinin su ihtiyacı, güneş, rüzgâr ve toprak karışımı da sulama düzenini etkiler. Bu nedenle bütün terracotta saksılar için sabit bir sulama aralığı vermek doğru değildir. Toprağın durumunu gözlemleyin ve bitkinizin bakım gereksinimleriyle seçtiğiniz ürünün bilgisini birlikte değerlendirin.', link: { href: '/urunler/terracotta-saksilar', label: 'Terracotta saksı koleksiyonunu inceleyin' } },
@@ -24,8 +24,7 @@ export const guidePages: PageContent[] = [
     intro: 'Büyük boy toprak saksı ile dekoratif bahçe küpü aynı amaçla seçilmez. Önce bitki dikilecek alanı veya görsel odak noktasını belirleyin; sonra iç hacmi, dış ölçüleri ve son konuma taşıma yolunu birlikte değerlendirin.',
     seoTitle: 'Büyük Boy Toprak Saksı ve Bahçe Küpü Seçim Rehberi',
     seoDescription: 'Büyük terracotta küp ve saksı seçiminde yükseklik, ağız ve gövde çapı, drenaj, taşıma rotası ve teklif hazırlığı için pratik kontrol listesi.',
-    updatedAt: '2026-10-19', image: '/images/collection.webp',
-    imageAlt: 'Büyük saksı ve küp ölçeklerini anlatan temsili terracotta görseli',
+    updatedAt: '2026-10-19', ...pagePhoto('gardenTrio'),
     blocks: [
       { title: 'Önce kullanım amacını ayırın', body: 'Bahçede dekoratif toprak küp tek başına bir odak oluşturabilir. Bitki dikilecek büyük bir saksıda ise kök gelişimi, iç hacim ve bakım erişimi belirleyicidir. Dar ağızlı büyük terracotta küpün geniş gövdesi olması, mevcut iç saksınızın içeri gireceği anlamına gelmez. Görsel tercih ile kullanım şartını ayrı not edin; ürün seçiminde ikisinin de karşılanmasını arayın.', link: { href: '/urunler/buyuk-boy-kupler', label: 'Büyük boy toprak küp seçeneklerini görün' } },
       { title: 'Dört ölçüyü birlikte isteyin', body: 'Yükseklik, ağız açıklığı, en geniş gövde çapı ve taban ölçüsü farklı sorulara cevap verir. Girişte görünüm için yükseklik, kapıdan geçiş için en geniş çap, iç saksı için ağız açıklığı önemlidir. Ölçülerin birimini ve iç mi dış mı olduğunu netleştirin. El yapımı ürünlerde kabul edilecek ölçü aralığını görüşün; yalnızca bir fotoğraftan veya ürün adından kesin ölçü çıkarmayın.' },
@@ -40,8 +39,7 @@ export const guidePages: PageContent[] = [
     intro: 'Otel için büyük saksı seçimi yalnızca giriş görselinden ibaret değildir. Misafir dolaşımı, servis hareketi, bitki bakımı ve etaplı teslimat aynı ürün planında buluşmalıdır.',
     seoTitle: 'Otel Peyzajında Büyük Saksı Seçimi ve Tedarik Planı',
     seoDescription: 'Otel girişleri, restoran dış mekânları ve teraslar için terracotta saksı seçimi: dolaşım, bakım erişimi, ürün listesi ve etaplı tedarik.',
-    updatedAt: '2026-10-19', image: '/images/project-concept.webp',
-    imageAlt: 'Otel avlusunda terracotta yerleşimini gösteren temsili konsept',
+    updatedAt: '2026-10-19', ...pagePhoto('entrance'),
     blocks: [
       { title: 'Giriş, avlu ve dinlenme alanını ayrı planlayın', body: 'Otel girişindeki büyük peyzaj küpü uzaktan algılanan bir odak olabilir; oturma grubunun yanındaki saksı ise yakın görüş, konfor ve bakım açısından değerlendirilir. Her noktaya aynı yüksekliği uygulamak yerine alanın görevini yazın. Plan üzerinde giriş, avlu, restoran ve teras için farklı kodlar oluşturun. Dekoratif küp ile bitkili saksıyı ürün listesinde ayrı kalemler olarak belirtin.', link: { href: '/urunler/otel-villa-koleksiyonlari', label: 'Otel ve villa koleksiyonlarını inceleyin' } },
       { title: 'Servis ve misafir akışını birlikte kontrol edin', body: 'Restoran dış mekân saksısı seçerken masa düzeni kadar sandalye hareketi, servis arabası ve temizlik erişimini de inceleyin. Ürünün zemindeki dış sınırını işaretleyip farklı kullanım saatlerini düşünün. Kaçış yolları ve erişilebilir geçişler proje sorumlusunun değerlendirmesinde korunmalıdır. Bir katalog yerleşimi, gerçek saha için uygunluk belgesi veya güvenli geçiş ölçüsü yerine geçmez.' },
@@ -56,8 +54,7 @@ export const guidePages: PageContent[] = [
     intro: 'Toptan toprak saksı alımında yalnızca birim fiyatı karşılaştırmak eksik bir karar verir. Ürün ölçüleri, adet dağılımı, paketleme, taşıma ve teslimat kapsamı aynı olduğunda teklifler anlamlı biçimde karşılaştırılabilir.',
     seoTitle: 'Toptan Saksı Alım Rehberi | Ölçü, Adet ve Sevkiyat',
     seoDescription: 'Üreticiden toptan çömlek ve bahçe saksısı alırken ürün listesi, ölçü toleransı, numune, paketleme ve teslimat kapsamını nasıl hazırlarsınız?',
-    updatedAt: '2026-10-19', image: '/images/collection.webp',
-    imageAlt: 'Adetli terracotta siparişini anlatan temsili ürün grubu',
+    updatedAt: '2026-10-19', ...pagePhoto('workshopInterior'),
     blocks: [
       { title: 'Tek toplam adet yerine kalemli liste hazırlayın', body: 'Toptan bahçe saksısı siparişinde farklı formları tek bir miktarda birleştirmeyin. Her ürün için ad veya bağlantı, hedef ölçü, kullanım amacı ve tahmini adet yazın. Örneğin giriş küpleri ile bitkili teras saksılarını ayrı satırlarda gösterin. Kesinleşmeyen kalemleri alternatif olarak işaretleyin; böylece seçenek değiştiğinde toplam kapsamın nasıl değiştiği anlaşılır.', bullets: ['Ürün adı veya katalog bağlantısı', 'Yükseklik, ağız ve gövde çapı; ölçü birimi', 'Her form için adet ve kullanım yeri', 'Teslimat şehri/ülkesi ve hedef tarih aralığı'], link: { href: '/urunler', label: 'Listeye ekleyeceğiniz ürünleri seçin' } },
       { title: 'El yapımının doğal farklarını önceden görüşün', body: 'El yapımı terracotta ürünlerde yüzey, ton ve ölçü farklılıkları olabilir. Birlikte sergilenecek ürünler için beklentinizi fotoğrafla anlatın. Tolerans, örnek görme ve onay yöntemi üzerine sorularınızı teklif aşamasında sorun. Numune hazırlanması, bedeli ve süreye etkisi sipariş özelinde teyit edilmelidir; her talep için ücretsiz numune veya birebir renk eşleşmesi varsayılmamalıdır.' },

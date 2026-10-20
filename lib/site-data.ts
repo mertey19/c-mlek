@@ -1,3 +1,4 @@
+import { pagePhoto, photoAlt } from './photography';
 import businessJson from '@/content/business.json';
 import categoriesJson from '@/content/categories.json';
 import productsJson from '@/content/products.json';
@@ -120,7 +121,7 @@ const trPages: PageContent[] = [
     updatedAt: '2026-10-19',
     seoTitle: 'El Yapımı Terracotta Saksı & Küp Modelleri | Tarsus',
     seoDescription: 'Büyük terracotta küpler, bahçe saksıları, dekoratif ve mimari saksılar. Toptan, otel, villa ve peyzaj projeleri için ürün gruplarını inceleyin.',
-    image: '/images/collection.webp', imageAlt: 'Farklı formlarda el yapımı terracotta küp ve saksı koleksiyonu — temsili görsel',
+    ...pagePhoto('clayCollection', 'tr'),
     blocks: [
       { title: 'Form, ölçek ve kullanım', body: 'Her proje aynı saksıyı istemez. Giriş aksları için heykelsi büyük küpler, dolaşım alanları için daha kontrollü formlar, peyzaj içinse bitki kökü ve sulama düzenine uygun hacimler gerekir.', bullets: ['Doğal terracotta yüzey', 'El yapımından gelen küçük varyasyonlar', 'İç ve dış mekân kullanım senaryoları', 'Toptan ve proje bazlı tedarik'] },
       { title: 'Saksı ile dekoratif küpü kullanımına göre ayırın', body: 'El yapımı toprak saksıda iç hacim, ağız açıklığı ve drenaj bilgisi önemlidir. Büyük bahçe küpü yalnızca dekoratif kullanılacaksa dış oran ve yerleşim öne çıkar. Bir formun bitkili kullanıma uygunluğunu görünüşünden çıkarmayın; katalogdaki ölçüleri ve atölyenin ürün bazındaki açıklamasını esas alın.', link: { href: '/rehber/buyuk-boy-saksi-secerken', label: 'Büyük saksı ve küp seçim rehberi' } },
@@ -133,7 +134,7 @@ const trPages: PageContent[] = [
     updatedAt: '2026-10-19',
     seoTitle: 'Toptan Çömlek ve Terracotta Saksı | Tarsus, Mersin',
     seoDescription: 'Tarsus, Mersin’de üreticiden toptan çömlek, toprak ve bahçe saksısı talepleri. Ürün, ölçü, adet ve teslimat bilgileriyle fiyat teklifi isteyin.',
-    image: '/images/collection.webp', imageAlt: 'Toptan tedarik için farklı ölçülerde terracotta ürünler — temsili görsel',
+    ...pagePhoto('blueStock', 'tr'),
     blocks: [
       { title: 'Toptan toprak saksı için kalemli ürün listesi', body: 'Farklı boy ve formları tek toplam adet altında toplamayın. Toptan bahçe saksısı, dekoratif küp ve mimari saksı taleplerini ayrı satırlarda belirtin. Mevcut ürün bağlantısı, hedef ölçü ve kullanım yeri doğru kapsamı konuşmayı kolaylaştırır. Katalogda görünen bir ürünün hazır stokta bulunduğu varsayılmamalıdır.', bullets: ['Ürün adı veya katalog bağlantısı', 'Ölçü birimiyle yükseklik ve çap', 'Her ürün için tahmini adet', 'Teslimat şehri, ilçe veya ülke', 'Hedef tarih aralığı ve varsa etaplar'], link: { href: '/urunler', label: 'Toptan talep için ürün gruplarını seçin' } },
       { title: 'Mersin ve Tarsus’ta üreticiden tedarik', body: 'Mersin toptan çömlek talepleri Tarsus’taki üretim noktası üzerinden değerlendirilir. Mersin ilçelerindeki teslimat adresini, araç erişimini ve indirme koşullarını paylaşın. İlçe sayfaları ayrı mağaza veya şube anlamına gelmez. Türkiye’nin diğer şehirlerinden gelen taleplerde de taşıma planı ürün ölçüsü, adet ve adresle birlikte netleştirilir.', link: { href: '/mersin', label: 'Mersin ilçe bazlı tedarik bilgileri' } },
@@ -148,7 +149,7 @@ const trPages: PageContent[] = [
     intro: 'Otel, villa, restoran, bahçe ve ticari alanlar için terracotta ürünleri ölçü, dolaşım, bitkilendirme ve mekânsal ritimle birlikte düşünün.',
     seoTitle: 'Mimari Saksı Üretimi ve Peyzaj Projeleri | Tarsus',
     seoDescription: 'Otel, villa, restoran ve peyzaj projeleri için büyük terracotta saksı ve küp çözümleri. Projenizi paylaşın, ürün ve tedarik teklifi alın.',
-    image: '/images/project-concept.webp', imageAlt: 'Mimari avluda büyük terracotta saksı kullanımı — temsili konsept görsel',
+    ...pagePhoto('hotel', 'tr'),
     blocks: [
       { title: 'Peyzaj projeleri için terracotta ürün listesi', body: 'Plan üzerindeki her yerleşim noktasına bir kod verin; form, yaklaşık ölçü, adet ve bitkili ya da dekoratif kullanım bilgisini ekleyin. Böylece peyzaj saksıları ile büyük peyzaj küpü talepleri birbirine karışmaz. Bitki kök hacmi, sulama ve bakım ihtiyaçlarını peyzaj sorumlusuyla hazırlayıp ürün görüşmesine dahil edin.', link: { href: '/urunler/peyzaj-projeleri', label: 'Peyzaj ürünlerinde seçim kriterleri' } },
       { title: 'Mimari terracotta saksıda form ve uygulanabilirlik', body: 'Giriş aksı, cephe oranı ve dolaşım alanı hedef formu belirlemeye yardımcı olur. Özel ölçü veya farklı form isteniyorsa çizim, referans görsel ve adet paylaşın. Mimari saksı üretimi talebi, atölyenin form ve ölçü değerlendirmesinden sonra netleşir. Her çizimin birebir üretilebileceği veya aynı takvimde teslim edilebileceği varsayılmamalıdır.', link: { href: '/urunler/ozel-uretim', label: 'Özel üretim çömlek talebini hazırlayın' } },
@@ -162,7 +163,7 @@ const trPages: PageContent[] = [
     intro: 'Mimari ölçekte kullanılan saksı ve küpleri giriş, avlu, teras, bahçe ve yaya akslarında tutarlı bir koleksiyon diliyle planlayın.',
     seoTitle: 'Otel & Villa İçin Büyük Terracotta Saksılar | Tarsus',
     seoDescription: 'Otel, villa, resort ve peyzaj uygulamalarına uygun büyük terracotta saksı ve dekoratif küp seçenekleri. Proje bazlı tedarik talebi oluşturun.',
-    image: '/images/project-concept.webp', imageAlt: 'Otel avlusunda büyük el yapımı terracotta saksılar — temsili konsept görsel',
+    ...pagePhoto('palmTrio', 'tr'),
     blocks: [
       { title: 'Otel için büyük saksı: karşılama ve avlu', body: 'Karşılama alanında uzaktan görülen yüksek bir form ile dinlenme avlusundaki bitkili saksı farklı işler üstlenir. Misafir ve servis hareketini kesmeden bir yerleşim planı hazırlayın. Birlikte görülecek ürünlerin oranını, yüzey beklentisini ve adetlerini aynı listede tutun. Konsept fotoğraflar gerçek otel referansı değil, kullanım fikridir.', link: { href: '/rehber/otel-peyzajinda-saksi-secimi', label: 'Otel peyzajında seçim ve tedarik rehberi' } },
       { title: 'Villa bahçe saksısı ve dekoratif küp', body: 'Bahçe girişinde odak oluşturmak için dekoratif küp, oturma alanında bitkili kullanım için uygun iç hacimli saksı değerlendirilebilir. Kapı açıklığı, basamak ve araç erişimini fotoğraflayın. Büyük ürünlerde yalnızca son görünümü değil, bahçedeki yerine nasıl ulaşacağını da düşünün. Dikim ve dış ortam uygunluğu seçilen ürün için ayrıca teyit edilmelidir.', link: { href: '/urunler/bahce-saksilari', label: 'Bahçe saksısı koleksiyonunu görün' } },
@@ -177,7 +178,7 @@ const trPages: PageContent[] = [
     intro: 'Yurtdışı toptancıları, oteller, tasarım stüdyoları ve peyzaj projeleri için ürün, adet, paketleme ve teslimat kapsamını birlikte netleştirin.',
     seoTitle: 'Terracotta Saksı ve Çömlek İhracatı | Tarsus, Türkiye',
     seoDescription: 'Türkiye’den el yapımı terracotta saksı ve küp ihracatı. Toptancı, otel, villa ve peyzaj projeleri için İngilizce teklif talebi oluşturun.',
-    image: '/images/hero-terracotta.webp', imageAlt: 'İhracata uygun büyük terracotta ürün grubu — temsili görsel',
+    ...pagePhoto('packing', 'tr'),
     blocks: [
       { title: 'İhracat talebinizi hazırlayın', body: 'Türkiye’den çömlek üreticisi arayan yurtdışı alıcıları için ilk adım net bir ürün listesidir. Form, ölçü, adet, kullanım alanı ve hedef ülkeyi paylaşın. Varış noktası ve hedef tarih, paketleme ve taşıma seçeneklerinin değerlendirilmesini sağlar. Katalog talebi, stok veya belirli ülkeye kesin sevkiyat taahhüdü değildir.', bullets: ['Ürün bağlantısı ve her kalem için adet', 'Ölçü birimi ve hedef kullanım', 'Varış ülkesi ve teslimat noktası', 'Paketleme ve teslim kapsamı beklentisi'] },
       { title: 'Nakliye ve belge kapsamını netleştirin', body: 'Ambalaj, yükleme, taşıma ve varışta teslim alma sorumlulukları siparişe göre görüşülür. Alıcının veya taşıyıcının istediği belge ve etiket bilgilerini önceden iletin. Ürünün kullanım uygunluğu, teslim koşulları ve gerekli belgeler teyit edilmeden evrensel ihracat uygunluğu veya sabit transit süre varsayılmamalıdır.', link: { href: '/toptan-satis', label: 'Üreticiden toptan alım hazırlığı' } },
@@ -190,7 +191,7 @@ const trPages: PageContent[] = [
     updatedAt: '2026-10-19',
     seoTitle: 'Tarsus Çömlek Atölyesi | Mersin Çömlek İmalatı',
     seoDescription: 'Tarsus çömlek atölyesinde el yapımı terracotta üretim aşamaları. Mersin’de çömlek imalatı, özel form ve toptan ürün talepleri için bilgi alın.',
-    image: '/images/workshop.webp', imageAlt: 'Büyük bir terracotta formu şekillendiren usta elleri — temsili görsel',
+    ...pagePhoto('workshopInterior', 'tr'),
     blocks: [
       { title: '01—03 · Hazırlık ve şekillendirme', body: 'Toprağın hazırlanmasıyla başlayan süreçte form, ustanın elleriyle katman katman kurulur; ardından çatlama riskini azaltacak biçimde kontrollü kurutulur.', bullets: ['Toprağın hazırlanması', 'Ustanın şekillendirmesi', 'Kontrollü kurutma'] },
       { title: '04—06 · Ateş ve sevkiyat', body: 'Fırınlama sonrasında yüzey ve form kontrol edilir. Sipariş kapsamına göre paketleme ve sevkiyat planı hazırlanır.', bullets: ['Fırınlama', 'Kalite kontrol', 'Paketleme ve sevkiyat'] },
@@ -204,7 +205,7 @@ const trPages: PageContent[] = [
     intro: 'Tarsus’ta kuşaklar boyunca sürdürülen çömlek ustalığını, günümüzün bahçe, mimari ve ticari mekânlarına taşıyan bir üretim kültürü.',
     seoTitle: 'Özçereciler Toprak Sanatları | Tarsus Çömlekçilik',
     seoDescription: '1927’den günümüze Tarsus’ta sürdürülen el yapımı çömlek ve terracotta üretim kültürünü, atölye yaklaşımını ve marka hikâyesini tanıyın.',
-    image: '/images/workshop.webp', imageAlt: 'Tarsus çömlekçilik geleneğini temsil eden el yapımı üretim sahnesi — temsili görsel',
+    ...pagePhoto('workshopYard', 'tr'),
     blocks: [
       { title: 'Kökü gelenekte, gözü mekânda', body: 'Geleneksel üretim bilgisi; yalnızca geçmişi korumak için değil, güncel mimari ve peyzaj ihtiyaçlarına doğru formu üretmek için yaşatılır.' },
       { title: 'Özçereciler Toprak Sanatları', body: 'Üretici kimliği; ürün geliştirme, toptan tedarik, proje bazlı çalışma ve uluslararası talepler için markanın kurumsal omurgasını oluşturur.', link: { href: '/atolye', label: 'Üretim sürecini keşfet' } },
@@ -213,13 +214,13 @@ const trPages: PageContent[] = [
   },
   {
     path: '/galeri', locale: 'tr', kicker: 'Görsel arşiv', title: 'Toprağın yüzeyleri ve ölçekleri',
-    intro: 'Ürün, üretim ve mimari kullanım görselleri için hazırlanmış editorial galeri. Bu sürümde yer alan AI konseptleri gerçek proje veya atölye referansı değildir.',
+    intro: 'Büyük terracotta küplerden mavi yeşil sırlı seramiklere; ürün, atölye, hazırlık ve mekân düzenlemelerinden 30 kare. Her görseli kendi oranında inceleyin ve detayları tam boy açın.',
     seoTitle: 'Terracotta Ürün, Atölye ve Proje Galerisi | Tarsus',
     seoDescription: 'Büyük terracotta küpler, saksılar, üretim süreci ve mimari kullanım görsellerini editorial galeride keşfedin.',
-    image: '/images/collection.webp', imageAlt: 'El yapımı terracotta ürün formları — temsili görsel',
+    ...pagePhoto('blueBatch', 'tr'),
     blocks: [
-      { title: 'Gerçek materyaller için hazır', body: 'Galeri altyapısı; atölye, üretim, ürünler, projeler, sevkiyat ve mimari kullanım kategorilerinde gerçek firma fotoğrafları eklendiğinde doğrudan güncellenebilir.' },
-      { title: 'Görsel doğruluk', body: 'Konsept görseller gerçek müşteri projesi, sevkiyat, atölye veya ürün kataloğu kanıtı olarak etiketlenmez.' },
+      { title: 'Form, yüzey ve hazırlık', body: 'Doğal terracotta küpleri, sırlı seramiklerin renk geçişlerini, atölye içindeki ürün gruplarını ve konteyner içi hazırlık karelerini ayrı başlıklarda keşfedin. Ürün ölçüsü, renk seçeneği ve güncel bulunabilirlik sipariş öncesinde teyit edilir.' },
+      { title: 'Mekân ve stil örnekleri', body: 'Otel, restoran, giriş ve teras sahneleri yerleşim fikri vermek içindir. Bu sahnelerde görünen mekân ve tabelalar tamamlanmış müşteri projesi veya iş ortaklığı iddiası taşımaz.' },
     ],
   },
   {
@@ -227,7 +228,7 @@ const trPages: PageContent[] = [
     intro: 'Ürün grubu, yaklaşık adet, teslimat şehri veya ülkesi ve varsa mekân görseli; doğru teklif için yeterli başlangıç bilgilerini sağlar.',
     seoTitle: 'İletişim & Teklif | Tarsus Çömlekçilik',
     seoDescription: 'Toptan çömlek, terracotta saksı, otel-villa-peyzaj projesi ve ihracat talepleriniz için Tarsus Çömlekçilik ile iletişime geçin.',
-    image: '/images/hero-terracotta.webp', imageAlt: 'Tarsus Çömlekçilik büyük terracotta küp detayları — temsili görsel',
+    ...pagePhoto('gardenTrio', 'tr'),
     blocks: [
       { title: 'WhatsApp üzerinden hızlı teklif', body: 'Toptan, proje ve ihracat taleplerini Instagram bio’daki doğrulanmış WhatsApp hattından alın. Form gönderimi de WhatsApp mesajına dönüştürülür.', link: { href: whatsappUrl('default'), label: 'WhatsApp’tan yazın' } },
       { title: 'Atölye adresi', body: 'Yeşil Mah., Hasan Özçivi Cd., 4202. Sk. No: 60, 33450 Tarsus/Mersin. Ziyaret veya teslimat planı için önceden haber vermenizi rica ederiz.', link: { href: business.googleMapsUrl, label: 'Google Haritalar’da aç' } },
@@ -240,7 +241,7 @@ const trPages: PageContent[] = [
     intro: 'Terracotta malzemeyi, büyük saksı seçimini, peyzaj kullanımını ve toptan tedarik sürecini karar vermeyi kolaylaştıracak biçimde ele alan içerik merkezi. Yerel üretim ve Mersin terracotta konuları için blog sayfamıza da göz atın.',
     seoTitle: 'Terracotta Saksı & Çömlek Rehberi | Tarsus Çömlekçilik',
     seoDescription: 'Terracotta saksı nedir, büyük saksı nasıl seçilir ve toptan alımda nelere dikkat edilir? Uygulama odaklı rehberleri keşfedin.',
-    image: '/images/collection.webp', imageAlt: 'Terracotta malzeme ve farklı saksı formları — temsili görsel',
+    ...pagePhoto('clayCollection', 'tr'),
     blocks: [
       { title: 'Terracotta Saksı Nedir?', body: 'Pişmiş toprağın gözenekli yapısı, doğal renk geçişleri ve elde şekillendirildiğinde kazandığı küçük varyasyonlar terracotta karakterinin temelidir.', link: { href: '/rehber/terracotta-saksi-nedir', label: 'Rehberi oku' } },
       { title: 'Büyük Boy Saksı Seçimi', body: 'Ölçek, drenaj, kök hacmi, rüzgâr ve taşıma rotası; yalnızca estetik değil uygulama kararlarıdır.', link: { href: '/rehber/buyuk-boy-saksi-secerken', label: 'Seçim kriterlerini incele' } },
@@ -263,7 +264,7 @@ const categoryPages: PageContent[] = categories.map((category) => {
     seoDescription: editorial.description,
     updatedAt: CATALOG_CONTENT_UPDATED,
     image: category.image,
-    imageAlt: `${category.name} koleksiyonu — temsili terracotta görseli`,
+    imageAlt: photoAlt(category.image, `${category.name} koleksiyonu`),
     blocks: editorial.blocks,
     faq: faqs.slice(0, 5),
   };
@@ -278,7 +279,7 @@ const enPages: PageContent[] = [
     updatedAt: '2026-10-19',
     seoTitle: 'Terracotta Pots Manufacturer in Turkey | Tarsus Pottery',
     seoDescription: 'Handmade Turkish terracotta pots and oversized planters for wholesale, hotels, villas and landscape projects. Request an export quotation.',
-    image: '/images/hero-terracotta.webp', imageAlt: 'Large handmade terracotta jars in a Mediterranean courtyard — concept image',
+    ...pagePhoto('gardenTrio', 'en'),
     blocks: [
       { title: 'Choose a product family before requesting a quote', body: 'A sculptural jar and a planting vessel can have similar silhouettes but different requirements. For planting, ask about usable internal dimensions, drainage and care. For decorative placement, compare the height, widest diameter and base against the intended space. Catalogue images do not establish stock availability or suitability for every outdoor setting.', link: { href: '/en/products', label: 'Explore terracotta pots and large planters' } },
       { title: 'Work directly with the Tarsus production workshop', body: 'Our production and visit location is in Tarsus, Mersin. Handmade surfaces can vary in tone, texture and dimensions; discuss the acceptable variation before ordering a group. Custom forms and sizes are reviewed for feasibility rather than offered as an unlimited manufacturing promise.', link: { href: '/en/about', label: 'About our pottery workshop' } },
@@ -291,7 +292,7 @@ const enPages: PageContent[] = [
     updatedAt: '2026-10-19',
     intro: 'Explore oversized jars, planters, garden pottery and architectural terracotta for wholesale and project-based supply.',
     seoTitle: 'Turkish Terracotta Pots & Large Planters | Products', seoDescription: 'Explore handmade terracotta pots, oversized jars, garden planters and architectural pottery made in Tarsus, Turkey.',
-    image: '/images/collection.webp', imageAlt: 'Handmade terracotta pot and jar collection — concept image',
+    ...pagePhoto('clayCollection', 'en'),
     blocks: [
       { title: 'Large jars for a focal point', body: 'Compare height, shoulder width, mouth opening and base size when choosing a large terracotta jar. A narrow-necked decorative vessel may not accept the inner pot you intend to use. Share a placement photo and the route from the delivery point to the final position; the widest part of the form matters as much as its height.', link: { href: '/en/projects', label: 'Planning jars and planters for a project' } },
       { title: 'Garden and architectural planters', body: 'For planting, request internal dimensions, drainage details and product-specific care information. Exterior dimensions alone do not establish usable root space. If a planter will stand on a terrace or raised structure, the project team should assess the full planted load and site conditions. A product suggestion does not replace a technical site assessment.' },
@@ -304,7 +305,7 @@ const enPages: PageContent[] = [
     intro: 'Source handmade pots, large terracotta planters and decorative jars through a direct manufacturer enquiry. Retailers, landscape companies and hospitality buyers can request a quotation by product, quantity and destination.',
     updatedAt: '2026-10-19',
     seoTitle: 'Wholesale Terracotta Pots Turkey | Manufacturer Supply', seoDescription: 'Request wholesale Turkish terracotta pots, large jars and garden planters directly from a Tarsus manufacturer.',
-    image: '/images/collection.webp', imageAlt: 'Wholesale grouping of handmade terracotta vessels — concept image',
+    ...pagePhoto('blueStock', 'en'),
     blocks: [
       { title: 'Large terracotta planters for wholesale orders', body: 'Separate large planting vessels from decorative jars in your buying list. Specify height, widest diameter, mouth opening and units, along with quantity for each form. For a planted installation, add internal-space and drainage requirements. A mixed-size order can be reviewed, but availability and production feasibility must be confirmed for each item.', link: { href: '/en/products', label: 'Browse pots, jars and planters' } },
       { title: 'Quantity, samples and production timing', body: 'There is no universal minimum quantity or lead time stated for every product. These depend on the form, dimensions, production situation and order scope. If you need a sample or finish approval, include that in the brief so availability, cost and timing can be discussed. Handmade variation should be considered when pieces will be displayed together.' },
@@ -321,11 +322,11 @@ const enPages: PageContent[] = [
     updatedAt: '2026-10-19',
     intro: 'Oversized planters and jars for entrances, courtyards, terraces, gardens, restaurants and commercial landscapes.',
     seoTitle: 'Hotel, Villa & Landscape Terracotta Planters | Turkey', seoDescription: 'Large terracotta planters for hotels, villas, restaurants and landscape projects. Share your project and request a supply proposal.',
-    image: '/images/project-concept.webp', imageAlt: 'Oversized terracotta planters in a hotel courtyard — concept visualization',
+    ...pagePhoto('hotel', 'en'),
     blocks: [
       { title: 'Hotels and villa gardens', body: 'An entrance jar can create a focal point, while a planter beside seating needs different proportions and maintenance access. Assign a code to each placement and separate decorative use from planting. Group quantities by project phase and discuss natural finish variation for pieces that will be displayed together.', link: { href: '/en/products', label: 'Choose a terracotta product family' } },
       { title: 'Restaurant terraces and landscape routes', body: 'Check chair movement, service routes and maintenance access against the widest part of each vessel. For planted forms, ask for usable internal dimensions and drainage information. The project team should assess ground conditions, wind exposure, support and planted loads; a concept image or catalogue entry is not a technical installation approval.' },
-      { title: 'From design brief to supply scope', body: 'Send a marked-up plan or site photos with approximate dimensions, quantity and the receiving location. Custom forms require workshop feasibility review. Clarify whether packing, unloading, final placement and planting are included or handled by others. The imagery on this site is labelled as concept work, not as completed client references.', link: { href: '/en/wholesale', label: 'Prepare a project purchasing list' } },
+      { title: 'From design brief to supply scope', body: 'Send a marked-up plan or site photos with approximate dimensions, quantity and the receiving location. Custom forms require workshop feasibility review. Clarify whether packing, unloading, final placement and planting are included or handled by others. The hospitality and terrace scenes are placement inspiration, not verified client references.', link: { href: '/en/wholesale', label: 'Prepare a project purchasing list' } },
       { title: 'Share your project', body: 'A plan, approximate dimensions or a photo of the setting is enough to begin a product discussion.', link: { href: '/en/contact#quote', label: 'Start a project enquiry' } },
     ],
   },
@@ -334,7 +335,7 @@ const enPages: PageContent[] = [
     intro: 'Looking for a terracotta planters exporter in Turkey? Discuss handmade pots and large jars with our Tarsus workshop. We review international wholesale and project enquiries by product, quantity, destination and delivery scope.',
     updatedAt: '2026-10-19',
     seoTitle: 'Terracotta Planters Exporter Turkey | Trade Enquiries', seoDescription: 'Request handmade terracotta pots and large planters from Tarsus, Turkey. Share quantities and destination to review packing, production and export scope.',
-    image: '/images/hero-terracotta.webp', imageAlt: 'Large Turkish terracotta jars prepared for international product enquiries — concept image',
+    ...pagePhoto('container', 'en'),
     blocks: [
       { title: 'Identify products and the destination first', body: 'Send a product list with links or reference images, dimensions with units and quantities for each form. Include the destination country, receiving location and intended use. Large terracotta planters require particular attention to packed dimensions and handling. A catalogue enquiry is not a confirmation of stock, shipping availability or a delivery date.', link: { href: '/en/products', label: 'Review handmade terracotta products' } },
       { title: 'Agree packing and handling responsibilities', body: 'Packing requirements depend on the selected forms, quantity and transport plan. Explain any receiving-site restrictions and how the goods will be unloaded. Confirm packing, loading, transport and final placement responsibilities in the quotation. Do not assume that delivery to an address includes moving large vessels into a courtyard or onto a terrace.' },
@@ -351,7 +352,7 @@ const enPages: PageContent[] = [
     path: '/en/about', locale: 'en', kicker: 'Tarsus · Since 1927', title: 'A craft carried across generations',
     intro: 'A pottery culture rooted in Tarsus, bringing traditional making knowledge into contemporary gardens, hospitality and architectural settings.',
     seoTitle: 'About Tarsus Pottery | Handmade Terracotta Since 1927', seoDescription: 'Learn about the multi-generation pottery tradition behind handmade terracotta production in Tarsus, Turkey.',
-    image: '/images/workshop.webp', imageAlt: 'Hands shaping a large terracotta planter — concept image',
+    ...pagePhoto('workshopYard', 'en'),
     blocks: [
       { title: 'Rooted in making', body: 'Traditional knowledge is kept relevant by applying it to the scale, consistency and supply needs of contemporary projects.' },
       { title: 'Özçereciler Toprak Sanatları', body: 'The production identity behind wholesale, project and international enquiries.', link: { href: '/en/products', label: 'Explore the collections' } },
@@ -361,7 +362,7 @@ const enPages: PageContent[] = [
     path: '/en/contact', locale: 'en', kicker: 'Contact & quotations', title: 'Tell us what you are sourcing',
     intro: 'Share the product family, estimated quantity, destination and project context for a more useful quotation.',
     seoTitle: 'Contact & Wholesale Quote | Tarsus Terracotta', seoDescription: 'Contact Tarsus Pottery for wholesale terracotta, project supply and export enquiries from Turkey.',
-    image: '/images/collection.webp', imageAlt: 'Handmade terracotta products for wholesale enquiries — concept image',
+    ...pagePhoto('blueBatch', 'en'),
     blocks: [
       { title: 'WhatsApp-first contact', body: 'Wholesale, project and export requests continue on the verified WhatsApp line from the Instagram bio. Quote forms open a prefilled WhatsApp message.', link: { href: whatsappUrl('default', undefined, true), label: 'Message on WhatsApp' } },
       { title: 'Prepare your brief', body: 'Company, country/city, product type, estimated quantity and intended application are the key details.' },
@@ -377,7 +378,7 @@ const productPages: ProductPage[] = products.map((product) => ({
   intro: product.shortDescription,
   seoTitle: product.seoTitle || `${product.name} | Tarsus Çömlekçilik`,
   seoDescription: product.seoDescription || product.shortDescription,
-  image: product.images[0], imageAlt: `${product.name} — temsili ürün görseli`,
+  image: product.images[0], imageAlt: photoAlt(product.images[0], `${product.name} — ürün görseli`),
   blocks: [
     { title: 'Heykelsi bir terracotta form', body: product.description, bullets: product.applications },
     { title: 'Fiyat için teklif alın', body: 'Fiyat; ölçü, adet, üretim durumu, paketleme ve teslimat noktasına göre hazırlanır. Sahte veya bağlayıcı olmayan liste fiyatı yayınlanmaz.', link: { href: '/iletisim#teklif', label: 'Ürün teklifi iste' } },
@@ -398,7 +399,7 @@ const utilityPages: PageContent[] = [
   ].map(([path, title, intro]) => ({
     path, locale: 'tr' as const, kicker: 'Yasal bilgilendirme', title, intro,
     seoTitle: `${title} | Tarsus Çömlekçilik`, seoDescription: `${title} kapsamında veri işleme, form gönderimi ve çerez kullanımına ilişkin yayın öncesi bilgilendirme.`,
-    image: '/images/workshop.webp', imageAlt: 'Toprak sanatları üretim detayı — temsili görsel',
+    ...pagePhoto('workshopInterior'),
     blocks: [
       { title: 'Yayın öncesi taslak', body: 'Bu metin hukuki danışmanlık değildir. Ticari işletme bilgileri, veri işleme süreçleri, iletişim kanalları ve kullanılan üçüncü taraf hizmetler doğrulandıktan sonra yetkili hukuk danışmanı tarafından gözden geçirilmelidir.' },
       { title: 'Şeffaflık ilkesi', body: 'Doğrulanmamış iletişim veya veri sorumlusu bilgisi yayınlanmaz; onay gerektiren takip kodları açık rıza mekanizması olmadan çalıştırılmaz.' },

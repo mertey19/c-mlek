@@ -1,4 +1,5 @@
 import { business, type ContentBlock, type PageContent } from './site-data';
+import { pagePhoto } from './photography';
 
 // District names checked against https://www.mersin.gov.tr/nufus-ve-dagilim on 2026-10-16.
 // These are enquiry/service areas, never additional shops or workshop addresses.
@@ -183,8 +184,7 @@ export const districtPages: PageContent[] = mersinDistricts.map(district => ({
   intro: district.intro,
   seoTitle: `${district.name} Çömlek & Terracotta Saksı`,
   seoDescription: district.description,
-  image: district.slug === 'tarsus' ? '/images/workshop.webp' : '/images/collection.webp',
-  imageAlt: 'Tarsus atölyesinin el yapımı terracotta ürünlerini temsil eden konsept görsel',
+  ...pagePhoto(district.slug === 'tarsus' ? 'workshopInterior' : 'clayCollection'),
   blocks: [...district.blocks, {
     title: district.slug === 'tarsus' ? 'Tarsus’taki üretim adresimiz' : `${district.name} talepleri Tarsus atölyemizde değerlendirilir`,
     body: `Üretim ve ziyaret adresimiz ${business.address}. ${district.slug === 'tarsus' ? 'Ziyaret ve ürün teslimi önceden teyit edilir.' : `Bu sayfa ${district.name} ilçesine yönelik tedarik talepleri içindir; ilçede ayrı bir şube veya mağaza bulunduğu anlamına gelmez.`} Ürün tipi, yaklaşık ölçü, adet, mahalle ve tarih aralığını göndererek teklif alabilirsiniz. Stok, özel üretim, minimum adet, paketleme ve sevkiyat koşulları siparişe göre teyit edilir.`,
@@ -202,10 +202,10 @@ export const serviceAreaHub: PageContent = {
   intro: 'Mersin’in 13 ilçesinden saksı, büyük küp, toptan ve proje taleplerini Tarsus’taki atölyemizde değerlendiriyoruz. İlçenizi seçerek ürün seçimi, teslimat hazırlığı ve teklif için gerekli bilgileri inceleyin.',
   seoTitle: 'Mersin İlçelerine Çömlek & Terracotta Tedariki',
   seoDescription: 'Mersin’in 13 ilçesi için el yapımı çömlek, terracotta saksı ve büyük küp. Tarsus atölyesinden ilçe bazlı ürün, toptan tedarik ve sevkiyat teklifi.',
-  image: '/images/hero-terracotta.webp', imageAlt: 'El yapımı terracotta küp ve saksılar — temsili konsept',
+  ...pagePhoto('gardenJars'),
   blocks: [
     { title: 'Tek üretim adresi, ilçeye göre değerlendirilen talepler', body: `Atölyemiz ${business.address} adresindedir. İlçe sayfaları ayrı şubeleri değil, ürün ve sevkiyat talebinde bulunabileceğiniz hizmet alanlarını gösterir. Aynı ilçe içindeki farklı adreslerde bile araç erişimi, paketleme ve iç taşıma ihtiyacı değişebilir.`, link: { href: '/iletisim', label: 'Gerçek atölye adresini görün' } },
-    { title: 'Ürünü kullanım amacına göre seçin', body: 'Bitki dikilecek saksı, tek başına dekoratif küp ve birden fazla ürün içeren peyzaj grubu farklı ihtiyaçlara cevap verir. Dış çap, iç hacim, ağız açıklığı ve bakım koşullarını birlikte değerlendirin. Görseller konsept amaçlıdır; kesin ölçü ve mevcut ürün seçenekleri teklif öncesinde teyit edilir.', link: { href: '/urunler', label: 'Ürün gruplarını keşfedin' } },
+    { title: 'Ürünü kullanım amacına göre seçin', body: 'Bitki dikilecek saksı, tek başına dekoratif küp ve birden fazla ürün içeren peyzaj grubu farklı ihtiyaçlara cevap verir. Dış çap, iç hacim, ağız açıklığı ve bakım koşullarını birlikte değerlendirin. Görseller form seçimine yardımcı olur; kesin ölçü ve mevcut ürün seçenekleri teklif öncesinde teyit edilir.', link: { href: '/urunler', label: 'Ürün gruplarını keşfedin' } },
     { title: 'Tedarik talebinizde bulunması gereken bilgiler', body: 'Ürün grubu ve adetle birlikte teslimat ilçesi, mahalle, yaklaşık ölçü ve tercih edilen tarih aralığını paylaşın. Büyük ürünlerde kapı genişliği, kat, merdiven ve araç yaklaşımı da önemlidir. Sevkiyat yöntemi, maliyet ve süre ancak ürün ve adres bilgileri değerlendirildikten sonra netleşir.', bullets: ['Bireysel kullanım: ürün tipi, ölçü ve kullanım alanı.', 'Toptan alım: ürün bazında adet listesi ve teslimat noktası.', 'Mimari proje: yerleşim fotoğrafları, etaplar ve uygulama takvimi.'], link: { href: '/toptan-satis', label: 'Toptan tedarik süreci' } },
   ],
   faq: [

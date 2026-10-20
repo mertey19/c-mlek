@@ -11,6 +11,7 @@
     "start": "next start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "test:seo": "node --experimental-strip-types scripts/check-seo.mjs",
+    "test:photography": "node scripts/check-photography.mjs",
     "audit:indexing": "node scripts/audit-indexing.mjs",
     "dev:vinext": "vinext dev",
     "build:vinext": "vinext build",

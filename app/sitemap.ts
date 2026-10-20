@@ -3,13 +3,14 @@ import { allIndexablePaths, allPages } from '@/lib/all-pages';
 import { blogPosts } from '@/lib/blog-data';
 import { SITE_URL } from '@/lib/site-url';
 import { SERVICE_AREAS_UPDATED } from '@/lib/service-areas';
+import { PHOTOGRAPHY_UPDATED } from '@/lib/photography';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogDates = new Map(blogPosts.map((post) => [post.path, post.updatedAt ?? post.publishedAt]));
   const blogPaths = new Set(blogDates.keys());
   const contentDates = new Map(allPages.map((page) => [page.path, page.updatedAt]));
-  // Actual homepage copy revision, not the time of the current build.
-  contentDates.set('/', '2026-10-19');
+  // Actual homepage photography revision, not the time of the current build.
+  contentDates.set('/', PHOTOGRAPHY_UPDATED);
   const blogIndexDates = new Map(['tr', 'en'].map((locale) => [
     locale === 'tr' ? '/blog' : '/en/blog',
     [...blogPosts.filter((post) => post.locale === locale).map((post) => post.updatedAt ?? post.publishedAt),

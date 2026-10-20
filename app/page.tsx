@@ -12,6 +12,8 @@ import { IconInstagram, IconWhatsApp } from '@/components/icons';
 import { absoluteUrl } from '@/lib/site-url';
 import { ServiceAreaDirectory } from '@/components/service-area-directory';
 import { localBusinessSchema } from '@/lib/business-schema';
+import { photoAlt, photoById } from '@/lib/photography';
+import { HeroPhotograph } from '@/components/hero-photograph';
 
 export const metadata: Metadata = {
   title: 'Tarsus Çömlekçilik | Mersin El Yapımı Terracotta Üreticisi',
@@ -24,13 +26,13 @@ export const metadata: Metadata = {
       '1927\'den günümüze Mersin Tarsus\'ta el yapımı terracotta. Toptan tedarik, proje bazlı üretim ve ihracat.',
     url: '/',
     type: 'website',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Tarsus Çömlekçilik — Mersin terracotta üreticisi' }],
+    images: [{ url: photoById('gardenJars').src, width: 1600, height: 1200, alt: photoById('gardenJars').alt }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Tarsus Çömlekçilik | Mersin El Yapımı Terracotta Üreticisi',
     description: 'El yapımı terracotta saksı ve büyük küp — Mersin Tarsus\'tan toptan ve proje tedariki.',
-    images: ['/og.png'],
+    images: [photoById('gardenJars').src],
   },
 };
 
@@ -56,7 +58,7 @@ export default function Home() {
     <>
       <main>
         <section className="hero" aria-labelledby="hero-title">
-          <Image className="hero__image" src="/images/hero-terracotta.webp" alt="Akdeniz taş avlusunda el yapımı büyük terracotta küp ve saksılar — temsili görsel" fill priority sizes="100vw" />
+          <HeroPhotograph />
           <div className="hero__shade" />
           <SiteHeader overlay />
           <div className="hero__content shell">
@@ -70,7 +72,7 @@ export default function Home() {
                 <IconWhatsApp /> WhatsApp’tan teklif al
               </TrackedLink>
             </div>
-            <p className="concept-note">Hero görseli temsili konsept çalışmadır.</p>
+            <Link className="hero__gallery-link" href="/galeri">Koleksiyonu yakından görün ↗</Link>
           </div>
           <div className="trust-strip"><div className="shell trust-strip__grid"><p><strong>1927’den beri</strong><span>Geleneksel üretim mirası</span></p><p><strong>El yapımı</strong><span>Her formda usta dokunuşu</span></p><p><strong>Toptan üretim</strong><span>Projeye göre planlanan tedarik</span></p><p><strong>Dünya geneli</strong><span>İhracat taleplerine açık</span></p></div></div>
         </section>
@@ -92,7 +94,7 @@ export default function Home() {
           <div className="category-grid">
             {categories.slice(0, 6).map((category, index) => (
               <TrackedLink className={`category-card category-card--${index + 1}`} href={`/urunler/${category.slug}`} eventName="category_view" eventData={{ category: category.slug }} key={category.slug}>
-                <Image src={category.image} alt={`${category.name} — temsili terracotta görseli`} fill sizes="(max-width: 700px) 100vw, 40vw" />
+                <Image quality={90} src={category.image} alt={photoAlt(category.image, category.name)} fill sizes="(max-width: 700px) 100vw, 33vw" />
                 <span><strong>{category.name}</strong><small>Koleksiyonu gör ↗</small></span>
               </TrackedLink>
             ))}
@@ -102,15 +104,15 @@ export default function Home() {
 
         <section className="story-section">
           <div className="shell story-section__grid">
-            <figure className="story-section__media"><Image src="/images/workshop.webp" alt="Büyük bir terracotta formu şekillendiren usta elleri — temsili görsel" fill sizes="(max-width: 800px) 100vw, 52vw" /><figcaption>Temsili üretim görseli</figcaption></figure>
+            <figure className="story-section__media"><Image quality={90} src={photoById('workshopInterior').src} alt={photoById('workshopInterior').alt} fill sizes="(max-width: 800px) 100vw, 52vw" /><figcaption>Atölyeden · Terracotta küpler</figcaption></figure>
             <div className="story-section__copy"><p className="eyebrow">Kuşaklar boyunca</p><h2>Dört kuşağa uzanan bir toprak hikâyesi</h2><p className="story-section__lead">Tarsus’ta sürdürülen çömlek ustalığı; bugün büyük ölçekli bahçe, mimari ve ticari mekânların ihtiyaçlarıyla yeniden buluşuyor.</p><div className="story-section__notes"><span>01</span><p>El yapımının bıraktığı yüzey izleri, her parçaya seri üretimde bulunmayan doğal bir karakter verir.</p><span>02</span><p>Üretici kimliği; toptan tedarik, proje bazlı çalışma ve yurtdışı talepler için süreci tek merkezde toplar.</p></div><Link className="text-link text-link--dark" href="/hakkimizda">Hikâyemizi okuyun <span>↗</span></Link></div>
           </div>
         </section>
 
         <section className="project-feature">
-          <Image src="/images/project-concept.webp" alt="Otel avlusunda anıtsal terracotta saksılar — temsili mimari konsept" fill sizes="100vw" />
+          <Image quality={90} src={photoById('hotel').src} alt={photoById('hotel').alt} fill sizes="100vw" />
           <div className="project-feature__shade" />
-          <div className="shell project-feature__copy"><p className="eyebrow">Hotels · Villas · Landscape</p><h2>Mekânlara toprağın karakterini katıyoruz</h2><p>Giriş, avlu, teras ve peyzaj aksları için ölçü, form ve yerleşimi birlikte değerlendiren terracotta tedariki.</p><div><Link className="button button--light" href="/projeler">Proje yaklaşımını keşfet</Link><TrackedLink className="button button--whatsapp" href={whatsappUrl('project')} target="_blank" rel="noreferrer" eventName="whatsapp_click" eventData={{ location: 'projects_band' }}><IconWhatsApp /> WhatsApp’tan projenizi gönderin</TrackedLink></div><small>Görsel temsili konsepttir; gerçek müşteri projesi değildir.</small></div>
+          <div className="shell project-feature__copy"><p className="eyebrow">Hotels · Villas · Landscape</p><h2>Mekânlara toprağın karakterini katıyoruz</h2><p>Giriş, avlu, teras ve peyzaj aksları için ölçü, form ve yerleşimi birlikte değerlendiren terracotta tedariki.</p><div><Link className="button button--light" href="/projeler">Proje yaklaşımını keşfet</Link><TrackedLink className="button button--whatsapp" href={whatsappUrl('project')} target="_blank" rel="noreferrer" eventName="whatsapp_click" eventData={{ location: 'projects_band' }}><IconWhatsApp /> WhatsApp’tan projenizi gönderin</TrackedLink></div><small>Yerleşim örneği — doğrulanmış müşteri referansı değildir.</small></div>
         </section>
 
         <section className="trade-section shell section" aria-labelledby="trade-title">
@@ -128,7 +130,7 @@ export default function Home() {
         </section>
 
         <section className="featured-product section shell">
-          <div className="featured-product__media"><Image src={featuredProduct.images[1] ?? featuredProduct.images[0]} alt={`${featuredProduct.name} — temsili ürün görseli`} fill sizes="(max-width: 800px) 100vw, 58vw" /><span>Temsili ürün görseli</span></div>
+          <div className="featured-product__media"><Image quality={90} src={featuredProduct.images[1] ?? featuredProduct.images[0]} alt={`${featuredProduct.name} — ürün görseli`} fill sizes="(max-width: 800px) 100vw, 58vw" /></div>
           <div className="featured-product__copy"><p className="eyebrow">Öne çıkan form</p><h2>{featuredProduct.name}</h2><p>{featuredProduct.description}</p><dl><div><dt>Malzeme</dt><dd>{featuredProduct.material}</dd></div><div><dt>Kullanım</dt><dd>Mimari, bahçe ve peyzaj</dd></div><div><dt>Fiyat</dt><dd>Teklif ile</dd></div></dl><TrackedLink className="button button--dark" href={`/urunler/${featuredProduct.slug}`} eventName="product_view" eventData={{ product: featuredProduct.slug }}>Ürünü incele</TrackedLink></div>
         </section>
 
@@ -144,21 +146,21 @@ export default function Home() {
           </div>
           <div className="blog-grid blog-grid--compact">
             <article className="blog-card">
-              <Link className="blog-card__media" href="/blog/mersin-comlekci"><Image src="/images/workshop.webp" alt="Mersin çömlekçi rehberi" fill sizes="(max-width: 700px) 100vw, 33vw" /></Link>
+              <Link className="blog-card__media" href="/blog/mersin-comlekci"><Image quality={90} src={photoById('workshopYard').src} alt={photoById('workshopYard').alt} fill sizes="(max-width: 700px) 100vw, 33vw" /></Link>
               <div className="blog-card__body"><h3><Link href="/blog/mersin-comlekci">Mersin çömlekçi arayanlar için Tarsus’ta el yapımı üretim</Link></h3><Link className="text-link text-link--dark" href="/blog">Tüm yazılar <span>↗</span></Link></div>
             </article>
             <article className="blog-card">
-              <Link className="blog-card__media" href="/blog/mersin-terracotta"><Image src="/images/collection.webp" alt="Mersin terracotta rehberi" fill sizes="(max-width: 700px) 100vw, 33vw" /></Link>
+              <Link className="blog-card__media" href="/blog/mersin-terracotta"><Image quality={90} src={photoById('clayCollection').src} alt={photoById('clayCollection').alt} fill sizes="(max-width: 700px) 100vw, 33vw" /></Link>
               <div className="blog-card__body"><h3><Link href="/blog/mersin-terracotta">Mersin terracotta saksı ve küp üreticisi</Link></h3><Link className="text-link text-link--dark" href="/blog/mersin-terracotta">Yazıyı oku <span>↗</span></Link></div>
             </article>
             <article className="blog-card">
-              <Link className="blog-card__media" href="/blog/tarsus-comlek-atolyesi"><Image src="/images/workshop.webp" alt="Tarsus çömlek atölyesi" fill sizes="(max-width: 700px) 100vw, 33vw" /></Link>
+              <Link className="blog-card__media" href="/blog/tarsus-comlek-atolyesi"><Image quality={90} src={photoById('workshopInterior').src} alt={photoById('workshopInterior').alt} fill sizes="(max-width: 700px) 100vw, 33vw" /></Link>
               <div className="blog-card__body"><h3><Link href="/blog/tarsus-comlek-atolyesi">Tarsus çömlek atölyesi: 1927’den günümüze</Link></h3><Link className="text-link text-link--dark" href="/blog/tarsus-comlek-atolyesi">Yazıyı oku <span>↗</span></Link></div>
             </article>
           </div>
         </section>
 
-        <section className="instagram-section"><div className="shell instagram-section__grid"><div><p className="eyebrow">Atölyeden güncel kareler</p><h2>Atölyemizi Instagram’da takip edin</h2><p>{business.instagramHandle}</p><TrackedLink className="button button--dark button--with-icon" href={business.instagram} target="_blank" rel="noreferrer" eventName="instagram_click"><IconInstagram /> Instagram’ı aç</TrackedLink></div><div className="instagram-section__images"><figure><Image src="/images/workshop.webp" alt="Terracotta üretim süreci — temsili görsel" fill sizes="35vw" /></figure><figure><Image src="/images/collection.webp" alt="Terracotta ürün koleksiyonu — temsili görsel" fill sizes="35vw" /></figure></div></div></section>
+        <section className="instagram-section"><div className="shell instagram-section__grid"><div><p className="eyebrow">Atölyeden güncel kareler</p><h2>Atölyemizi Instagram’da takip edin</h2><p>{business.instagramHandle}</p><TrackedLink className="button button--dark button--with-icon" href={business.instagram} target="_blank" rel="noreferrer" eventName="instagram_click"><IconInstagram /> Instagram’ı aç</TrackedLink></div><div className="instagram-section__images"><figure><Image quality={90} src={photoById('blueBatch').src} alt={photoById('blueBatch').alt} fill sizes="(max-width: 800px) 50vw, 35vw" /></figure><figure><Image quality={90} src={photoById('workshopYard').src} alt={photoById('workshopYard').alt} fill sizes="(max-width: 800px) 50vw, 35vw" /></figure></div></div></section>
 
         <div className="shell section"><QuoteForm /></div>
         <ServiceAreaDirectory compact />

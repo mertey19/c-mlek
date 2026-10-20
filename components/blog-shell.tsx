@@ -9,6 +9,7 @@ import { JsonLd } from './json-ld';
 import { SiteFooter } from './site-footer';
 import { SiteHeader } from './site-header';
 import { TrackedLink } from './tracked-link';
+import { photoCaption, photoForSrc } from '@/lib/photography';
 
 function formatDate(value: string, english: boolean) {
   return new Intl.DateTimeFormat(english ? 'en-GB' : 'tr-TR', {
@@ -22,7 +23,7 @@ function BlogCard({ post }: { post: BlogPost }) {
   return (
     <article className="blog-card">
       <Link className="blog-card__media" href={post.path}>
-        <Image src={post.image} alt={post.imageAlt} fill sizes="(max-width: 700px) 100vw, 33vw" />
+        <Image quality={90} src={post.image} alt={post.imageAlt} fill sizes="(max-width: 700px) 100vw, 33vw" />
       </Link>
       <div className="blog-card__body">
         <p className="blog-card__meta">
@@ -141,6 +142,8 @@ function BlogIndex({ page }: { page: PageContent }) {
 
 function BlogArticle({ post }: { post: BlogPost }) {
   const english = post.locale === 'en';
+  const cover = photoForSrc(post.image);
+  const caption = photoCaption(post.image, english);
   const related = postsForLocale(post.locale).filter((item) => item.path !== post.path).slice(0, 3);
   const wa = whatsappUrl('default', undefined, english);
 
@@ -179,7 +182,8 @@ function BlogArticle({ post }: { post: BlogPost }) {
           </header>
 
           <figure className="blog-article__cover shell">
-            <Image src={post.image} alt={post.imageAlt} width={1320} height={720} priority sizes="(max-width: 900px) 100vw, 1320px" />
+            <Image quality={90} src={post.image} alt={post.imageAlt} width={cover?.width ?? 1320} height={cover?.height ?? 720} priority sizes="(max-width: 900px) 100vw, 1320px" />
+            {caption && <figcaption>{caption}</figcaption>}
           </figure>
 
           <div className="shell blog-article__content">
@@ -257,7 +261,7 @@ function BlogArticle({ post }: { post: BlogPost }) {
             publisher: {
               '@type': 'Organization',
               name: business.name,
-              logo: { '@type': 'ImageObject', url: absoluteUrl('/og.png') },
+              logo: { '@type': 'ImageObject', url: absoluteUrl('/icon-512.png') },
             },
             mainEntityOfPage: absoluteUrl(post.path),
           },

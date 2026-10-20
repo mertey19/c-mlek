@@ -127,7 +127,8 @@ const originalBodies = districtArticles.flatMap(post => post.blocks.map(block =>
 check(new Set(originalBodies).size === originalBodies.length, 'Repeated district article paragraphs');
 check(districts.every(slug => home.includes(`href="/mersin/${slug}"`)), 'Home missing district links');
 check(home.includes('Toprağın ustalığı'), 'Home H1 content lost');
-check(home.includes('/images/hero-terracotta.webp'), 'Static hero fallback removed');
+check(home.replace(/%2f/gi, '/').includes('/images/photography-2026-10/buyuk-terracotta-kupler-bahce.webp'), 'Supplied static hero photograph removed');
+check(home.replace(/%2f/gi, '/').includes('/images/photography-2026-10/uc-buyuk-terracotta-kup.webp'), 'Mobile hero composition removed');
 const featuredProduct = products.find(product => product.featured) ?? products[0];
 check(home.includes(`href="/urunler/${featuredProduct.slug}"`), 'Admin-selected featured product lost');
 check(!/PotteryHero|ProductionExperience|ProductViewer3D|pottery\.css/.test(readFileSync('app/page.tsx', 'utf8')), 'Unrequested 3D homepage restored');
@@ -182,8 +183,8 @@ for (const path of [...keywordPlan.targets.map(target => target.path), ...keywor
       guideParagraphs.add(paragraph);
     }
     const entry = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find(match => match[1].includes(`<loc>${origin}${path}</loc>`))?.[1];
-    check(entry?.includes('<lastmod>2026-10-19T00:00:00.000Z</lastmod>'), `${path}: guide revision missing from sitemap`);
-    check(schemas.some(item => item['@type'] === 'WebPage' && item.dateModified === '2026-10-19'), `${path}: page revision missing from schema`);
+    check(entry?.includes('<lastmod>2026-10-20T00:00:00.000Z</lastmod>'), `${path}: photography revision missing from sitemap`);
+    check(schemas.some(item => item['@type'] === 'WebPage' && item.dateModified === '2026-10-20'), `${path}: photography revision missing from schema`);
   }
 }
 const englishCatalogue = await get('/en/products');
@@ -197,10 +198,10 @@ check(englishCatalogue.includes('View collection (Turkish)') && englishCatalogue
 check(!textOnly(await get('/en/export')).includes('before the site goes live'), 'Export page still contains launch placeholder copy');
 for (const path of ['/', '/blog', '/urunler', '/toptan-satis', '/en/products', '/en/wholesale', '/en/export']) {
   const entry = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find(match => match[1].includes(`<loc>${origin}${path}</loc>`))?.[1];
-  check(entry?.includes('<lastmod>2026-10-19T00:00:00.000Z</lastmod>'), `${path}: revised content date missing`);
+  check(entry?.includes('<lastmod>2026-10-20T00:00:00.000Z</lastmod>'), `${path}: revised content date missing`);
 }
-const untouchedDistrict = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find(match => match[1].includes(`<loc>${origin}/mersin/tarsus</loc>`))?.[1];
-check(untouchedDistrict?.includes('<lastmod>2026-10-16T00:00:00.000Z</lastmod>'), 'Unchanged district content date was artificially refreshed');
+const revisedDistrict = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find(match => match[1].includes(`<loc>${origin}/mersin/tarsus</loc>`))?.[1];
+check(revisedDistrict?.includes('<lastmod>2026-10-20T00:00:00.000Z</lastmod>'), 'District photography revision missing');
 
 // Crawl every sitemap URL, including preserved product, blog and English routes.
 for (const url of locations) {

@@ -335,7 +335,7 @@ export function emptyBlogSeed(): BlogSeed {
     intro: '',
     seoTitle: '',
     seoDescription: '',
-    image: '/images/collection.webp',
+    image: '/images/photography-2026-10/terracotta-saksi-vazo-koleksiyonu.webp',
     imageAlt: '',
     publishedAt: new Date().toISOString().slice(0, 10),
     tags: [],
@@ -345,7 +345,7 @@ export function emptyBlogSeed(): BlogSeed {
 }
 
 export function emptyProduct(): Product {
-  return { slug: '', name: '', category: '', shortDescription: '', description: '', images: ['/images/collection.webp'] };
+  return { slug: '', name: '', category: '', shortDescription: '', description: '', images: ['/images/photography-2026-10/terracotta-saksi-vazo-koleksiyonu.webp'] };
 }
 
 export function slugify(text: string) {
