@@ -3,9 +3,12 @@ import { readFile, stat } from 'node:fs/promises';
 import sharp from 'sharp';
 
 const photos = JSON.parse(await readFile('content/photography.json', 'utf8'));
-assert.equal(photos.length, 30);
-assert.equal(new Set(photos.map(photo => photo.id)).size, 30);
-assert.equal(new Set(photos.map(photo => photo.file)).size, 30);
+assert.equal(photos.length, 32);
+assert.equal(new Set(photos.map(photo => photo.id)).size, photos.length);
+assert.equal(new Set(photos.map(photo => photo.file)).size, photos.length);
+for (const id of ['handledJarH55L37', 'handledJarH49L39']) {
+  assert(photos.some(photo => photo.id === id), `Additional handled jar missing: ${id}`);
+}
 assert(!photos.some(photo => photo.source === 'adas.jpeg'), 'Unrelated bulb advertisement imported');
 let bytes = 0;
 for (const photo of photos) {
@@ -26,6 +29,7 @@ const get = async (path) => {
   return response;
 };
 const gallery = await (await get('/galeri')).text();
+assert(gallery.includes(`${photos.length} kare`), 'Gallery introduction has a stale photograph count');
 for (const photo of photos) {
   const path = `/images/photography-2026-10/${photo.file}.webp`;
   assert(gallery.includes(`href="${path}"`), `${photo.id}: full-size link absent`);
@@ -45,7 +49,7 @@ for (const route of ['/', '/galeri', '/atolye', '/urunler', '/blog', '/mersin', 
   assert(!oldImages.test(html), `${route}: former concept imagery still in rendered output`);
   assert(!html.includes('şekillendiren usta elleri'), `${route}: obsolete image description`);
 }
-for (const id of ['gardenJars', 'gardenTrio', 'blueBatch']) {
+for (const id of ['gardenJars', 'gardenTrio', 'blueBatch', 'handledJarH55L37', 'handledJarH49L39']) {
   const photo = photos.find(item => item.id === id);
   const url = `/_next/image?url=${encodeURIComponent(`/images/photography-2026-10/${photo.file}.webp`)}&w=640&q=90`;
   const response = await get(url);
@@ -54,4 +58,4 @@ for (const id of ['gardenJars', 'gardenTrio', 'blueBatch']) {
   assert.equal(rendered.width, 640);
   assert(Math.abs(rendered.height / rendered.width - photo.height / photo.width) < 0.005, `${id}: optimized image distorted`);
 }
-console.log(`Photography audit passed: 30 full-resolution assets (${(bytes / 1024 / 1024).toFixed(2)} MiB), gallery, 11 routes, responsive hero and quality-90 optimizer.`);
+console.log(`Photography audit passed: ${photos.length} full-resolution assets (${(bytes / 1024 / 1024).toFixed(2)} MiB), gallery, 11 routes, responsive hero and quality-90 optimizer.`);

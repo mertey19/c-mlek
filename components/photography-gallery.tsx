@@ -6,7 +6,7 @@ export function PhotographyGallery() {
   return (
     <section className="section shell photography-gallery" aria-labelledby="photography-title">
       <div className="section-heading">
-        <p className="eyebrow">30 kare · Ürün, atölye ve yerleşim</p>
+        <p className="eyebrow">{photoCollection.length} kare · Ürün, atölye ve yerleşim</p>
         <h2 id="photography-title">Koleksiyona yakından bakın</h2>
         <p>Dokuyu ve formu tam boy görmek için bir görseli açın. Mekân ve stil görselleri müşteri referansı olarak sunulmaz.</p>
       </div>

@@ -1,8 +1,9 @@
 # Supplied photography — 20 October 2026
 
-The owner supplied 31 JPEGs for the existing website. The 30 pottery-related
-images are catalogued in `content/photography.json`; `adas.jpeg` is a light-bulb
-advertisement and is intentionally excluded.
+The owner initially supplied 31 JPEGs for the existing website, followed by two
+additional handled-jar photographs. The 32 pottery-related images are catalogued
+in `content/photography.json`; `adas.jpeg` is a light-bulb advertisement and is
+intentionally excluded.
 
 ## Preservation and presentation
 
@@ -14,6 +15,10 @@ advertisement and is intentionally excluded.
   browser-selected composition is requested, with high fetch priority.
 - Gallery and inner-page hero images use their native aspect ratios. Gallery
   images are lazy-loaded and link to the full-resolution WebP.
+- The additional `..çç.jpeg` (1242 × 1192) and `öööööö.jpeg` (1242 × 1200)
+  photographs appear in the Terracotta collection. Their embedded H55 × L37 and
+  H49 × L39 labels remain visible; no measurement unit, age or stock availability
+  is inferred. The gallery count is derived from the collection.
 - Badges embedded in `aaaaaa.jpeg` and `aaaaaaaaaaa.jpeg` remain intact. These
   files are gallery-only rather than hero images.
 - Hospitality/brand-styled scenes are labelled as placement inspiration, not

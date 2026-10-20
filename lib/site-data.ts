@@ -1,4 +1,4 @@
-import { pagePhoto, photoAlt } from './photography';
+import { pagePhoto, photoAlt, photoCollection } from './photography';
 import businessJson from '@/content/business.json';
 import categoriesJson from '@/content/categories.json';
 import productsJson from '@/content/products.json';
@@ -214,7 +214,8 @@ const trPages: PageContent[] = [
   },
   {
     path: '/galeri', locale: 'tr', kicker: 'Görsel arşiv', title: 'Toprağın yüzeyleri ve ölçekleri',
-    intro: 'Büyük terracotta küplerden mavi yeşil sırlı seramiklere; ürün, atölye, hazırlık ve mekân düzenlemelerinden 30 kare. Her görseli kendi oranında inceleyin ve detayları tam boy açın.',
+    updatedAt: '2026-10-20',
+    intro: `Büyük terracotta küplerden mavi yeşil sırlı seramiklere; ürün, atölye, hazırlık ve mekân düzenlemelerinden ${photoCollection.length} kare. Her görseli kendi oranında inceleyin ve detayları tam boy açın.`,
     seoTitle: 'Terracotta Ürün, Atölye ve Proje Galerisi | Tarsus',
     seoDescription: 'Büyük terracotta küpler, saksılar, üretim süreci ve mimari kullanım görsellerini editorial galeride keşfedin.',
     ...pagePhoto('blueBatch', 'tr'),
