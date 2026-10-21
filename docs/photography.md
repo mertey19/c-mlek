@@ -1,9 +1,23 @@
-# Supplied photography — 20 October 2026
+# Supplied photography — 20–21 October 2026
 
 The owner initially supplied 31 JPEGs for the existing website, followed by two
-additional handled-jar photographs. The 32 pottery-related images are catalogued
+additional handled-jar photographs. Those 32 pottery-related images are catalogued
 in `content/photography.json`; `adas.jpeg` is a light-bulb advertisement and is
 intentionally excluded.
+
+On 21 October the owner supplied another batch of 25 photographs. Only 22 were
+new, bringing the gallery to 54 images. The following incoming copies were omitted:
+
+- `WhatsApp Image 2026-10-20 at 16.01.12.jpeg`: byte-identical to `..çç.jpeg` (H55 × L37).
+- `WhatsApp Image 2026-10-20 at 16.01.12 (3).jpeg`: byte-identical to `öööööö.jpeg` (H49 × L39).
+- `WhatsApp Image 2026-10-20 at 16.01.12 (5).jpeg`: a re-encoded copy of `hhh.jpeg`,
+  confirmed by visual comparison and a 32 × 32 RGB mean absolute difference of
+  0.30 on the 0–255 scale. The existing outdoor blue-pot photograph was retained.
+
+The incoming batch was also compared with the existing admin-uploaded images.
+The additions are gallery-only: 16 product/collection photographs, five preparation
+photographs and one labelled placement example. Existing heroes are unchanged.
+Only the gallery's editorial modification date advances to 21 October.
 
 ## Preservation and presentation
 
@@ -15,6 +29,9 @@ intentionally excluded.
   browser-selected composition is requested, with high fetch priority.
 - Gallery and inner-page hero images use their native aspect ratios. Gallery
   images are lazy-loaded and link to the full-resolution WebP.
+- The new collages, embedded black borders and H/L labels remain intact. New
+  images retain their source dimensions, including the 3024 × 4032 indoor blue-pot
+  photograph; smaller source images are not enlarged.
 - The additional `..çç.jpeg` (1242 × 1192) and `öööööö.jpeg` (1242 × 1200)
   photographs appear in the Terracotta collection. Their embedded H55 × L37 and
   H49 × L39 labels remain visible; no measurement unit, age or stock availability

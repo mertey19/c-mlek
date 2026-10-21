@@ -214,7 +214,7 @@ const trPages: PageContent[] = [
   },
   {
     path: '/galeri', locale: 'tr', kicker: 'Görsel arşiv', title: 'Toprağın yüzeyleri ve ölçekleri',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-10-21',
     intro: `Büyük terracotta küplerden mavi yeşil sırlı seramiklere; ürün, atölye, hazırlık ve mekân düzenlemelerinden ${photoCollection.length} kare. Her görseli kendi oranında inceleyin ve detayları tam boy açın.`,
     seoTitle: 'Terracotta Ürün, Atölye ve Proje Galerisi | Tarsus',
     seoDescription: 'Büyük terracotta küpler, saksılar, üretim süreci ve mimari kullanım görsellerini editorial galeride keşfedin.',

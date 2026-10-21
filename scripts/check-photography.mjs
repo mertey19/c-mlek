@@ -3,9 +3,14 @@ import { readFile, stat } from 'node:fs/promises';
 import sharp from 'sharp';
 
 const photos = JSON.parse(await readFile('content/photography.json', 'utf8'));
-assert.equal(photos.length, 32);
+assert.equal(photos.length, 54);
 assert.equal(new Set(photos.map(photo => photo.id)).size, photos.length);
 assert.equal(new Set(photos.map(photo => photo.file)).size, photos.length);
+assert.equal(new Set(photos.map(photo => photo.source)).size, photos.length);
+assert.equal(photos.filter(photo => photo.source.startsWith('WhatsApp Image 2026-10-20')).length, 22);
+for (const duplicate of ['16.01.12', '16.01.12 (3)', '16.01.12 (5)']) {
+  assert(!photos.some(photo => photo.source === `WhatsApp Image 2026-10-20 at ${duplicate}.jpeg`), `Duplicate photograph imported: ${duplicate}`);
+}
 for (const id of ['handledJarH55L37', 'handledJarH49L39']) {
   assert(photos.some(photo => photo.id === id), `Additional handled jar missing: ${id}`);
 }
@@ -49,7 +54,7 @@ for (const route of ['/', '/galeri', '/atolye', '/urunler', '/blog', '/mersin', 
   assert(!oldImages.test(html), `${route}: former concept imagery still in rendered output`);
   assert(!html.includes('şekillendiren usta elleri'), `${route}: obsolete image description`);
 }
-for (const id of ['gardenJars', 'gardenTrio', 'blueBatch', 'handledJarH55L37', 'handledJarH49L39']) {
+for (const id of ['gardenJars', 'gardenTrio', 'blueBatch', 'handledJarH55L37', 'handledJarH49L39', 'handledJarH56L38', 'blueIndoorStock', 'whiteRibbedPair']) {
   const photo = photos.find(item => item.id === id);
   const url = `/_next/image?url=${encodeURIComponent(`/images/photography-2026-10/${photo.file}.webp`)}&w=640&q=90`;
   const response = await get(url);
